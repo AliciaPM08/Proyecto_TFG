@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="658.0" style="-fx-background-color: #01152e; -fx-border-color: #ff6d6e; -fx-border-radius: 5; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Splash">
+   <children>
+      <ImageView fitHeight="311.0" fitWidth="305.0" layoutX="177.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Imagenes/Logo/Logo%20App.png" />
+         </image>
+      </ImageView>
+      <ProgressBar layoutX="98.0" layoutY="325.0" prefHeight="18.0" prefWidth="463.0" progress="0.0" />
+   </children>
+</AnchorPane>
