@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" fx:controller="org.example.onside_fem.Otros.ConPantallaPrincipal" style="-fx-background-color: #fbfbf3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #fbfbf3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Otros.ConPantallaPrincipal">
    <children>
       <ImageView fitHeight="952.0" fitWidth="1410.0" layoutX="-6.0" layoutY="-45.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,17 +31,17 @@
                   <Font name="ACaslonPro-Semibold" size="36.0" />
                </font>
             </Label>
-            <ComboBox layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+            <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
          </children>
       </Pane>
-      <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+      <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1410.0" style="-fx-background-color: #01152e;">
          <children>
             <Label layoutX="639.0" layoutY="1.0" text="OnSideFem" textFill="#ff6d6e">
                <font>
                   <Font name="ACaslonPro-Semibold" size="24.0" />
                </font>
             </Label>
-            <Hyperlink layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+            <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
                <font>
                   <Font name="ACaslonPro-Semibold" size="18.0" />
                </font>
@@ -51,20 +51,34 @@
       </Pane>
       <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;">
         <menus>
-          <Menu mnemonicParsing="false" text="Inicio">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
+          <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio" />
+          <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                  <MenuItem mnemonicParsing="false" text="National Super League" />
+               </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Ligas">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Selecciones">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
+          <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Alemania" />
+                  <MenuItem mnemonicParsing="false" text="Australia" />
+                  <MenuItem mnemonicParsing="false" text="Brasil" />
+                  <MenuItem mnemonicParsing="false" text="Canada" />
+                  <MenuItem mnemonicParsing="false" text="Colombia" />
+                  <MenuItem mnemonicParsing="false" text="España" />
+                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                  <MenuItem mnemonicParsing="false" text="Francia" />
+                  <MenuItem mnemonicParsing="false" text="Inglatera" />
+                  <MenuItem mnemonicParsing="false" text="Japon" />
+                  <MenuItem mnemonicParsing="false" text="Nigeria" />
+                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                  <MenuItem mnemonicParsing="false" text="Suecia" />
+               </items>
           </Menu>
         </menus>
       </MenuBar>

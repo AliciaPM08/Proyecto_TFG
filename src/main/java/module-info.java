@@ -1,6 +1,8 @@
 module org.example.onside_fem {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires java.desktop;
 
 
     opens org.example.onside_fem to javafx.fxml;
