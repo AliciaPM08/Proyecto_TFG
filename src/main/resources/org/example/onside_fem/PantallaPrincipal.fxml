@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="952.0" fitWidth="1410.0" layoutX="-6.0" layoutY="-45.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Imagenes/Logo/Foto%20campo.jpg" />
+            <Image url="@../../../Imagenes/Logo/Foto campo.jpg" />
          </image>
       </ImageView>
       <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -23,7 +23,7 @@
             <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../../Imagenes/Logo/Logo%20App.png" />
+                  <Image url="@../../../Imagenes/Logo/Logo App.png" />
                </image>
             </ImageView>
             <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">

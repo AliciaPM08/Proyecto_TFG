@@ -14,6 +14,7 @@ public class Aplicacion extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1400, 900);
         stage.setTitle("OnSideFem");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

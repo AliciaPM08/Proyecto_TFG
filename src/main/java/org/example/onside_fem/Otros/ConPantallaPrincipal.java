@@ -34,6 +34,7 @@ public class ConPantallaPrincipal {
     @FXML
     private Hyperlink hyperlinkAyuda;
 
+
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
 
