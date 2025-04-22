@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -18,30 +19,34 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-public class ConClasificacionE {
+public class ConEquiposE {
     @FXML
     private MenuItem volverItem;
 
     @FXML
-    private Menu menuLigas;
+    private Menu menuLiga;
 
     @FXML
     private Menu menuSelecciones;
 
     @FXML
-    private ComboBox<String> comboBoxIdiomas;
+    private ComboBox<String> comboBoxIdioma;
 
     @FXML
     private Hyperlink hyperlinkAyuda;
 
     @FXML
-    private Button btnEquipo;
+    private Button btnClasificacion;
+
+    @FXML
+    private Pane rootPane;
 
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
-
     private final Map<String, String> seleccionPantallas = new HashMap<>();
+
+    private final Map<String, String> equipoPantallas = new HashMap<>();
 
     @FXML
     public void initialize() {
@@ -50,18 +55,19 @@ public class ConClasificacionE {
         inicializarMenuInicio();
         inicializarLigas();
         inicializarSelecciones();
+        inicializarClasifiacion();
         inicializarEquipos();
         hyperlinkAyuda.setOnAction(this::abrirAyuda);
     }
 
     private void inicializarIdioma() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
-        comboBoxIdiomas.setValue("Español");
-        comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
+        comboBoxIdioma.getItems().addAll("Español", "Inglés");
+        comboBoxIdioma.setValue("Español");
+        comboBoxIdioma.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
-        String idioma = comboBoxIdiomas.getValue();
+        String idioma = comboBoxIdioma.getValue();
         Locale locale = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
         System.out.println("Idioma cambiado a: " + idioma);
     }
@@ -97,7 +103,7 @@ public class ConClasificacionE {
     }
 
     private void inicializarLigas() {
-        for (MenuItem item : menuLigas.getItems()) {
+        for (MenuItem item : menuLiga.getItems()) {
             item.setOnAction(e -> {
                 String liga = ((MenuItem) e.getSource()).getText();
                 String ruta = ligaPantallas.get(liga);
@@ -126,15 +132,47 @@ public class ConClasificacionE {
         }
     }
 
-    private void inicializarEquipos() {
-        btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PEquiposEspana.fxml"));
+    private void inicializarClasifiacion() {
+        btnClasificacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PClasificacionEspana.fxml"));
     }
+
+
+    private void inicializarEquipos() {
+        equipoPantallas.put("ivBilbao", "/org/example/onside_fem/Espana/PBilbao.fxml");
+        equipoPantallas.put("ivAtletico", "/org/example/onside_fem/Espana/Equipos/Atletico.fxml");
+        equipoPantallas.put("ivBarcelona", "/org/example/onside_fem/Espana/Equipos/Barcelona.fxml");
+        equipoPantallas.put("ivTenerife", "/org/example/onside_fem/Espana/Equipos/Tenerife.fxml");
+        equipoPantallas.put("ivDepor", "/org/example/onside_fem/Espana/Equipos/Depor.fxml");
+        equipoPantallas.put("ivEibar", "/org/example/onside_fem/Espana/Equipos/Eibar.fxml");
+        equipoPantallas.put("ivEspanyol", "/org/example/onside_fem/Espana/Equipos/Espanyol.fxml");
+        equipoPantallas.put("ivGranada", "/org/example/onside_fem/Espana/Equipos/Granada.fxml");
+        equipoPantallas.put("ivLBadalona", "/org/example/onside_fem/Espana/Equipos/LBadalona.fxml");
+        equipoPantallas.put("ivLevante", "/org/example/onside_fem/Espana/Equipos/Levante.fxml");
+        equipoPantallas.put("ivMadridCFF", "/org/example/onside_fem/Espana/Equipos/MadridCFF.fxml");
+        equipoPantallas.put("ivMadrid", "/org/example/onside_fem/Espana/Equipos/RealMadrid.fxml");
+        equipoPantallas.put("ivRealSociedad", "/org/example/onside_fem/Espana/Equipos/RealSociedad.fxml");
+        equipoPantallas.put("ivSevilla", "/org/example/onside_fem/Espana/Equipos/Sevilla.fxml");
+        equipoPantallas.put("ivValencia", "/org/example/onside_fem/Espana/Equipos/Valencia.fxml");
+        equipoPantallas.put("ivBetis", "/org/example/onside_fem/Espana/Equipos/Betis.fxml");
+
+        // Agrega listeners dinámicamente
+        for (javafx.scene.Node node : rootPane.getChildren()) {
+            if (node instanceof ImageView) {
+                String id = node.getId();
+                if (id != null && id.startsWith("iv") && equipoPantallas.containsKey(id)) {
+                    node.setOnMouseClicked(e -> cargarPantalla(equipoPantallas.get(id)));
+                    node.setStyle("-fx-cursor: hand;"); // Opcional: cambia el cursor al pasar por encima
+                }
+            }
+        }
+    }
+
 
     private void cargarPantalla(String rutaFXML) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaFXML));
             Pane root = loader.load();
-            Stage stage = (Stage) comboBoxIdiomas.getScene().getWindow();
+            Stage stage = (Stage) comboBoxIdioma.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setResizable(false);
         } catch (IOException e) {

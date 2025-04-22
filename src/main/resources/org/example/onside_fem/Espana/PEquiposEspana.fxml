@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Espana.ConEquiposE">
     <children>
         <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
                 <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
                 <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../../Imagenes/Logo/Logo%20App.png" />
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
@@ -27,7 +27,7 @@
                         <Font name="ACaslonPro-Semibold" size="36.0" />
                     </font>
                 </Label>
-                <ComboBox layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
         <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -37,7 +37,7 @@
                         <Font name="ACaslonPro-Semibold" size="24.0" />
                     </font>
                 </Label>
-                <Hyperlink layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+                <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
                     <font>
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
@@ -49,17 +49,35 @@
             <menus>
                 <Menu mnemonicParsing="false" text="Inicio">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Ligas">
+                <Menu fx:id="menuLiga" mnemonicParsing="false" text="Ligas">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                  <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Selecciones">
+                <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="Alemania" />
+                  <MenuItem mnemonicParsing="false" text="Australia" />
+                  <MenuItem mnemonicParsing="false" text="Brasil" />
+                  <MenuItem mnemonicParsing="false" text="Canada" />
+                  <MenuItem mnemonicParsing="false" text="Colombia" />
+                  <MenuItem mnemonicParsing="false" text="España" />
+                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                  <MenuItem mnemonicParsing="false" text="Francia" />
+                  <MenuItem mnemonicParsing="false" text="Nigeria" />
+                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="About" />
                     </items>
                 </Menu>
             </menus>
@@ -68,7 +86,7 @@
             <children>
                 <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Logo%20Liga/Logo%20liga.png" />
+                        <Image url="@../../../../Imagenes/Liga Española/Logo Liga/Logo liga.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
@@ -76,90 +94,85 @@
                         <Font name="ACaslonPro-Semibold" size="24.0" />
                     </font>
                 </Label>
-                <Button layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Equipos">
-                    <font>
-                        <Font name="ACaslonPro-Semibold" size="18.0" />
-                    </font>
-                </Button>
-                <Button layoutX="1127.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Clasificacion">
+                <Button fx:id="btnClasificacion" layoutX="1257.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Clasificacion">
                     <font>
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
                 </Button>
             </children></Pane>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="29.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivBilbao" fitHeight="160.0" fitWidth="160.0" layoutX="29.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Athletic%20Club/Athletic%20Club.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Athletic Club/Athletic Club.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="200.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivAtletico" fitHeight="160.0" fitWidth="160.0" layoutX="200.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Atletico%20de%20Madrid/Atletico%20Madrid.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Atletico de Madrid/Atletico Madrid.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivBarcelona" fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Barcelona/Barcelona.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Barcelona/Barcelona.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="766.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivDepor" fitHeight="160.0" fitWidth="160.0" layoutX="766.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Dep%20La%20Coruña/Dep%20La%20Coruña.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Dep La Coruña/Dep La Coruña.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="926.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivEibar" fitHeight="160.0" fitWidth="160.0" layoutX="926.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Eibar/Eibar.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Eibar/Eibar.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1072.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivEspanyol" fitHeight="160.0" fitWidth="160.0" layoutX="1072.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Espanyol/Espanyol.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Espanyol/Espanyol.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1232.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivGranada" fitHeight="160.0" fitWidth="160.0" layoutX="1232.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Granada/Granada.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Granada/Granada.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="200.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivLevante" fitHeight="160.0" fitWidth="160.0" layoutX="200.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Levante/Levante.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Levante/Levante.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="29.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivLBadalona" fitHeight="160.0" fitWidth="160.0" layoutX="29.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Levante%20Badalona/Levante%20Badalona.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Levante Badalona/Levante Badalona.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivMadridCFF" fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Madrid%20CFF/Madrid%20CFF.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Madrid CFF/Madrid CFF.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="766.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivMadrid" fitHeight="160.0" fitWidth="160.0" layoutX="766.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Real%20Madrid/Real%20Madrid.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Real Madrid/Real Madrid.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="926.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivRealSociedad" fitHeight="160.0" fitWidth="160.0" layoutX="926.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Real%20Sociedad/Real%20Sociedad.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Real Sociedad/Real Sociedad.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1072.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivSevilla" fitHeight="160.0" fitWidth="160.0" layoutX="1072.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Sevilla/Sevilla.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Sevilla/Sevilla.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="575.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivTenerife" fitHeight="160.0" fitWidth="160.0" layoutX="575.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Tenerife/Tenerife.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Tenerife/Tenerife.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1232.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivValencia" fitHeight="160.0" fitWidth="160.0" layoutX="1232.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Valencia/Valencia.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Valencia/Valencia.png" />
          </image>
       </ImageView>
       <Label layoutX="59.0" layoutY="450.0" text="Athletic Club">
@@ -182,9 +195,9 @@
             <Font name="ACaslonPro-Semibold" size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="575.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivBetis" fitHeight="160.0" fitWidth="160.0" layoutX="575.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Equipos/Betis/Betis.png" />
+            <Image url="@../../../../Imagenes/Liga Española/Equipos/Betis/Betis.png" />
          </image>
       </ImageView>
       <Label layoutX="778.0" layoutY="450.0" text="Deportivo Abanca">
