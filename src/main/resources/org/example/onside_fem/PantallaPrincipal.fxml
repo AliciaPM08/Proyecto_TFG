@@ -51,7 +51,6 @@
       </Pane>
       <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;">
         <menus>
-          <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio" />
           <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                <items>
                   <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />

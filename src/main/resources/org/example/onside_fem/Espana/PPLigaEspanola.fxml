@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="org.example.onside_fem.Espana.ConPantallaP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" >
     <children>
         <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
                 <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
                 <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../../Imagenes/Logo/Logo%20App.png" />
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
@@ -27,7 +27,7 @@
                         <Font name="ACaslonPro-Semibold" size="36.0" />
                     </font>
                 </Label>
-                <ComboBox layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
         <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -37,7 +37,7 @@
                         <Font name="ACaslonPro-Semibold" size="24.0" />
                     </font>
                 </Label>
-                <Hyperlink layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+                <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
                     <font>
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
@@ -47,19 +47,36 @@
         </Pane>
         <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;">
             <menus>
-                <Menu mnemonicParsing="false" text="Inicio">
+                <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
+               <items>
+                  <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+               </items></Menu>
+                <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                  <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Ligas">
+                <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Selecciones">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="Alemania" />
+                  <MenuItem mnemonicParsing="false" text="Australia" />
+                  <MenuItem mnemonicParsing="false" text="Brasil" />
+                  <MenuItem mnemonicParsing="false" text="Canada" />
+                  <MenuItem mnemonicParsing="false" text="Colombia" />
+                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                  <MenuItem mnemonicParsing="false" text="España" />
+                  <MenuItem mnemonicParsing="false" text="Francia" />
+                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
+                  <MenuItem mnemonicParsing="false" text="Japon" />
+                  <MenuItem mnemonicParsing="false" text="Nigeria" />
+                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                  <MenuItem mnemonicParsing="false" text="Suecia" />
                     </items>
                 </Menu>
             </menus>
@@ -68,7 +85,7 @@
          <children>
             <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Logo%20Liga/Logo%20liga.png" />
+                  <Image url="@../../../../Imagenes/Liga Española/Logo Liga/Logo liga.png" />
                </image>
             </ImageView>
             <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
@@ -76,12 +93,12 @@
                   <Font name="ACaslonPro-Semibold" size="24.0" />
                </font>
             </Label>
-            <Button layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Equipos">
+            <Button fx:id="btnEquipo" layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Equipos">
                <font>
                   <Font name="ACaslonPro-Semibold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="1127.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Clasificacion">
+            <Button fx:id="btnClasificacion" layoutX="1127.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Clasificacion">
                <font>
                   <Font name="ACaslonPro-Semibold" size="18.0" />
                </font>

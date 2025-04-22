@@ -14,14 +14,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" fx:controller="org.example.onside_fem.Espana.ConClasificacionE" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
                 <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
                 <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../../Imagenes/Logo/Logo%20App.png" />
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
@@ -70,7 +70,7 @@
             <children>
                 <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../../Imagenes/Liga%20Española/Logo%20Liga/Logo%20liga.png" />
+                        <Image url="@../../../../Imagenes/Liga Española/Logo Liga/logo liga2.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
