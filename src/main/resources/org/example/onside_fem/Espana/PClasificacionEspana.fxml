@@ -102,17 +102,17 @@
                     </font>
                 </Button>
             </children></Pane>
-      <TableView layoutX="362.0" layoutY="178.0" prefHeight="674.0" prefWidth="685.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
+      <TableView fx:id="tableView" layoutX="340.0" layoutY="218.0" prefHeight="445.0" prefWidth="718.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
         <columns>
-          <TableColumn prefWidth="75.0" text="Equipo" />
-          <TableColumn prefWidth="75.0" text="Posicion" />
-            <TableColumn prefWidth="75.0" text="Puntos" />
-            <TableColumn prefWidth="75.0" text="P. Jugados" />
-            <TableColumn prefWidth="75.0" text="Victorias" />
-            <TableColumn prefWidth="75.0" text="Empates" />
-            <TableColumn prefWidth="75.0" text="Perdidos" />
-            <TableColumn prefWidth="75.0" text="G. A Favor" />
-            <TableColumn prefWidth="75.0" text="G. En Contra" />
+          <TableColumn fx:id="colNombre" prefWidth="96.0" text="Equipo" />
+          <TableColumn fx:id="colPosicion" prefWidth="68.0" text="Posicion" />
+            <TableColumn fx:id="colPuntos" prefWidth="77.0" text="Puntos" />
+            <TableColumn fx:id="colJugados" prefWidth="79.0" text="P. Jugados" />
+            <TableColumn fx:id="colVictorias" prefWidth="70.0" text="Victorias" />
+            <TableColumn fx:id="colEmpates" prefWidth="78.0" text="Empates" />
+            <TableColumn fx:id="colPerdidos" prefWidth="69.0" text="Perdidos" />
+            <TableColumn fx:id="colFavor" prefWidth="84.0" text="G. A Favor" />
+            <TableColumn fx:id="colContra" prefWidth="88.0" text="G. En Contra" />
         </columns>
       </TableView>
     </children>

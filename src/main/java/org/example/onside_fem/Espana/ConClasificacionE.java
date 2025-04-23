@@ -1,5 +1,6 @@
 package org.example.onside_fem.Espana;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,8 +9,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.example.onside_fem.BBDD.ClasifiacionDAO;
+import org.example.onside_fem.BBDD.Clasificacion;
 
 import java.awt.*;
 import java.io.File;
@@ -43,6 +47,19 @@ public class ConClasificacionE {
 
     private final Map<String, String> seleccionPantallas = new HashMap<>();
 
+    @FXML private TableView<Clasificacion> tableView;
+    @FXML private TableColumn<Clasificacion, String> colNombre;
+    @FXML private TableColumn<Clasificacion, Integer> colPosicion;
+    @FXML private TableColumn<Clasificacion, Integer> colPuntos;
+    @FXML private TableColumn<Clasificacion, Integer> colJugados;
+    @FXML private TableColumn<Clasificacion, Integer> colVictorias;
+    @FXML private TableColumn<Clasificacion, Integer> colEmpates;
+    @FXML private TableColumn<Clasificacion, Integer> colPerdidos;
+    @FXML private TableColumn<Clasificacion, Integer> colFavor;
+    @FXML private TableColumn<Clasificacion, Integer> colContra;
+
+    private String ligaActual = "Finetwork Liga F";
+
     @FXML
     public void initialize() {
         inicializarIdioma();
@@ -51,6 +68,7 @@ public class ConClasificacionE {
         inicializarLigas();
         inicializarSelecciones();
         inicializarEquipos();
+        inicializarTabla();
         hyperlinkAyuda.setOnAction(this::abrirAyuda);
     }
 
@@ -128,6 +146,22 @@ public class ConClasificacionE {
 
     private void inicializarEquipos() {
         btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PEquiposEspana.fxml"));
+    }
+
+    private void inicializarTabla() {
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colPosicion.setCellValueFactory(new PropertyValueFactory<>("posicion"));
+        colPuntos.setCellValueFactory(new PropertyValueFactory<>("puntos"));
+        colJugados.setCellValueFactory(new PropertyValueFactory<>("partidosJugados"));
+        colVictorias.setCellValueFactory(new PropertyValueFactory<>("victorias"));
+        colEmpates.setCellValueFactory(new PropertyValueFactory<>("empates"));
+        colPerdidos.setCellValueFactory(new PropertyValueFactory<>("perdidos"));
+        colFavor.setCellValueFactory(new PropertyValueFactory<>("golesFavor"));
+        colContra.setCellValueFactory(new PropertyValueFactory<>("golesContra"));
+
+        tableView.setItems(FXCollections.observableArrayList(
+                ClasifiacionDAO.obtenerEquiposPorLiga(ligaActual)
+        ));
     }
 
     private void cargarPantalla(String rutaFXML) {

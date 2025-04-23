@@ -16,7 +16,7 @@ public class ConexionBD {
      * Obtiene una conexión a la base de datos.
      * @return Una conexión a la base de datos, o null si no se pudo establecer la conexión.
      */
-    public static Connection getConexion() {
+    public static Connection conectar() {
         try {
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
