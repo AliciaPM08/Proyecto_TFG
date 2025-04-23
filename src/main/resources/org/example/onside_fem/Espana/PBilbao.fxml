@@ -102,7 +102,7 @@
             </Tab>
         </tabs>
       </TabPane>
-      <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="294.0" prefWidth="464.0">
+      <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="56.0" prefWidth="464.0">
         <columns>
           <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
           <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
@@ -135,17 +135,17 @@
             <Font name="ACaslonPro-Semibold" size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="137.0" fitWidth="112.0" layoutX="936.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="137.0" fitWidth="112.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga Española/Equipos/Athletic Club/CamisetaP.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="121.0" fitWidth="119.0" layoutX="1180.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="121.0" fitWidth="119.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga Española/Equipos/Athletic Club/CamisetaS.png" />
          </image>
       </ImageView>
-      <Label layoutX="1018.0" layoutY="204.0" text="EQUIPACIONES">
+      <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
          <font>
             <Font name="ACaslonPro-Bold" size="24.0" />
          </font>

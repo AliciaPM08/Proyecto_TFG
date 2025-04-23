@@ -8,8 +8,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.example.onside_fem.BBDD.Estadisticas;
+import org.example.onside_fem.BBDD.EstadisticasDAO;
 
 import java.awt.*;
 import java.io.File;
@@ -46,6 +49,13 @@ public class ConBilbaoP {
 
     private final Map<String, String> seleccionPantallas = new HashMap<>();
 
+    @FXML private TableView<Estadisticas> tableEstadisticas;
+    @FXML private TableColumn<Estadisticas, Integer> colGAnotados;
+    @FXML private TableColumn<Estadisticas, Integer> colGRecibidos;
+    @FXML private TableColumn<Estadisticas, Integer> colTAmarillas;
+    @FXML private TableColumn<Estadisticas, Integer> colTRojas;
+
+
     @FXML
     public void initialize() {
         inicializarIdioma();
@@ -55,6 +65,7 @@ public class ConBilbaoP {
         inicializarSelecciones();
         inicializarEquipos();
         inicializarClasifiacion();
+        inicializarTablaEstadisticas();
         hyperlinkAyuda.setOnAction(this::abrirAyuda);
     }
 
@@ -137,6 +148,22 @@ public class ConBilbaoP {
     private void inicializarClasifiacion() {
         btnClasifiacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PClasificacionEspana.fxml"));
     }
+
+    private void inicializarTablaEstadisticas() {
+        colGAnotados.setCellValueFactory(new PropertyValueFactory<>("golesAnotados"));
+        colGRecibidos.setCellValueFactory(new PropertyValueFactory<>("golesRecibidos"));
+        colTAmarillas.setCellValueFactory(new PropertyValueFactory<>("tarjetasAmarillas"));
+        colTRojas.setCellValueFactory(new PropertyValueFactory<>("tarjetasRojas"));
+
+        Estadisticas estadisticas = new EstadisticasDAO().obtenerEstadisticas("Athletic Club", "Finetwork Liga F");
+
+        if (estadisticas != null) {
+            tableEstadisticas.getItems().setAll(estadisticas);
+        } else {
+            System.err.println("No se encontraron estadísticas.");
+        }
+    }
+
 
     private void cargarPantalla(String rutaFXML) {
         try {
