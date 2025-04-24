@@ -54,7 +54,7 @@
             <children>
                 <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../Imagenes/Liga Española/Logo Liga/Logo liga.png" />
+                        <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Logo liga.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
@@ -75,7 +75,7 @@
             </children></Pane>
       <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="47.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Athletic Club/Athletic Club.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Athletic Club/Athletic Club.png" />
          </image>
       </ImageView>
       <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="513.0" tabClosingPolicy="UNAVAILABLE">
@@ -137,12 +137,12 @@
       </Label>
       <ImageView fitHeight="137.0" fitWidth="112.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Athletic Club/CamisetaP.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Athletic Club/CamisetaP.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="121.0" fitWidth="119.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Athletic Club/CamisetaS.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Athletic Club/CamisetaS.png" />
          </image>
       </ImageView>
       <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">

@@ -1,23 +1,34 @@
 package org.example.onside_fem.Espana;
 
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import org.example.onside_fem.BBDD.Estadisticas;
 import org.example.onside_fem.BBDD.EstadisticasDAO;
+import org.example.onside_fem.BBDD.Jugadora;
+import org.example.onside_fem.BBDD.JugadoraDAO;
 
-import java.awt.*;
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -55,6 +66,25 @@ public class ConBilbaoP {
     @FXML private TableColumn<Estadisticas, Integer> colTAmarillas;
     @FXML private TableColumn<Estadisticas, Integer> colTRojas;
 
+    private static final Map<String, String> mapaPosiciones = new HashMap<>();
+
+    static {
+        mapaPosiciones.put("PO", "Portera");
+        mapaPosiciones.put("DE", "Defensas");
+        mapaPosiciones.put("CC", "Centrocampistas");
+        mapaPosiciones.put("DL", "Delantera");
+    }
+
+    @FXML
+    private Tab tabPortera;
+    @FXML
+    private Tab tabDefensas;
+    @FXML
+    private Tab tabCentro;
+    @FXML
+    private Tab tabDelantera;
+
+    private JugadoraDAO jugadoraDAO;
 
     @FXML
     public void initialize() {
@@ -66,6 +96,8 @@ public class ConBilbaoP {
         inicializarEquipos();
         inicializarClasifiacion();
         inicializarTablaEstadisticas();
+        jugadoraDAO = new JugadoraDAO();
+        cargarJugadores();
         hyperlinkAyuda.setOnAction(this::abrirAyuda);
     }
 
@@ -164,6 +196,87 @@ public class ConBilbaoP {
         }
     }
 
+    private void cargarJugadores() {
+        cargarJugadoresEnTab("PO", tabPortera); // "PO" para porteras
+        cargarJugadoresEnTab("DF", tabDefensas); // "DE" para defensas
+        cargarJugadoresEnTab("CC", tabCentro); // "CC" para centrocampistas
+        cargarJugadoresEnTab("DL", tabDelantera); // "DL" para delantera
+    }
+
+    private void cargarJugadoresEnTab(String abreviaturaPosicion, Tab tab) {
+        List<Jugadora> jugadores = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Athletic Club", abreviaturaPosicion);
+        VBox vbox = new VBox(10);
+
+        for (Jugadora jugadora : jugadores) {
+            Button btn = new Button(jugadora.getNombre());
+            btn.setOnAction(e -> mostrarInfoJugadora(jugadora, "Liga Española")); // Puedes hacerlo variable
+            vbox.getChildren().add(btn);
+        }
+
+        ScrollPane scroll = new ScrollPane(vbox);
+        tab.setContent(scroll);
+    }
+
+    private void mostrarInfoJugadora(Jugadora jugadora, String liga) {
+        Stage infoStage = new Stage();
+        infoStage.setTitle(jugadora.getNombre());
+        infoStage.setResizable(false);
+
+        // Estilos personalizados para los textos
+        Label nombre = new Label("Nombre: " + jugadora.getNombre());
+        nombre.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2a2a2a;");
+
+        Label posicion = new Label("Posición: " + obtenerNombrePosicion(jugadora.getPosicion()));
+        posicion.setStyle("-fx-font-size: 14px; -fx-font-weight: normal; -fx-text-fill: #555;");
+
+        Label equipon = new Label("Año de nacimiento: : " + jugadora.getNombre_equipo());
+        equipon.setStyle("-fx-font-size: 14px; -fx-font-weight: normal; -fx-text-fill: #777;");
+
+        Label anioNacimiento = new Label("Equipo: " + jugadora.getFecha());
+        anioNacimiento.setStyle("-fx-font-size: 14px; -fx-font-weight: normal; -fx-text-fill: #777;");
+
+        // Creamos el VBox para organizar los componentes
+        VBox vbox = new VBox(10, cargarFotoJugadora(jugadora, liga), nombre, posicion, equipon, anioNacimiento);
+        vbox.setStyle("-fx-padding: 20; -fx-background-color: #f4f4f4; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, #000, 10, 0, 0, 2);");
+
+        Scene scene = new Scene(vbox, 400, 300);
+        infoStage.setScene(scene);
+
+        // Cerrar el Stage después de 5 segundos
+        PauseTransition delay = new PauseTransition(Duration.seconds(5));
+        delay.setOnFinished(event -> infoStage.close());
+        delay.play();
+
+        infoStage.show();
+    }
+
+
+    private ImageView cargarFotoJugadora(Jugadora jugadora, String liga) {
+        String rutaImagen = "/Imagenes/Liga_Española/Jugadoras/Athletic_Club/"
+                + jugadora.getNombre() + ".png";
+
+        InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
+
+        Image imagen;
+        if (inputStream != null) {
+            imagen = new Image(inputStream);
+        } else {
+            System.err.println("No se encontró la imagen para: " + rutaImagen);
+            inputStream = getClass().getResourceAsStream("/Imagenes/default_jugadora.png");
+            if (inputStream == null) {
+                throw new RuntimeException("Imagen por defecto no encontrada.");
+            }
+            imagen = new Image(inputStream);
+        }
+
+        ImageView imageView = new ImageView(imagen);
+        imageView.setFitWidth(150);  // Reducimos el tamaño de la imagen
+        imageView.setFitHeight(150); // Ajuste proporcional
+        imageView.setPreserveRatio(true);
+
+        return imageView;
+    }
+
 
     private void cargarPantalla(String rutaFXML) {
         try {
@@ -189,5 +302,9 @@ public class ConBilbaoP {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private String obtenerNombrePosicion(String abreviatura) {
+        return mapaPosiciones.getOrDefault(abreviatura, "Desconocido");
     }
 }

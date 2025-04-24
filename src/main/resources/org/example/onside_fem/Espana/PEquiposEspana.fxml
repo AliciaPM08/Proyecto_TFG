@@ -86,7 +86,7 @@
             <children>
                 <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../Imagenes/Liga Española/Logo Liga/Logo liga.png" />
+                        <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Logo liga.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
@@ -102,77 +102,77 @@
             </children></Pane>
       <ImageView fx:id="ivBilbao" fitHeight="160.0" fitWidth="160.0" layoutX="29.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Athletic Club/Athletic Club.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Athletic Club/Athletic Club.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivAtletico" fitHeight="160.0" fitWidth="160.0" layoutX="200.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Atletico de Madrid/Atletico Madrid.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Atletico de Madrid/Atletico Madrid.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivBarcelona" fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Barcelona/Barcelona.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Barcelona/Barcelona.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivDepor" fitHeight="160.0" fitWidth="160.0" layoutX="766.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Dep La Coruña/Dep La Coruña.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Dep La Coruña/Dep La Coruña.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivEibar" fitHeight="160.0" fitWidth="160.0" layoutX="926.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Eibar/Eibar.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Eibar/Eibar.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivEspanyol" fitHeight="160.0" fitWidth="160.0" layoutX="1072.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Espanyol/Espanyol.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Espanyol/Espanyol.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivGranada" fitHeight="160.0" fitWidth="160.0" layoutX="1232.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Granada/Granada.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Granada/Granada.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivLevante" fitHeight="160.0" fitWidth="160.0" layoutX="200.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Levante/Levante.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante/Levante.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivLBadalona" fitHeight="160.0" fitWidth="160.0" layoutX="29.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Levante Badalona/Levante Badalona.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante Badalona/Levante Badalona.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivMadridCFF" fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Madrid CFF/Madrid CFF.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Madrid CFF/Madrid CFF.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivMadrid" fitHeight="160.0" fitWidth="160.0" layoutX="766.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Real Madrid/Real Madrid.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Real Madrid/Real Madrid.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivRealSociedad" fitHeight="160.0" fitWidth="160.0" layoutX="926.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Real Sociedad/Real Sociedad.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Real Sociedad/Real Sociedad.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivSevilla" fitHeight="160.0" fitWidth="160.0" layoutX="1072.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Sevilla/Sevilla.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Sevilla/Sevilla.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivTenerife" fitHeight="160.0" fitWidth="160.0" layoutX="575.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Tenerife/Tenerife.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Tenerife/Tenerife.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ivValencia" fitHeight="160.0" fitWidth="160.0" layoutX="1232.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Valencia/Valencia.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Valencia/Valencia.png" />
          </image>
       </ImageView>
       <Label layoutX="59.0" layoutY="450.0" text="Athletic Club">
@@ -197,7 +197,7 @@
       </Label>
       <ImageView fx:id="ivBetis" fitHeight="160.0" fitWidth="160.0" layoutX="575.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Imagenes/Liga Española/Equipos/Betis/Betis.png" />
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Betis/Betis.png" />
          </image>
       </ImageView>
       <Label layoutX="778.0" layoutY="450.0" text="Deportivo Abanca">
