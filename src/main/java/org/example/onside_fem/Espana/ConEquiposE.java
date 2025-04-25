@@ -139,7 +139,7 @@ public class ConEquiposE {
 
     private void inicializarEquipos() {
         equipoPantallas.put("ivBilbao", "/org/example/onside_fem/Espana/PBilbao.fxml");
-        equipoPantallas.put("ivAtletico", "/org/example/onside_fem/Espana/Equipos/Atletico.fxml");
+        equipoPantallas.put("ivAtletico", "/org/example/onside_fem/Espana/PAtleti.fxml");
         equipoPantallas.put("ivBarcelona", "/org/example/onside_fem/Espana/Equipos/Barcelona.fxml");
         equipoPantallas.put("ivTenerife", "/org/example/onside_fem/Espana/Equipos/Tenerife.fxml");
         equipoPantallas.put("ivDepor", "/org/example/onside_fem/Espana/Equipos/Depor.fxml");
