@@ -70,7 +70,7 @@ public class ConBilbaoP {
 
     static {
         mapaPosiciones.put("PO", "Portera");
-        mapaPosiciones.put("DE", "Defensas");
+        mapaPosiciones.put("DF", "Defensas");
         mapaPosiciones.put("CC", "Centrocampistas");
         mapaPosiciones.put("DL", "Delantera");
     }
@@ -253,7 +253,7 @@ public class ConBilbaoP {
 
     private ImageView cargarFotoJugadora(Jugadora jugadora, String liga) {
         String rutaImagen = "/Imagenes/Liga_Española/Jugadoras/Athletic_Club/"
-                + jugadora.getNombre() + ".png";
+                + jugadora.getNombre() + ".jpg";
 
         InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
 
