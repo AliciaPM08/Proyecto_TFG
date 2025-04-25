@@ -243,7 +243,7 @@ public class ConBilbaoP {
         infoStage.setScene(scene);
 
         // Cerrar el Stage después de 5 segundos
-        PauseTransition delay = new PauseTransition(Duration.seconds(5));
+        PauseTransition delay = new PauseTransition(Duration.seconds(3));
         delay.setOnFinished(event -> infoStage.close());
         delay.play();
 
@@ -285,6 +285,7 @@ public class ConBilbaoP {
             Stage stage = (Stage) comboBoxIdiomas.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setResizable(false);
+
         } catch (IOException e) {
             System.err.println("Error al cargar: " + rutaFXML);
             e.printStackTrace();
