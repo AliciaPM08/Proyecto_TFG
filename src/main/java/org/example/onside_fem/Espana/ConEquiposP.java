@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-public class ConEquiposE {
+public class ConEquiposP {
     @FXML
     private MenuItem volverItem;
 
@@ -142,7 +142,7 @@ public class ConEquiposE {
         equipoPantallas.put("ivAtletico", "/org/example/onside_fem/Espana/PAtleti.fxml");
         equipoPantallas.put("ivBarcelona", "/org/example/onside_fem/Espana/PBarsa.fxml");
         equipoPantallas.put("ivTenerife", "/org/example/onside_fem/Espana/PTenerife.fxml");
-        equipoPantallas.put("ivDepor", "/org/example/onside_fem/Espana/Equipos/Depor.fxml");
+        equipoPantallas.put("ivDepor", "/org/example/onside_fem/Espana/PDepor.fxml");
         equipoPantallas.put("ivEibar", "/org/example/onside_fem/Espana/Equipos/Eibar.fxml");
         equipoPantallas.put("ivEspanyol", "/org/example/onside_fem/Espana/Equipos/Espanyol.fxml");
         equipoPantallas.put("ivGranada", "/org/example/onside_fem/Espana/Equipos/Granada.fxml");
