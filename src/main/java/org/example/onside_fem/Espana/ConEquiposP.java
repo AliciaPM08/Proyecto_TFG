@@ -143,7 +143,7 @@ public class ConEquiposP {
         equipoPantallas.put("ivBarcelona", "/org/example/onside_fem/Espana/PBarsa.fxml");
         equipoPantallas.put("ivTenerife", "/org/example/onside_fem/Espana/PTenerife.fxml");
         equipoPantallas.put("ivDepor", "/org/example/onside_fem/Espana/PDepor.fxml");
-        equipoPantallas.put("ivEibar", "/org/example/onside_fem/Espana/Equipos/Eibar.fxml");
+        equipoPantallas.put("ivEibar", "/org/example/onside_fem/Espana/PEibar.fxml");
         equipoPantallas.put("ivEspanyol", "/org/example/onside_fem/Espana/Equipos/Espanyol.fxml");
         equipoPantallas.put("ivGranada", "/org/example/onside_fem/Espana/Equipos/Granada.fxml");
         equipoPantallas.put("ivLBadalona", "/org/example/onside_fem/Espana/Equipos/LBadalona.fxml");
