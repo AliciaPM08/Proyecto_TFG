@@ -146,14 +146,14 @@ public class ConEquiposP {
         equipoPantallas.put("ivEibar", "/org/example/onside_fem/Espana/PEibar.fxml");
         equipoPantallas.put("ivEspanyol", "/org/example/onside_fem/Espana/PEspayol.fxml");
         equipoPantallas.put("ivGranada", "/org/example/onside_fem/Espana/PGranada.fxml");
-        equipoPantallas.put("ivLBadalona", "/org/example/onside_fem/Espana/Equipos/LBadalona.fxml");
-        equipoPantallas.put("ivLevante", "/org/example/onside_fem/Espana/Equipos/Levante.fxml");
-        equipoPantallas.put("ivMadridCFF", "/org/example/onside_fem/Espana/Equipos/MadridCFF.fxml");
-        equipoPantallas.put("ivMadrid", "/org/example/onside_fem/Espana/Equipos/RealMadrid.fxml");
-        equipoPantallas.put("ivRealSociedad", "/org/example/onside_fem/Espana/Equipos/RealSociedad.fxml");
-        equipoPantallas.put("ivSevilla", "/org/example/onside_fem/Espana/Equipos/Sevilla.fxml");
-        equipoPantallas.put("ivValencia", "/org/example/onside_fem/Espana/Equipos/Valencia.fxml");
-        equipoPantallas.put("ivBetis", "/org/example/onside_fem/Espana/Equipos/Betis.fxml");
+        equipoPantallas.put("ivLBadalona", "/org/example/onside_fem/Espana/PLevanteB.fxml");
+        equipoPantallas.put("ivLevante", "/org/example/onside_fem/Espana/PLevante.fxml");
+        equipoPantallas.put("ivMadridCFF", "/org/example/onside_fem/Espana/PMadrid.fxml");
+        equipoPantallas.put("ivMadrid", "/org/example/onside_fem/Espana/PRMadrid.fxml");
+        equipoPantallas.put("ivRealSociedad", "/org/example/onside_fem/Espana/PRSociedad.fxml");
+        equipoPantallas.put("ivSevilla", "/org/example/onside_fem/Espana/PSevilla.fxml");
+        equipoPantallas.put("ivValencia", "/org/example/onside_fem/Espana/PValecia.fxml");
+        equipoPantallas.put("ivBetis", "/org/example/onside_fem/Espana/PBetis.fxml");
 
         // Agrega listeners dinámicamente
         for (javafx.scene.Node node : rootPane.getChildren()) {
