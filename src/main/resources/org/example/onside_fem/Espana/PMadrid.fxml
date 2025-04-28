@@ -78,7 +78,7 @@
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Madrid CFF/Madrid CFF.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="513.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="513.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffc0dc; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tabPortera" text="Portera">
                     <content>
@@ -102,7 +102,7 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="464.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-radius: 3; -fx-border-width: 5;">
+        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="464.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffc0dc; -fx-border-radius: 3; -fx-border-width: 5;">
             <columns>
                 <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
                 <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
@@ -115,17 +115,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 1991-2003-2009">
+        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 2010">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Yerai Arti">
+        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Victor Alba">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Iprua">
+        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Fernando Torres">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -137,22 +137,17 @@
         </Label>
         <ImageView fitHeight="168.0" fitWidth="168.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Eibar/CamisetaP.png" />
+                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Madrid CFF/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="145.0" fitWidth="145.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="168.0" fitWidth="166.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Eibar/CamisetaS.png" />
+                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Madrid CFF/CamisetaS.png" />
             </image>
         </ImageView>
         <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
-            </font>
-        </Label>
-        <Label layoutX="68.0" layoutY="798.0" text="1 Supercopa de España">
-            <font>
-                <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
         <Label layoutX="77.0" layoutY="399.0" text="PLANTILLA">
