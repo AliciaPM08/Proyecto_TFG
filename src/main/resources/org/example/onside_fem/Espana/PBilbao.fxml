@@ -102,7 +102,7 @@
             </Tab>
         </tabs>
       </TabPane>
-      <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="464.0" style="-fx-background-color: #ffffff; -fx-border-color: #9c0001; -fx-border-radius: 3; -fx-border-width: 5;" stylesheets="@../Estilos/EstiloTAb.css">
+      <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="464.0" style="-fx-background-color: #ffffff; -fx-border-color: #9c0001; -fx-border-radius: 3; -fx-border-width: 5;">
         <columns>
           <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
           <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
