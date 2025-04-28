@@ -187,7 +187,7 @@ public class ConBetisP {
         colTAmarillas.setCellValueFactory(new PropertyValueFactory<>("tarjetasAmarillas"));
         colTRojas.setCellValueFactory(new PropertyValueFactory<>("tarjetasRojas"));
 
-        Estadisticas estadisticas = new EstadisticasDAO().obtenerEstadisticas("Betis", "Finetwork Liga F");
+        Estadisticas estadisticas = new EstadisticasDAO().obtenerEstadisticas("Real Betis", "Finetwork Liga F");
 
         if (estadisticas != null) {
             tableEstadisticas.getItems().setAll(estadisticas);
@@ -204,7 +204,7 @@ public class ConBetisP {
     }
 
     private void cargarJugadoresEnTab(String abreviaturaPosicion, Tab tab) {
-        List<Jugadora> jugadores = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Betis", abreviaturaPosicion);
+        List<Jugadora> jugadores = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Real Betis", abreviaturaPosicion);
         VBox vbox = new VBox(10);
 
         for (Jugadora jugadora : jugadores) {
