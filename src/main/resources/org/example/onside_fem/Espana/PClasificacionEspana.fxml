@@ -88,7 +88,7 @@
             <children>
                 <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../Imagenes/Liga%20Española/Logo%20Liga/Logo%20liga.png" />
+                        <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Logo liga.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
