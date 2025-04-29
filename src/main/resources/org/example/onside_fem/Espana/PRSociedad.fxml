@@ -110,22 +110,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="REAL SOCIEDAD">
+        <Label layoutX="233.0" layoutY="173.0" text="REAL SOCIEDAD DE FUTBOL SAD">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 2020">
+        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 2004">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Alberto Toril">
+        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Jose Luis Sanchez Vera">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Alfredo Di Stefano">
+        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Instalaciones Zubieta">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -135,14 +135,14 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="168.0" fitWidth="168.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="213.0" fitWidth="160.0" layoutX="887.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Eibar/CamisetaP.png" />
+                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Real Sociedad/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="145.0" fitWidth="145.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="197.0" fitWidth="150.0" layoutX="1124.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Eibar/CamisetaS.png" />
+                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Real Sociedad/CamisetaS.png" />
             </image>
         </ImageView>
         <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
@@ -197,5 +197,10 @@
                 </Menu>
             </menus>
         </MenuBar>
+      <Label layoutX="77.0" layoutY="789.0" prefHeight="31.0" prefWidth="197.0" text="1 Copa de la Reina">
+         <font>
+            <Font name="ACaslonPro-Regular" size="24.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
