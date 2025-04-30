@@ -160,7 +160,7 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <MenuBar layoutX="-3.0" layoutY="56.0" prefHeight="25.0" prefWidth="1406.0" style="-fx-background-color: #ff6d6e;">
+        <MenuBar layoutX="-3.0" layoutY="56.0" prefHeight="25.0" prefWidth="1406.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
                 <Menu mnemonicParsing="false" text="Inicio">
                     <items>

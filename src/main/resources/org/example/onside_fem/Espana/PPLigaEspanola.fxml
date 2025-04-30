@@ -45,7 +45,7 @@
                 <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
-        <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;">
+        <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
                 <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
                <items>
@@ -81,7 +81,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
+        <Pane layoutX="-1.0" layoutY="95.0" prefHeight="68.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
          <children>
             <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                <image>

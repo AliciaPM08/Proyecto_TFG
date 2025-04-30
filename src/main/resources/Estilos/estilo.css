@@ -1,0 +1,14 @@
+.menu-bar {
+    -fx-font-size: 13px;
+    -fx-background-color: #ff6d6e;
+}
+
+.menu {
+    -fx-font-size: 13px;
+    -fx-padding: 10px;
+}
+
+.menu-item {
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+}

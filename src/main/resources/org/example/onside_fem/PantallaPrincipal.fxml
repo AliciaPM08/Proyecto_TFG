@@ -49,7 +49,7 @@
             <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
          </children>
       </Pane>
-      <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;">
+      <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../Estilos/estilo.css">
         <menus>
           <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                <items>
@@ -81,6 +81,6 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Pane layoutX="268.0" layoutY="81.0" prefHeight="789.0" prefWidth="865.0" style="-fx-background-color: #ffffff;" />
+      <Pane layoutX="268.0" layoutY="95.0" prefHeight="775.0" prefWidth="865.0" style="-fx-background-color: #ffffff;" />
    </children>
 </Pane>
