@@ -1,25 +1,34 @@
-package org.example.onside_fem.Espana;
+package org.example.onside_fem.Australia;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.example.onside_fem.BBDD.Estadisticas;
+import org.example.onside_fem.BBDD.EstadisticasDAO;
+import org.example.onside_fem.BBDD.Jugadora;
+import org.example.onside_fem.BBDD.JugadoraDAO;
 
-
-import java.awt.Desktop;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class ConPantallaP {
+public class ConAdelaideP {
     @FXML
     private MenuItem volverItem;
 
@@ -30,22 +39,50 @@ public class ConPantallaP {
     private Menu menuSelecciones;
 
     @FXML
-    private ComboBox<String> comboBoxIdioma;
+    private ComboBox<String> comboBoxIdiomas;
 
     @FXML
     private Hyperlink hyperlinkAyuda;
 
     @FXML
-    private Button btnClasificacion;
+    private Button btnEquipo;
 
     @FXML
-    private Button btnEquipo;
+    private Button btnClasifiacion;
 
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
 
     private final Map<String, String> seleccionPantallas = new HashMap<>();
+
+    @FXML private TableView<Estadisticas> tableEstadisticas;
+    @FXML private TableColumn<Estadisticas, Integer> colGAnotados;
+    @FXML private TableColumn<Estadisticas, Integer> colGRecibidos;
+    @FXML private TableColumn<Estadisticas, Integer> colTAmarillas;
+    @FXML private TableColumn<Estadisticas, Integer> colTRojas;
+
+    @FXML private ListView<String> listPorteras;
+    @FXML private ListView<String> listDefensas;
+    @FXML private ListView<String> listCentros;
+    @FXML private ListView<String> listDelanteras;
+
+    @FXML private Label lblNombre;
+    @FXML private Label lblPosicion;
+    @FXML private Label lblEquipo;
+    @FXML private Label lblFecha;
+    @FXML private ImageView imgJugadora;
+
+    private static final Map<String, String> mapaPosiciones = new HashMap<>();
+
+    static {
+        mapaPosiciones.put("PO", "Portera");
+        mapaPosiciones.put("DF", "Defensas");
+        mapaPosiciones.put("CC", "Centrocampistas");
+        mapaPosiciones.put("DL", "Delantera");
+    }
+
+    private JugadoraDAO jugadoraDAO;
 
     @FXML
     public void initialize() {
@@ -54,19 +91,22 @@ public class ConPantallaP {
         inicializarMenuInicio();
         inicializarLigas();
         inicializarSelecciones();
-        inicializarClasifiacion();
         inicializarEquipos();
+        inicializarClasifiacion();
+        inicializarTablaEstadisticas();
+        jugadoraDAO = new JugadoraDAO();
+        cargarJugadores();
         hyperlinkAyuda.setOnAction(this::abrirAyuda);
     }
 
     private void inicializarIdioma() {
-        comboBoxIdioma.getItems().addAll("Español", "Inglés");
-        comboBoxIdioma.setValue("Español");
-        comboBoxIdioma.setOnAction(e -> cambiarIdioma());
+        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.setValue("Español");
+        comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
-        String idioma = comboBoxIdioma.getValue();
+        String idioma = comboBoxIdiomas.getValue();
         Locale locale = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
         System.out.println("Idioma cambiado a: " + idioma);
     }
@@ -131,21 +171,76 @@ public class ConPantallaP {
         }
     }
 
-    private void inicializarClasifiacion() {
-        btnClasificacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PClasificacionEspana.fxml"));
+    private void inicializarEquipos() {
+        btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Australia/PEquiposAustralia.fxml"));
     }
 
-    private void inicializarEquipos() {
-        btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PEquiposEspana.fxml"));
+    private void inicializarClasifiacion() {
+        btnClasifiacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Australia/PClasificacionAustralia.fxml"));
+    }
+
+    private void inicializarTablaEstadisticas() {
+        colGAnotados.setCellValueFactory(new PropertyValueFactory<>("golesAnotados"));
+        colGRecibidos.setCellValueFactory(new PropertyValueFactory<>("golesRecibidos"));
+        colTAmarillas.setCellValueFactory(new PropertyValueFactory<>("tarjetasAmarillas"));
+        colTRojas.setCellValueFactory(new PropertyValueFactory<>("tarjetasRojas"));
+
+        Estadisticas estadisticas = new EstadisticasDAO().obtenerEstadisticas("Adelaide Utd", "Liberty A-League");
+
+        if (estadisticas != null) {
+            tableEstadisticas.getItems().setAll(estadisticas);
+        } else {
+            System.err.println("No se encontraron estadísticas.");
+        }
+    }
+
+    private void cargarJugadores() {
+        cargarListaJugadoras("PO", listPorteras);
+        cargarListaJugadoras("DF", listDefensas);
+        cargarListaJugadoras("CC", listCentros);
+        cargarListaJugadoras("DL", listDelanteras);
+    }
+
+    private void cargarListaJugadoras(String posicion, ListView<String> listView) {
+        List<Jugadora> jugadoras = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Adelaide Utd", posicion);
+        for (Jugadora j : jugadoras) {
+            listView.getItems().add(j.getNombre());
+        }
+
+        listView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                Jugadora j = jugadoraDAO.obtenerJugadoraPorNombre("Adelaide Utd", newVal);
+                mostrarInfoEnPanel(j, "Liberty A-League");
+            }
+        });
+    }
+
+    private void mostrarInfoEnPanel(Jugadora jugadora, String liga) {
+        lblNombre.setText("Nombre: " + jugadora.getNombre());
+        lblPosicion.setText("Posición: " + obtenerNombrePosicion(jugadora.getPosicion()));
+        lblEquipo.setText("Fecha de nacimiento: " + jugadora.getNombre_equipo());
+        lblFecha.setText("Equipo:  " + jugadora.getFecha());
+
+        String baseRuta = "/Imagenes/Liga Australiana/Jugadoras/Adelaide Utd/" + jugadora.getNombre();
+        InputStream inputStream = getClass().getResourceAsStream(baseRuta + ".jpg");
+
+        if (inputStream == null) {
+            inputStream = getClass().getResourceAsStream("/Imagenes/default_jugadora.png");
+        }
+
+        if (inputStream != null) {
+            imgJugadora.setImage(new Image(inputStream));
+        }
     }
 
     private void cargarPantalla(String rutaFXML) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaFXML));
             Pane root = loader.load();
-            Stage stage = (Stage) comboBoxIdioma.getScene().getWindow();
+            Stage stage = (Stage) comboBoxIdiomas.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setResizable(false);
+
         } catch (IOException e) {
             System.err.println("Error al cargar: " + rutaFXML);
             e.printStackTrace();
@@ -163,5 +258,9 @@ public class ConPantallaP {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private String obtenerNombrePosicion(String abreviatura) {
+        return mapaPosiciones.getOrDefault(abreviatura, "Desconocido");
     }
 }
