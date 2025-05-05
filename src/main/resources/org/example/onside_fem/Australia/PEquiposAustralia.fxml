@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Australia.ConEquiposP">
+    <children>
+        <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="36.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+            </children>
+        </Pane>
+        <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <Label layoutX="639.0" layoutY="1.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Hyperlink>
+                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+            </children>
+        </Pane>
+        <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
+            <menus>
+                <Menu mnemonicParsing="false" text="Inicio">
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuLiga" mnemonicParsing="false" text="Ligas">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Alemania" />
+                  <MenuItem mnemonicParsing="false" text="Australia" />
+                  <MenuItem mnemonicParsing="false" text="Brasil" />
+                  <MenuItem mnemonicParsing="false" text="Canada" />
+                  <MenuItem mnemonicParsing="false" text="Colombia" />
+                  <MenuItem mnemonicParsing="false" text="España" />
+                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                  <MenuItem mnemonicParsing="false" text="Francia" />
+                  <MenuItem mnemonicParsing="false" text="Nigeria" />
+                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Pane layoutX="-1.0" layoutY="95.0" prefHeight="68.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="136.0" layoutX="33.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Liga Australiana/Logo Liga/Logo Aus.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="106.0" layoutY="26.0" text="A-League Women">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnClasificacion" layoutX="1257.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Clasificacion">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Button>
+            </children></Pane>
+      <ImageView fx:id="ivAdelaida" fitHeight="160.0" fitWidth="160.0" layoutX="41.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Adelaide Utd/Adelaide-logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivBrisbane" fitHeight="160.0" fitWidth="160.0" layoutX="283.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Brisbane Roar/Logo Brisbane.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivCanberra" fitHeight="160.0" fitWidth="160.0" layoutX="491.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Caberra Utd/Logo Canberra Utd.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivMelbourneS" fitHeight="160.0" fitWidth="160.0" layoutX="978.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Melb Sindey/Logo Melb Sindey.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivMelbourneV" fitHeight="160.0" fitWidth="160.0" layoutX="1205.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Melb Victory/Logo Melb Victory.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivPerth" fitHeight="160.0" fitWidth="160.0" layoutX="281.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Perth Glory/Logo Perth Glory.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivNewcastle" fitHeight="160.0" fitWidth="160.0" layoutX="51.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Newcastle Jets/Logo Newcastle Jets.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivSydney" fitHeight="160.0" fitWidth="160.0" layoutX="508.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Sidney FC/Logo Sidney.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivWPhoenix" fitHeight="160.0" fitWidth="160.0" layoutX="978.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Wellington Phoenix/Logo Wellington Phoenix.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivWUnited" fitHeight="160.0" fitWidth="160.0" layoutX="1201.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Western United/Logo Western United.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivCentral" fitHeight="160.0" fitWidth="160.0" layoutX="748.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Central Coast Mariners/Logo Central Coast Mariners.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="48.0" layoutY="450.0" text="Adelaida United">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="450.0" text="Brisbane Roar FC">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="509.0" layoutY="450.0" text="Canberra United">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="713.0" layoutY="450.0" text="Central Coast Mariners FC">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="ivWSydney" fitHeight="160.0" fitWidth="160.0" layoutX="753.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Australiana/Equipos/W Sindey/Western Sydney.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="984.0" layoutY="450.0" text="Melbourne City FC">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1201.0" layoutY="450.0" text="Melbourne Victory">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="756.0" text="Newcastle Jets">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="756.0" text="Perth Glory FC">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="530.0" layoutY="756.0" text="Sydney FC">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="698.0" layoutY="756.0" text="Western Sydney Wanderers FC">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="967.0" layoutY="756.0" text="Wellington Phoenix FC">
+         <font>
+            <Font name="ACaslonPro-Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1198.0" layoutY="756.0" text="Western United FC">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

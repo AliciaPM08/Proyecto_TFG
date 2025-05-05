@@ -18,4 +18,6 @@ module org.example.onside_fem {
 
     exports org.example.onside_fem.Espana;
     opens org.example.onside_fem.Espana to javafx.fxml;
+    exports org.example.onside_fem.Australia;
+    opens org.example.onside_fem.Australia to javafx.fxml;
 }

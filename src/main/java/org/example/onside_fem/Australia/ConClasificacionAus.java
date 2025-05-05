@@ -1,15 +1,19 @@
-package org.example.onside_fem.Otros;
+package org.example.onside_fem.Australia;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.example.onside_fem.BBDD.ClasifiacionDAO;
+import org.example.onside_fem.BBDD.Clasificacion;
 
 import java.awt.*;
 import java.io.File;
@@ -18,9 +22,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-public class ConPantallaPrincipal {
+public class ConClasificacionAus {
     @FXML
-    private Menu menuInicio;
+    private MenuItem volverItem;
 
     @FXML
     private Menu menuLigas;
@@ -29,10 +33,13 @@ public class ConPantallaPrincipal {
     private Menu menuSelecciones;
 
     @FXML
-    private ComboBox<String> comboBoxIdioma;
+    private ComboBox<String> comboBoxIdiomas;
 
     @FXML
     private Hyperlink hyperlinkAyuda;
+
+    @FXML
+    private Button btnEquipo;
 
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
@@ -40,25 +47,45 @@ public class ConPantallaPrincipal {
 
     private final Map<String, String> seleccionPantallas = new HashMap<>();
 
+    @FXML private TableView<Clasificacion> tableView;
+    @FXML private TableColumn<Clasificacion, String> colNombre;
+    @FXML private TableColumn<Clasificacion, Integer> colPosicion;
+    @FXML private TableColumn<Clasificacion, Integer> colPuntos;
+    @FXML private TableColumn<Clasificacion, Integer> colJugados;
+    @FXML private TableColumn<Clasificacion, Integer> colVictorias;
+    @FXML private TableColumn<Clasificacion, Integer> colEmpates;
+    @FXML private TableColumn<Clasificacion, Integer> colPerdidos;
+    @FXML private TableColumn<Clasificacion, Integer> colFavor;
+    @FXML private TableColumn<Clasificacion, Integer> colContra;
+
+    private String ligaActual = "Liberty A-League";
+
     @FXML
     public void initialize() {
         inicializarIdioma();
         inicializarRutas();
+        inicializarMenuInicio();
         inicializarLigas();
         inicializarSelecciones();
+        inicializarEquipos();
+        inicializarTabla();
         hyperlinkAyuda.setOnAction(this::abrirAyuda);
     }
 
     private void inicializarIdioma() {
-        comboBoxIdioma.getItems().addAll("Español", "Inglés");
-        comboBoxIdioma.setValue("Español");
-        comboBoxIdioma.setOnAction(e -> cambiarIdioma());
+        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.setValue("Español");
+        comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
-        String idioma = comboBoxIdioma.getValue();
+        String idioma = comboBoxIdiomas.getValue();
         Locale locale = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
         System.out.println("Idioma cambiado a: " + idioma);
+    }
+
+    private void inicializarMenuInicio() {
+        volverItem.setOnAction(e -> cargarPantalla("/org/example/onside_fem/PantallaPrincipal.fxml"));
     }
 
     private void inicializarRutas() {
@@ -70,7 +97,7 @@ public class ConPantallaPrincipal {
         ligaPantallas.put("Yogibo WE League", "/org/example/onside_fem/FXML/Ligas/YogiboWELeague.fxml");
         ligaPantallas.put("National Super League", "/org/example/onside_fem/FXML/Ligas/NationalSuperLeague.fxml");
 
-//        // SELECCIONES
+        // SELECCIONES
         seleccionPantallas.put("Alemania", "/org/example/onside_fem/FXML/Selecciones/Alemania.fxml");
         seleccionPantallas.put("Australia", "/org/example/onside_fem/FXML/Selecciones/Australia.fxml");
         seleccionPantallas.put("Brasil", "/org/example/onside_fem/FXML/Selecciones/Brasil.fxml");
@@ -117,11 +144,31 @@ public class ConPantallaPrincipal {
         }
     }
 
+    private void inicializarEquipos() {
+        btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Australia/PEquiposAustralia.fxml"));
+    }
+
+    private void inicializarTabla() {
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colPosicion.setCellValueFactory(new PropertyValueFactory<>("posicion"));
+        colPuntos.setCellValueFactory(new PropertyValueFactory<>("puntos"));
+        colJugados.setCellValueFactory(new PropertyValueFactory<>("partidosJugados"));
+        colVictorias.setCellValueFactory(new PropertyValueFactory<>("victorias"));
+        colEmpates.setCellValueFactory(new PropertyValueFactory<>("empates"));
+        colPerdidos.setCellValueFactory(new PropertyValueFactory<>("perdidos"));
+        colFavor.setCellValueFactory(new PropertyValueFactory<>("golesFavor"));
+        colContra.setCellValueFactory(new PropertyValueFactory<>("golesContra"));
+
+        tableView.setItems(FXCollections.observableArrayList(
+                ClasifiacionDAO.obtenerEquiposPorLiga(ligaActual)
+        ));
+    }
+
     private void cargarPantalla(String rutaFXML) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaFXML));
             Pane root = loader.load();
-            Stage stage = (Stage) comboBoxIdioma.getScene().getWindow();
+            Stage stage = (Stage) comboBoxIdiomas.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setResizable(false);
         } catch (IOException e) {
