@@ -75,14 +75,16 @@ public class ConEibarP {
         mapaPosiciones.put("DL", "Delantera");
     }
 
-    @FXML
-    private Tab tabPortera;
-    @FXML
-    private Tab tabDefensas;
-    @FXML
-    private Tab tabCentro;
-    @FXML
-    private Tab tabDelantera;
+    @FXML private ListView<String> listPorteras;
+    @FXML private ListView<String> listDefensas;
+    @FXML private ListView<String> listCentros;
+    @FXML private ListView<String> listDelanteras;
+
+    @FXML private Label lblNombre;
+    @FXML private Label lblPosicion;
+    @FXML private Label lblEquipo;
+    @FXML private Label lblFecha;
+    @FXML private ImageView imgJugadora;
 
     private JugadoraDAO jugadoraDAO;
 
@@ -197,84 +199,40 @@ public class ConEibarP {
     }
 
     private void cargarJugadores() {
-        cargarJugadoresEnTab("PO", tabPortera); // "PO" para porteras
-        cargarJugadoresEnTab("DF", tabDefensas); // "DE" para defensas
-        cargarJugadoresEnTab("CC", tabCentro); // "CC" para centrocampistas
-        cargarJugadoresEnTab("DL", tabDelantera); // "DL" para delantera
+        cargarListaJugadoras("PO", listPorteras);
+        cargarListaJugadoras("DF", listDefensas);
+        cargarListaJugadoras("CC", listCentros);
+        cargarListaJugadoras("DL", listDelanteras);
     }
 
-    private void cargarJugadoresEnTab(String abreviaturaPosicion, Tab tab) {
-        List<Jugadora> jugadores = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Eibar", abreviaturaPosicion);
-        VBox vbox = new VBox(10);
-
-        for (Jugadora jugadora : jugadores) {
-            Button btn = new Button(jugadora.getNombre());
-            btn.setOnAction(e -> mostrarInfoJugadora(jugadora, "Liga Española")); // Puedes hacerlo variable
-            vbox.getChildren().add(btn);
+    private void cargarListaJugadoras(String posicion, ListView<String> listView) {
+        List<Jugadora> jugadoras = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Eibar", posicion);
+        for (Jugadora j : jugadoras) {
+            listView.getItems().add(j.getNombre());
         }
 
-        ScrollPane scroll = new ScrollPane(vbox);
-        tab.setContent(scroll);
-    }
-
-    private void mostrarInfoJugadora(Jugadora jugadora, String liga) {
-        Stage infoStage = new Stage();
-        infoStage.setTitle(jugadora.getNombre());
-        infoStage.setResizable(false);
-
-        // Estilos personalizados para los textos
-        Label nombre = new Label("Nombre: " + jugadora.getNombre());
-        nombre.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2a2a2a;");
-
-        Label posicion = new Label("Posición: " + obtenerNombrePosicion(jugadora.getPosicion()));
-        posicion.setStyle("-fx-font-size: 14px; -fx-font-weight: normal; -fx-text-fill: #555;");
-
-        Label equipon = new Label("Año de nacimiento: : " + jugadora.getNombre_equipo());
-        equipon.setStyle("-fx-font-size: 14px; -fx-font-weight: normal; -fx-text-fill: #777;");
-
-        Label anioNacimiento = new Label("Equipo: " + jugadora.getFecha());
-        anioNacimiento.setStyle("-fx-font-size: 14px; -fx-font-weight: normal; -fx-text-fill: #777;");
-
-        // Creamos el VBox para organizar los componentes
-        VBox vbox = new VBox(10, cargarFotoJugadora(jugadora, liga), nombre, posicion, equipon, anioNacimiento);
-        vbox.setStyle("-fx-padding: 20; -fx-background-color: #f4f4f4; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, #000, 10, 0, 0, 2);");
-
-        Scene scene = new Scene(vbox, 400, 300);
-        infoStage.setScene(scene);
-
-        // Cerrar el Stage después de 5 segundos
-        PauseTransition delay = new PauseTransition(Duration.seconds(3));
-        delay.setOnFinished(event -> infoStage.close());
-        delay.play();
-
-        infoStage.show();
-    }
-
-
-    private ImageView cargarFotoJugadora(Jugadora jugadora, String liga) {
-        String rutaImagen = "/Imagenes/Liga_Española/Jugadoras/SD Eibar/"
-                + jugadora.getNombre() + ".jpg";
-
-        InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
-
-        Image imagen;
-        if (inputStream != null) {
-            imagen = new Image(inputStream);
-        } else {
-            System.err.println("No se encontró la imagen para: " + rutaImagen);
-            inputStream = getClass().getResourceAsStream("/Imagenes/default_jugadora.png");
-            if (inputStream == null) {
-                throw new RuntimeException("Imagen por defecto no encontrada.");
+        listView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                Jugadora j = jugadoraDAO.obtenerJugadoraPorNombre("Eibar", newVal);
+                mostrarInfoEnPanel(j, "Liga Española");
             }
-            imagen = new Image(inputStream);
+        });
+    }
+
+    private void mostrarInfoEnPanel(Jugadora jugadora, String liga) {
+        lblNombre.setText("Nombre: " + jugadora.getNombre());
+        lblPosicion.setText("Posición: " + obtenerNombrePosicion(jugadora.getPosicion()));
+        lblEquipo.setText("Fecha de nacimiento: " + jugadora.getNombre_equipo());
+        lblFecha.setText("Equipo:  " + jugadora.getFecha());
+
+        String rutaImagen = "/Imagenes/Liga_Española/Jugadoras/SD Eibar/" + jugadora.getNombre() + ".jpg";
+        InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
+        if (inputStream == null) {
+            inputStream = getClass().getResourceAsStream("/Imagenes/default_jugadora.png");
         }
-
-        ImageView imageView = new ImageView(imagen);
-        imageView.setFitWidth(150);  // Reducimos el tamaño de la imagen
-        imageView.setFitHeight(150); // Ajuste proporcional
-        imageView.setPreserveRatio(true);
-
-        return imageView;
+        if (inputStream != null) {
+            imgJugadora.setImage(new Image(inputStream));
+        }
     }
 
 

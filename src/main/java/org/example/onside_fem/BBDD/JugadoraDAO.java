@@ -34,4 +34,26 @@ public class JugadoraDAO {
 
         return jugadoras;
     }
+
+    public Jugadora obtenerJugadoraPorNombre(String equipo, String nombre) {
+        String sql = "SELECT nombre_jugadora, posicion, nombre_equipo, fecha_nacimiento FROM jugadorasequipo WHERE nombre_equipo = ? AND nombre_jugadora = ?";
+        try (Connection conn = ConexionBD.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, equipo);
+            stmt.setString(2, nombre);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return new Jugadora(
+                        rs.getString("nombre_jugadora"),
+                        rs.getString("posicion"),
+                        rs.getString("nombre_equipo"),
+                        rs.getString("fecha_nacimiento")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null; // Si no se encuentra la jugadora
+    }
 }

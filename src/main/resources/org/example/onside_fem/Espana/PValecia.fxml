@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -15,6 +16,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Espana.ConValenciaP">
@@ -78,35 +80,43 @@
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Valencia/Valencia.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="513.0" style="-fx-background-color: #ffffff; -fx-border-color: #ff6d2a; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="318.0" style="-fx-background-color: #ffffff; -fx-border-color: #ff6d2a; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
-                <Tab fx:id="tabPortera" text="Portera">
+                <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                        <AnchorPane prefHeight="179.0" prefWidth="311.0">
+                            <ListView fx:id="listPorteras" layoutX="0" layoutY="0" prefHeight="255.0" prefWidth="314.0" />
+                        </AnchorPane>
                     </content>
                 </Tab>
-                <Tab fx:id="tabDefensas" text="Defensas">
+                <Tab fx:id="tabDefensas" style="-fx-background-color: #ffffff;" text="Defensas">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="513.0" />
+                        <AnchorPane>
+                            <ListView fx:id="listDefensas" layoutX="0" layoutY="0" prefHeight="258.0" prefWidth="312.0" />
+                        </AnchorPane>
                     </content>
                 </Tab>
-                <Tab fx:id="tabCentro" text="Centrocampistas">
+                <Tab fx:id="tabCentro" style="-fx-background-color: #ffffff;" text="Centrocampistas">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <AnchorPane>
+                            <ListView fx:id="listCentros" layoutX="0" layoutY="0" prefHeight="253.0" prefWidth="310.0" />
+                        </AnchorPane>
                     </content>
                 </Tab>
-                <Tab fx:id="tabDelantera" text="Delantera">
+                <Tab fx:id="tabDelantera" style="-fx-background-color: #ffffff;" text="Delantera">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <AnchorPane>
+                            <ListView fx:id="listDelanteras" layoutX="0" layoutY="0" prefHeight="255.0" prefWidth="312.0" />
+                        </AnchorPane>
                     </content>
                 </Tab>
             </tabs>
         </TabPane>
-        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="464.0" style="-fx-background-color: #ffffff; -fx-border-color: #ff6d2a; -fx-border-radius: 3; -fx-border-width: 5;">
+        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="68.0" prefWidth="474.0" style="-fx-background-color: #ffffff; -fx-border-color: #ff6d2a; -fx-border-radius: 3; -fx-border-width: 5;">
             <columns>
                 <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
                 <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
-                <TableColumn fx:id="colTAmarillas" prefWidth="125.0" text="Trajetas Amarillas" />
+                <TableColumn fx:id="colTAmarillas" prefWidth="125.0" text="Tarjetas Amarillas" />
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
@@ -172,7 +182,7 @@
                         <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
                         <MenuItem mnemonicParsing="false" text="Liberty A-League" />
                         <MenuItem mnemonicParsing="false" text="Women's Super League" />
-                        <MenuItem mnemonicParsing="false" text="rkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
                         <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
                         <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
@@ -197,5 +207,14 @@
                 </Menu>
             </menus>
         </MenuBar>
+        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #ff6d2a; -fx-border-width: 5; -fx-background-color: #ffffff;">
+            <children>
+                <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
+                <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
+                <Label fx:id="lblPosicion" style="-fx-font-size: 14px;" text="Posición: " />
+                <Label fx:id="lblEquipo" style="-fx-font-size: 14px;" text="Equipo: " />
+                <Label fx:id="lblFecha" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " />
+            </children>
+        </VBox>
     </children>
 </Pane>
