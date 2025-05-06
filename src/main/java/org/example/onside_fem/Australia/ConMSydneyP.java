@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class ConMSydney {
+public class ConMSydneyP {
     @FXML
     private MenuItem volverItem;
 
