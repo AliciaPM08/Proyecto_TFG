@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Espana.ConLevanteP">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Australia.ConSydneyP">
     <children>
         <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
@@ -54,12 +54,12 @@
         </Pane>
         <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
             <children>
-                <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="75.0" fitWidth="136.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Logo liga.png" />
+                        <Image url="@../../../../Imagenes/Liga Australiana/Logo Liga/Logo Aus.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
+                <Label layoutX="106.0" layoutY="26.0" text="A-League Women">
                     <font>
                         <Font name="ACaslonPro-Semibold" size="24.0" />
                     </font>
@@ -75,12 +75,12 @@
                     </font>
                 </Button>
             </children></Pane>
-        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="47.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="127.0" layoutX="84.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante/Levante.png" />
+                <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Sidney FC/Logo Sidney.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="319.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #00AAE4; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
                     <content>
@@ -112,7 +112,7 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="464.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-radius: 3; -fx-border-width: 5;">
+        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-border-color: #00AAE4; -fx-border-radius: 3; -fx-border-width: 5;">
             <columns>
                 <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
                 <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="UD LEVANTE">
+        <Label layoutX="233.0" layoutY="173.0" text="SYDNEY FC">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 1993">
+        <Label layoutX="272.0" layoutY="230.0" text="Fundación:  2008">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Angel Saiz">
+        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Ante Juric">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Ciudad Deportiva de Buñol">
+        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Sydney Football Stadium">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,24 +145,19 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="168.0" fitWidth="168.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="165.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante/CamisetaP.png" />
+                <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Sidney FC/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="182.0" fitWidth="171.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1180.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante/CamisetaS.png" />
+                <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Sidney FC/CamisetaS.png" />
             </image>
         </ImageView>
         <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
-            </font>
-        </Label>
-        <Label layoutX="68.0" layoutY="798.0" text="6 Copas de la Reina">
-            <font>
-                <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
         <Label layoutX="77.0" layoutY="399.0" text="PLANTILLA">
@@ -212,17 +207,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-      <Label layoutX="273.0" layoutY="798.0" text="4 Copas Primera Division">
-         <font>
-            <Font name="ACaslonPro-Regular" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="517.0" layoutY="798.0" text="2 Supercopa de España">
-         <font>
-            <Font name="ACaslonPro-Regular" size="18.0" />
-         </font>
-      </Label>
-        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #294e9c; -fx-border-width: 5; -fx-background-color: #ffffff;">
+        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #00AAE4; -fx-border-width: 5; -fx-background-color: #ffffff;">
             <children>
                 <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
                 <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
