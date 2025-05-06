@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Espana.ConGranadaP">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Australia.ConPerthP">
     <children>
         <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
@@ -54,12 +54,12 @@
         </Pane>
         <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
             <children>
-                <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="75.0" fitWidth="136.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Logo liga.png" />
+                        <Image url="@../../../../Imagenes/Liga Australiana/Logo Liga/Logo Aus.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="106.0" layoutY="26.0" text="Primera División Femenina de España">
+                <Label layoutX="106.0" layoutY="26.0" text="A-League Women">
                     <font>
                         <Font name="ACaslonPro-Semibold" size="24.0" />
                     </font>
@@ -75,12 +75,12 @@
                     </font>
                 </Button>
             </children></Pane>
-        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="47.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="127.0" layoutX="84.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Granada/Granada.png" />
+                <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Perth Glory/Logo Perth Glory.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="318.0" style="-fx-background-color: #ffffff; -fx-border-color: #9c0001; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #681c7c; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
                     <content>
@@ -112,7 +112,7 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="69.0" prefWidth="474.0" style="-fx-background-color: #ffffff; -fx-border-color: #9c0001; -fx-border-radius: 3; -fx-border-width: 5;">
+        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-border-color: #681c7c; -fx-border-radius: 3; -fx-border-width: 5;">
             <columns>
                 <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
                 <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="GRANADA CF">
+        <Label layoutX="233.0" layoutY="173.0" text="NEWCASTLE JETS FC">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 2003">
+        <Label layoutX="272.0" layoutY="230.0" text="Fundación:  2008">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Arturo Ruiz">
+        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Bobby Despotovski">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Ciudad Deportiva del Granada CF">
+        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Dorrien Gardens">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,14 +145,14 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="171.0" fitWidth="150.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="165.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Granada/CamisetaP.png" />
+                <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Perth Glory/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="171.0" fitWidth="145.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1180.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga_Española/Equipos/Granada/CamisetaS.png" />
+                <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Perth Glory/CamisetaS.png" />
             </image>
         </ImageView>
         <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
@@ -207,7 +207,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #9c0001; -fx-border-width: 5; -fx-background-color: #ffffff;">
+        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #681c7c; -fx-border-width: 5; -fx-background-color: #ffffff;">
             <children>
                 <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
                 <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
