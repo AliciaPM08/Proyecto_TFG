@@ -185,7 +185,7 @@ public class ConMVictoryP {
         colTAmarillas.setCellValueFactory(new PropertyValueFactory<>("tarjetasAmarillas"));
         colTRojas.setCellValueFactory(new PropertyValueFactory<>("tarjetasRojas"));
 
-        Estadisticas estadisticas = new EstadisticasDAO().obtenerEstadisticas("Adelaide Utd", "Liberty A-League");
+        Estadisticas estadisticas = new EstadisticasDAO().obtenerEstadisticas("Melb Victory", "Liberty A-League");
 
         if (estadisticas != null) {
             tableEstadisticas.getItems().setAll(estadisticas);
