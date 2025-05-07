@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Japon.ConBelezaP">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Japon.ConCerezoP">
     <children>
         <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
@@ -77,10 +77,10 @@
             </children></Pane>
         <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="69.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Beleza/Beleza.png" />
+                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Cerezo/Cerezo.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #008000; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #FF0080; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
                     <content>
@@ -112,7 +112,7 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-border-color: #008000; -fx-border-radius: 3; -fx-border-width: 5;">
+        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-border-color: #FF0080; -fx-border-radius: 3; -fx-border-width: 5;">
             <columns>
                 <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
                 <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="NIPPON TV TOKYO VERDY BELEZA">
+        <Label layoutX="233.0" layoutY="173.0" text="CEREZO OSAKA YANMAR LADIES">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 1 de enero de 1981 ">
+        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 2010 ">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Takeo Matsuda">
+        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Nobuhito Toriizuka">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Inagi Central Park">
+        <Label layoutX="272.0" layoutY="310.0" text="Estadio: YODOKO SAKURA STADIUM">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -147,12 +147,12 @@
         </Label>
         <ImageView fitHeight="160.0" fitWidth="165.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Beleza/CamisetaP.png" />
+                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Cerezo/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="171.0" fitWidth="160.0" layoutX="1178.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Beleza/CamisetaS.png" />
+                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Cerezo/CamisetaS.png" />
             </image>
         </ImageView>
         <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
@@ -207,7 +207,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #008000; -fx-border-width: 5; -fx-background-color: #ffffff;">
+        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #FF0080; -fx-border-width: 5; -fx-background-color: #ffffff;">
             <children>
                 <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
                 <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
@@ -216,20 +216,5 @@
                 <Label fx:id="lblFecha" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " />
             </children>
         </VBox>
-      <Label layoutX="69.0" layoutY="789.0" text="16 Copas de Emperatriz">
-         <font>
-            <Font name="ACaslonPro-Regular" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="287.0" layoutY="789.0" text="2 Nadeshiko League Cup">
-         <font>
-            <Font name="ACaslonPro-Regular" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="514.0" layoutY="789.0" text="1 AFC Women's Club Championship">
-         <font>
-            <Font name="ACaslonPro-Regular" size="18.0" />
-         </font>
-      </Label>
     </children>
 </Pane>
