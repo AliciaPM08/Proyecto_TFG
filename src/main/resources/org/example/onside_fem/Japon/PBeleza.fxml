@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Japon.ConBelezaP">
+    <children>
+        <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="36.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+            </children>
+        </Pane>
+        <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <Label layoutX="639.0" layoutY="1.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Hyperlink>
+                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+            </children>
+        </Pane>
+        <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/Logo liga.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="148.0" layoutY="36.0" text="WE League">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnEquipo" layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Equipos">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnClasifiacion" layoutX="1127.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Clasificacion">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Button>
+            </children></Pane>
+        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="69.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Beleza/Beleza.png" />
+            </image>
+        </ImageView>
+        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #008000; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
+                    <content>
+                        <AnchorPane prefHeight="179.0" prefWidth="311.0">
+                            <ListView fx:id="listPorteras" layoutX="0" layoutY="0" prefHeight="255.0" prefWidth="314.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabDefensas" style="-fx-background-color: #ffffff;" text="Defensas">
+                    <content>
+                        <AnchorPane>
+                            <ListView fx:id="listDefensas" layoutX="0" layoutY="0" prefHeight="258.0" prefWidth="312.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabCentro" style="-fx-background-color: #ffffff;" text="Centrocampistas">
+                    <content>
+                        <AnchorPane>
+                            <ListView fx:id="listCentros" layoutX="0" layoutY="0" prefHeight="253.0" prefWidth="310.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabDelantera" style="-fx-background-color: #ffffff;" text="Delantera">
+                    <content>
+                        <AnchorPane>
+                            <ListView fx:id="listDelanteras" layoutX="0" layoutY="0" prefHeight="255.0" prefWidth="312.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="82.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-border-color: #008000; -fx-border-radius: 3; -fx-border-width: 5;">
+            <columns>
+                <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
+                <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
+                <TableColumn fx:id="colTAmarillas" prefWidth="125.0" text="Tarjetas Amarillas" />
+                <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
+            </columns>
+        </TableView>
+        <Label layoutX="233.0" layoutY="173.0" text="ALBIREX NIIGATA LADIES">
+            <font>
+                <Font name="ACaslonPro-Semibold" size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 1 de enero de 1981 ">
+            <font>
+                <Font name="ACaslonPro-Regular" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="272.0" layoutY="273.0" text="Entrenador: Takeo Matsuda">
+            <font>
+                <Font name="ACaslonPro-Regular" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Inagi Central Park">
+            <font>
+                <Font name="ACaslonPro-Regular" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="47.0" layoutY="744.0" text="PALMARES">
+            <font>
+                <Font name="ACaslonPro-Semibold" size="24.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="160.0" fitWidth="165.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Beleza/CamisetaP.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1177.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Beleza/CamisetaS.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
+            <font>
+                <Font name="ACaslonPro-Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="77.0" layoutY="399.0" text="PLANTILLA">
+            <font>
+                <Font name="ACaslonPro-Semibold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="874.0" layoutY="399.0" text="ESTADÍSTICAS GENERALES">
+            <font>
+                <Font name="ACaslonPro-Semibold" size="24.0" />
+            </font>
+        </Label>
+        <MenuBar layoutX="-3.0" layoutY="56.0" prefHeight="25.0" prefWidth="1406.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
+            <menus>
+                <Menu mnemonicParsing="false" text="Inicio">
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                        <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                        <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                        <MenuItem mnemonicParsing="false" text="National Super League" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Seleccion">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Alemania" />
+                        <MenuItem mnemonicParsing="false" text="Australia" />
+                        <MenuItem mnemonicParsing="false" text="Brasil" />
+                        <MenuItem mnemonicParsing="false" text="Canada" />
+                        <MenuItem mnemonicParsing="false" text="Colombia" />
+                        <MenuItem mnemonicParsing="false" text="España" />
+                        <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem mnemonicParsing="false" text="Francia" />
+                        <MenuItem mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem mnemonicParsing="false" text="Japon" />
+                        <MenuItem mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem mnemonicParsing="false" text="Suecia" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #008000; -fx-border-width: 5; -fx-background-color: #ffffff;">
+            <children>
+                <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
+                <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
+                <Label fx:id="lblPosicion" style="-fx-font-size: 14px;" text="Posición: " />
+                <Label fx:id="lblEquipo" style="-fx-font-size: 14px;" text="Equipo: " />
+                <Label fx:id="lblFecha" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " />
+            </children>
+        </VBox>
+      <Label layoutX="69.0" layoutY="789.0" text="16 Copas de Emperatriz">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="287.0" layoutY="789.0" text="2 Nadeshiko League Cup">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="789.0" text="1 AFC Women's Club Championship">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
