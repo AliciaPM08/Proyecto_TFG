@@ -120,7 +120,7 @@
             <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/JEF United Chiba/Jef United Chiba.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ivMelbourneV" fitHeight="160.0" fitWidth="160.0" layoutX="1192.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivKobe" fitHeight="160.0" fitWidth="160.0" layoutX="1192.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Kobe Leonesa/Kobe Leonesa.png" />
          </image>
