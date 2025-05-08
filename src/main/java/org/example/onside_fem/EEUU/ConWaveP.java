@@ -4,49 +4,85 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.example.onside_fem.BBDD.Estadisticas;
+import org.example.onside_fem.BBDD.EstadisticasDAO;
+import org.example.onside_fem.BBDD.Jugadora;
+import org.example.onside_fem.BBDD.JugadoraDAO;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class ConEquiposP {
+public class ConWaveP {
     @FXML
     private MenuItem volverItem;
 
     @FXML
-    private Menu menuLiga;
+    private Menu menuLigas;
 
     @FXML
     private Menu menuSelecciones;
 
     @FXML
-    private ComboBox<String> comboBoxIdioma;
+    private ComboBox<String> comboBoxIdiomas;
 
     @FXML
     private Hyperlink hyperlinkAyuda;
 
     @FXML
-    private Button btnClasificacion;
+    private Button btnEquipo;
 
     @FXML
-    private Pane rootPane;
+    private Button btnClasifiacion;
 
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
+
     private final Map<String, String> seleccionPantallas = new HashMap<>();
 
-    private final Map<String, String> equipoPantallas = new HashMap<>();
+    @FXML private TableView<Estadisticas> tableEstadisticas;
+    @FXML private TableColumn<Estadisticas, Integer> colGAnotados;
+    @FXML private TableColumn<Estadisticas, Integer> colGRecibidos;
+    @FXML private TableColumn<Estadisticas, Integer> colTAmarillas;
+    @FXML private TableColumn<Estadisticas, Integer> colTRojas;
+
+    @FXML private ListView<String> listPorteras;
+    @FXML private ListView<String> listDefensas;
+    @FXML private ListView<String> listCentros;
+    @FXML private ListView<String> listDelanteras;
+
+    @FXML private Label lblNombre;
+    @FXML private Label lblPosicion;
+    @FXML private Label lblEquipo;
+    @FXML private Label lblFecha;
+    @FXML private ImageView imgJugadora;
+
+    private static final Map<String, String> mapaPosiciones = new HashMap<>();
+
+    static {
+        mapaPosiciones.put("PO", "Portera");
+        mapaPosiciones.put("DF", "Defensas");
+        mapaPosiciones.put("CC", "Centrocampistas");
+        mapaPosiciones.put("DL", "Delantera");
+    }
+
+    private JugadoraDAO jugadoraDAO;
 
     @FXML
     public void initialize() {
@@ -55,19 +91,22 @@ public class ConEquiposP {
         inicializarMenuInicio();
         inicializarLigas();
         inicializarSelecciones();
-        inicializarClasifiacion();
         inicializarEquipos();
+        inicializarClasifiacion();
+        inicializarTablaEstadisticas();
+        jugadoraDAO = new JugadoraDAO();
+        cargarJugadores();
         hyperlinkAyuda.setOnAction(this::abrirAyuda);
     }
 
     private void inicializarIdioma() {
-        comboBoxIdioma.getItems().addAll("Español", "Inglés");
-        comboBoxIdioma.setValue("Español");
-        comboBoxIdioma.setOnAction(e -> cambiarIdioma());
+        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.setValue("Español");
+        comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
-        String idioma = comboBoxIdioma.getValue();
+        String idioma = comboBoxIdiomas.getValue();
         Locale locale = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
         System.out.println("Idioma cambiado a: " + idioma);
     }
@@ -83,7 +122,7 @@ public class ConEquiposP {
         ligaPantallas.put("Women's Super League", "/org/example/onside_fem/FXML/Ligas/WomensSuperLeague.fxml");
         ligaPantallas.put("Arkema Premiere League", "/org/example/onside_fem/FXML/Ligas/ArkemaPremiereLeague.fxml");
         ligaPantallas.put("Yogibo WE League", "/org/example/onside_fem/Japon/PPLigaJaponesa.fxml");
-        ligaPantallas.put("National Super League", "/org/example/onside_fem/EEUU/PPLigaEEUU.fxml");
+        ligaPantallas.put("National Super League", "/org/example/onside_fem/FXML/Ligas/NationalSuperLeague.fxml");
 
         // SELECCIONES
         seleccionPantallas.put("Alemania", "/org/example/onside_fem/FXML/Selecciones/Alemania.fxml");
@@ -103,7 +142,7 @@ public class ConEquiposP {
     }
 
     private void inicializarLigas() {
-        for (MenuItem item : menuLiga.getItems()) {
+        for (MenuItem item : menuLigas.getItems()) {
             item.setOnAction(e -> {
                 String liga = ((MenuItem) e.getSource()).getText();
                 String ruta = ligaPantallas.get(liga);
@@ -132,47 +171,74 @@ public class ConEquiposP {
         }
     }
 
-    private void inicializarClasifiacion() {
-        btnClasificacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/EEUU/PClasificacionEEUU.fxml"));
+    private void inicializarEquipos() {
+        btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/EEUU/PEquiposEEUU.fxml"));
     }
 
+    private void inicializarClasifiacion() {
+        btnClasifiacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/EEUU/PClasificacionEEUU.fxml"));
+    }
 
-    private void inicializarEquipos() {
-        equipoPantallas.put("ivAngel", "/org/example/onside_fem/EEUU/PAngel.fxml");
-        equipoPantallas.put("ivBay", "/org/example/onside_fem/EEUU/PBay.fxml");
-        equipoPantallas.put("ivChicago", "/org/example/onside_fem/EEUU/PChicagoP.fxml");
-        equipoPantallas.put("ivHouston", "/org/example/onside_fem/EEUU/PDash.fxml");
-        equipoPantallas.put("ivCurrent", "/org/example/onside_fem/EEUU/PCurrent.fxml");
-        equipoPantallas.put("ivGotham", "/org/example/onside_fem/EEUU/PGotham.fxml");
-        equipoPantallas.put("ivCourage", "/org/example/onside_fem/EEUU/PCourage.fxml");
-        equipoPantallas.put("ivOrlando", "/org/example/onside_fem/EEUU/POrlando.fxml");
-        equipoPantallas.put("ivThorns", "/org/example/onside_fem/EEUU/PThorns.fxml");
-        equipoPantallas.put("ivLouisville", "/org/example/onside_fem/EEUU/PLousville.fxml");
-        equipoPantallas.put("ivWave", "/org/example/onside_fem/EEUU/PWave.fxml");
-        equipoPantallas.put("ivMadrid", "/org/example/onside_fem/Espana/PRMadrid.fxml");
-        equipoPantallas.put("ivRealSociedad", "/org/example/onside_fem/Espana/PRSociedad.fxml");
-        equipoPantallas.put("ivSevilla", "/org/example/onside_fem/Espana/PSevilla.fxml");
+    private void inicializarTablaEstadisticas() {
+        colGAnotados.setCellValueFactory(new PropertyValueFactory<>("golesAnotados"));
+        colGRecibidos.setCellValueFactory(new PropertyValueFactory<>("golesRecibidos"));
+        colTAmarillas.setCellValueFactory(new PropertyValueFactory<>("tarjetasAmarillas"));
+        colTRojas.setCellValueFactory(new PropertyValueFactory<>("tarjetasRojas"));
 
-        // Agrega listeners dinámicamente
-        for (javafx.scene.Node node : rootPane.getChildren()) {
-            if (node instanceof ImageView) {
-                String id = node.getId();
-                if (id != null && id.startsWith("iv") && equipoPantallas.containsKey(id)) {
-                    node.setOnMouseClicked(e -> cargarPantalla(equipoPantallas.get(id)));
-                    node.setStyle("-fx-cursor: hand;"); // Opcional: cambia el cursor al pasar por encima
-                }
-            }
+        Estadisticas estadisticas = new EstadisticasDAO().obtenerEstadisticas("Wave", "National Womens Soccer League");
+
+        if (estadisticas != null) {
+            tableEstadisticas.getItems().setAll(estadisticas);
+        } else {
+            System.err.println("No se encontraron estadísticas.");
         }
     }
 
+    private void cargarJugadores() {
+        cargarListaJugadoras("PO", listPorteras);
+        cargarListaJugadoras("DF", listDefensas);
+        cargarListaJugadoras("CC", listCentros);
+        cargarListaJugadoras("DL", listDelanteras);
+    }
+
+    private void cargarListaJugadoras(String posicion, ListView<String> listView) {
+        List<Jugadora> jugadoras = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Wave", posicion);
+        for (Jugadora j : jugadoras) {
+            listView.getItems().add(j.getNombre());
+        }
+
+        listView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                Jugadora j = jugadoraDAO.obtenerJugadoraPorNombre("Wave", newVal);
+                mostrarInfoEnPanel(j, "National Womens Soccer League");
+            }
+        });
+    }
+
+    private void mostrarInfoEnPanel(Jugadora jugadora, String liga) {
+        lblNombre.setText("Nombre: " + jugadora.getNombre());
+        lblPosicion.setText("Posición: " + obtenerNombrePosicion(jugadora.getPosicion()));
+        lblEquipo.setText("Fecha de nacimiento: " + jugadora.getNombre_equipo());
+        lblFecha.setText("Equipo:  " + jugadora.getFecha());
+
+        String rutaImagen = "/Imagenes/Liga Estadunidense/Jugadoras/Wave/" + jugadora.getNombre() + ".jpg";
+        InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
+        if (inputStream == null) {
+            inputStream = getClass().getResourceAsStream("/Imagenes/default_jugadora.png");
+        }
+        if (inputStream != null) {
+            imgJugadora.setImage(new Image(inputStream));
+        }
+    }
 
     private void cargarPantalla(String rutaFXML) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaFXML));
             Pane root = loader.load();
-            Stage stage = (Stage) comboBoxIdioma.getScene().getWindow();
+            Stage stage = (Stage) comboBoxIdiomas.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setResizable(false);
+
         } catch (IOException e) {
             System.err.println("Error al cargar: " + rutaFXML);
             e.printStackTrace();
@@ -190,5 +256,9 @@ public class ConEquiposP {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private String obtenerNombrePosicion(String abreviatura) {
+        return mapaPosiciones.getOrDefault(abreviatura, "Desconocido");
     }
 }
