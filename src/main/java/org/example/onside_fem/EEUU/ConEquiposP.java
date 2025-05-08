@@ -144,7 +144,7 @@ public class ConEquiposP {
         equipoPantallas.put("ivHouston", "/org/example/onside_fem/EEUU/PDash.fxml");
         equipoPantallas.put("ivCurrent", "/org/example/onside_fem/EEUU/PCurrent.fxml");
         equipoPantallas.put("ivGotham", "/org/example/onside_fem/EEUU/PGotham.fxml");
-        equipoPantallas.put("ivEspanyol", "/org/example/onside_fem/Espana/PEspayol.fxml");
+        equipoPantallas.put("ivCourage", "/org/example/onside_fem/EEUU/PCourage.fxml");
         equipoPantallas.put("ivGranada", "/org/example/onside_fem/Espana/PGranada.fxml");
         equipoPantallas.put("ivLBadalona", "/org/example/onside_fem/Espana/PLevanteB.fxml");
         equipoPantallas.put("ivLevante", "/org/example/onside_fem/Espana/PLevante.fxml");
@@ -152,8 +152,6 @@ public class ConEquiposP {
         equipoPantallas.put("ivMadrid", "/org/example/onside_fem/Espana/PRMadrid.fxml");
         equipoPantallas.put("ivRealSociedad", "/org/example/onside_fem/Espana/PRSociedad.fxml");
         equipoPantallas.put("ivSevilla", "/org/example/onside_fem/Espana/PSevilla.fxml");
-        equipoPantallas.put("ivValencia", "/org/example/onside_fem/Espana/PValecia.fxml");
-        equipoPantallas.put("ivBetis", "/org/example/onside_fem/Espana/PBetis.fxml");
 
         // Agrega listeners dinámicamente
         for (javafx.scene.Node node : rootPane.getChildren()) {
