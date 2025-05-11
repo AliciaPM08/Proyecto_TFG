@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Francia.ConPantallaP">
+    <children>
+        <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="36.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+            </children>
+        </Pane>
+        <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <Label layoutX="639.0" layoutY="1.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Hyperlink>
+                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+            </children>
+        </Pane>
+        <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
+            <menus>
+                <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
+               <items>
+                  <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+               </items></Menu>
+                <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Alemania" />
+                  <MenuItem mnemonicParsing="false" text="Australia" />
+                  <MenuItem mnemonicParsing="false" text="Brasil" />
+                  <MenuItem mnemonicParsing="false" text="Canada" />
+                  <MenuItem mnemonicParsing="false" text="Colombia" />
+                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                  <MenuItem mnemonicParsing="false" text="España" />
+                  <MenuItem mnemonicParsing="false" text="Francia" />
+                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
+                  <MenuItem mnemonicParsing="false" text="Japon" />
+                  <MenuItem mnemonicParsing="false" text="Nigeria" />
+                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Pane layoutX="-1.0" layoutY="95.0" prefHeight="68.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga Francesa/Logo Liga/Logo liga.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="106.0" layoutY="26.0" text="Arkema Première Ligue">
+               <font>
+                  <Font name="ACaslonPro-Semibold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnEquipo" layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Equipos">
+               <font>
+                  <Font name="ACaslonPro-Semibold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClasificacion" layoutX="1127.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Clasificacion">
+               <font>
+                  <Font name="ACaslonPro-Semibold" size="18.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Label layoutX="62.0" layoutY="170.0" text="NOTICIAS">
+         <font>
+            <Font name="ACaslonPro-Semibold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="168.0" fitWidth="236.0" layoutX="203.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Francesa/Logo Liga/noticia.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="522.0" layoutY="241.0" text="PSG - Paris FC: ¡Una semifinal 100% parisina en el Parque de los Príncipes!">
+         <font>
+            <Font name="ACaslonPro-SemiboldItalic" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="528.0" layoutY="290.0" text="El domingo 11 de mayo a las 21.00 horas, el Parque de los Príncipes acogerá por primera vez en su historia una semifinal del Play-Off de la Première ">
+         <font>
+            <Font name="ACaslonPro-Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="525.0" layoutY="323.0" text="Ligue Arkema entre el París Saint-Germain y el París FC. Un emocionante partido femenino a partir de 15 euros.">
+         <font>
+            <Font name="ACaslonPro-Regular" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="214.0" fitWidth="182.0" layoutX="235.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Francesa/Logo Liga/noticia2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="518.0" layoutY="450.0" text="Play-offs del D1 : el OL avanza a la final por delante del Dijon FCO">
+         <font>
+            <Font name="ACaslonPro-BoldItalic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="524.0" layoutY="503.0" text="En esta primera semifinal de los play-offs de la Arkema Premier League, el OL se enfrentó al Dijon en el Groupama Stadium. Al final del partido ">
+         <font>
+            <Font name="ACaslonPro-Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="522.0" layoutY="540.0" text="quedó un lugar en la final para defender.">
+         <font>
+            <Font name="ACaslonPro-Regular" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="145.0" fitWidth="282.0" layoutX="192.0" layoutY="667.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Francesa/Logo Liga/noticia3.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="522.0" layoutY="661.0" text="Ascenso a la Premier League: el sueño inesperado del TFC Women">
+         <font>
+            <Font name="ACaslonPro-SemiboldItalic" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="525.0" layoutY="721.0" text="Ascendidas esta temporada a la Segunda División, las jugadoras del TFC pueden ascender a la Primera División, la élite del fútbol femenino, la próxima ">
+         <font>
+            <Font name="ACaslonPro-Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="525.0" layoutY="758.0" text="temporada. Sólo les quedan dos partidos para conseguir un ascenso tan inesperado como prometedor.">
+         <font>
+            <Font name="ACaslonPro-Regular" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
