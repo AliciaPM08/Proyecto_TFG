@@ -135,7 +135,7 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Stade Salif-Keita,">
+        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Stade Salif-Keita">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
