@@ -201,7 +201,7 @@ public class ConCanadaP {
         lblImbatidas.setText("Porterias a cero: " + jugadora.getImbatidas());
 
         String baseRuta = "/Imagenes/Selecciones/Jugadoras/Canada/" + jugadora.getNombre_jugadora();
-        InputStream inputStream = getClass().getResourceAsStream(baseRuta + ".jpg");
+        InputStream inputStream = getClass().getResourceAsStream(baseRuta + ".png");
 
         if (inputStream == null) {
             inputStream = getClass().getResourceAsStream("/Imagenes/default_jugadora.png");
