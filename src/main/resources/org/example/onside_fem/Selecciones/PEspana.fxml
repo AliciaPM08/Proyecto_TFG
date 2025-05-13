@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Selecciones.ConAustraliaP">
+    <children>
+        <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="36.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+            </children>
+        </Pane>
+        <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <Label layoutX="639.0" layoutY="1.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Hyperlink>
+                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+            </children>
+        </Pane>
+        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="14.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/España/España.png" />
+            </image>
+        </ImageView>
+        <TabPane fx:id="tabpanePlantilla" layoutX="76.0" layoutY="321.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #FF0000; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
+                    <content>
+                        <AnchorPane prefHeight="179.0" prefWidth="311.0">
+                            <ListView fx:id="listPorteras" prefHeight="255.0" prefWidth="314.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabDefensas" style="-fx-background-color: #ffffff;" text="Defensas">
+                    <content>
+                        <AnchorPane>
+                            <ListView fx:id="listDefensas" layoutX="0" layoutY="0" prefHeight="258.0" prefWidth="312.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabCentro" style="-fx-background-color: #ffffff;" text="Centrocampistas">
+                    <content>
+                        <AnchorPane>
+                            <ListView fx:id="listCentros" layoutX="0" layoutY="0" prefHeight="253.0" prefWidth="310.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabDelantera" style="-fx-background-color: #ffffff;" text="Delantera">
+                    <content>
+                        <AnchorPane>
+                            <ListView fx:id="listDelanteras" layoutX="0" layoutY="0" prefHeight="255.0" prefWidth="312.0" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Label layoutX="245.0" layoutY="194.0" text="Entrenadora: Montse Tome">
+            <font>
+                <Font name="ACaslonPro-Regular" size="18.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="193.0" fitWidth="213.0" layoutX="102.0" layoutY="665.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/España/CamisetaP.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="181.0" fitWidth="182.0" layoutX="311.0" layoutY="666.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/España/CamisetaS.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="76.0" layoutY="634.0" text="EQUIPACIONES">
+            <font>
+                <Font name="ACaslonPro-Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="76.0" layoutY="279.0" text="ULTIMA CONVOCATORIA">
+            <font>
+                <Font name="ACaslonPro-Semibold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="784.0" layoutY="634.0" text="PALMARES">
+            <font>
+                <Font name="ACaslonPro-Semibold" size="24.0" />
+            </font>
+        </Label>
+        <MenuBar layoutX="-3.0" layoutY="56.0" prefHeight="25.0" prefWidth="1406.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
+            <menus>
+                <Menu mnemonicParsing="false" text="Inicio">
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                        <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                        <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                        <MenuItem mnemonicParsing="false" text="National Super League" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Seleccion">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Alemania" />
+                        <MenuItem mnemonicParsing="false" text="Australia" />
+                        <MenuItem mnemonicParsing="false" text="Brasil" />
+                        <MenuItem mnemonicParsing="false" text="Canada" />
+                        <MenuItem mnemonicParsing="false" text="Colombia" />
+                        <MenuItem mnemonicParsing="false" text="España" />
+                        <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem mnemonicParsing="false" text="Francia" />
+                        <MenuItem mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem mnemonicParsing="false" text="Japon" />
+                        <MenuItem mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem mnemonicParsing="false" text="Suecia" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <VBox fx:id="jugadoraInfoPanel" layoutX="385.0" layoutY="321.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #FF0000; -fx-border-width: 5; -fx-background-color: #ffffff;">
+            <children>
+                <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
+                <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
+                <Label fx:id="lblPosicion" style="-fx-font-size: 14px;" text="Posición: " />
+                <Label fx:id="lblEquipo" style="-fx-font-size: 14px;" text="Seleccion: " />
+                <Label fx:id="lblPJugados" style="-fx-font-size: 14px;" text="Partidos jugados:" />
+                <Label fx:id="lblGoles" layoutX="15.0" layoutY="230.0" style="-fx-font-size: 14px;" text="Goles:" />
+                <Label fx:id="lblImbatidas" layoutX="15.0" layoutY="250.0" style="-fx-font-size: 14px;" text="Porterias a cero:" />
+            </children>
+        </VBox>
+        <Label layoutX="198.0" layoutY="125.0" text="ESPAÑA">
+            <font>
+                <Font name="ACaslonPro-Semibold" size="36.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tableRanking" layoutX="963.0" layoutY="217.0" prefHeight="374.0" prefWidth="290.0" style="-fx-border-color: #FF0000; -fx-border-width: 5; -fx-background-color: #ffffff;">
+            <columns>
+                <TableColumn fx:id="colSeleccion" prefWidth="188.0" text="Selecciones" />
+                <TableColumn fx:id="colNRanking" prefWidth="88.0" text="Nº Ranking" />
+            </columns>
+        </TableView>
+        <Label layoutX="773.0" layoutY="156.0" text="RANKING GLOBAL">
+            <font>
+                <Font name="ACaslonPro-Bold" size="24.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="122.0" fitWidth="137.0" layoutX="829.0" layoutY="684.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/CopaMundo.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="111.0" fitWidth="150.0" layoutX="1052.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/CopaEuro.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="111.0" fitWidth="150.0" layoutX="1224.0" layoutY="706.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/MedallaOlim.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="882.0" layoutY="803.0" text="1">
+            <font>
+                <Font name="AdobeArabic-Regular" size="48.0" />
+            </font>
+        </Label>
+        <Label layoutX="1081.0" layoutY="803.0" text="0">
+            <font>
+                <Font name="AdobeArabic-Regular" size="48.0" />
+            </font>
+        </Label>
+        <Label layoutX="1253.0" layoutY="803.0" text="0">
+            <font>
+                <Font name="AdobeArabic-Regular" size="48.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
