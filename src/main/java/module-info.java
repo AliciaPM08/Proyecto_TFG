@@ -26,4 +26,6 @@ module org.example.onside_fem {
     opens org.example.onside_fem.EEUU to javafx.fxml;
     exports org.example.onside_fem.Francia;
     opens org.example.onside_fem.Francia to javafx.fxml;
+    exports org.example.onside_fem.Selecciones;
+    opens org.example.onside_fem.Selecciones to javafx.fxml;
 }
