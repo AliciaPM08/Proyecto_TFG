@@ -87,15 +87,24 @@ public class JugadoraDAO {
     }
 
     public JugadoraSeleccion obtenerJugadoraSeleccionPorNombre(String seleccion, String nombre) {
-        String sql = "SELECT nombre_jugadora, nombre_seleccion, posicion,partidos_jugados, goles, imbatidas FROM jugadorasseleccion WHERE nombre_seleccion = ? AND nombre_jugadora = ?";
+        String sql;
+        if (seleccion == null) {
+            sql = "SELECT nombre_jugadora, nombre_seleccion, posicion, partidos_jugados, goles, imbatidas FROM jugadorasseleccion WHERE nombre_jugadora = ?";
+        } else {
+            sql = "SELECT nombre_jugadora, nombre_seleccion, posicion, partidos_jugados, goles, imbatidas FROM jugadorasseleccion WHERE nombre_seleccion = ? AND nombre_jugadora = ?";
+        }
         try (Connection conn = ConexionBD.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, seleccion);
-            stmt.setString(2, nombre);
+            if (seleccion == null) {
+                stmt.setString(1, nombre);
+            } else {
+                stmt.setString(1, seleccion);
+                stmt.setString(2, nombre);
+            }
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
                 return new JugadoraSeleccion(
-                       rs.getString("nombre_jugadora"),
+                        rs.getString("nombre_jugadora"),
                         rs.getString("nombre_seleccion"),
                         rs.getString("posicion"),
                         rs.getInt("partidos_jugados"),
@@ -106,7 +115,20 @@ public class JugadoraDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return null;
+    }
+
+    public boolean juegaEnSeleccion(String nombreJugadora) {
+        String sql = "SELECT COUNT(*) FROM jugadorasseleccion WHERE nombre_jugadora = ?";
+        try (Connection conn = ConexionBD.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nombreJugadora);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

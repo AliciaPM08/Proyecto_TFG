@@ -145,17 +145,17 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="168.0" fitWidth="168.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="168.0" fitWidth="168.0" layoutX="892.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Valencia/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="168.0" fitWidth="168.0" layoutX="1154.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="168.0" fitWidth="168.0" layoutX="1150.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Valencia/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label layoutX="1018.0" layoutY="526.0" text="EQUIPACIONES">
+        <Label layoutX="1013.0" layoutY="540.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
@@ -198,7 +198,6 @@
                         <MenuItem mnemonicParsing="false" text="Estados Unidos" />
                         <MenuItem mnemonicParsing="false" text="Francia" />
                         <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                        <MenuItem mnemonicParsing="false" text="Japon" />
                         <MenuItem mnemonicParsing="false" text="Nigeria" />
                         <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
                         <MenuItem mnemonicParsing="false" text="Sudafrica" />
@@ -207,7 +206,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #ff6d2a; -fx-border-width: 5; -fx-background-color: #ffffff;">
+        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #ff6d2a; -fx-border-width: 5; -fx-background-color: #ffffff; -fx-padding: 5;">
             <children>
                 <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
                 <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
