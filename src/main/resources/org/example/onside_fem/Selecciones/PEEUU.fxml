@@ -56,12 +56,12 @@
                 <Image url="@../../../../Imagenes/Selecciones/Selecciones/USA/USA.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="76.0" layoutY="321.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="76.0" layoutY="321.0" prefHeight="295.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #000080; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
                     <content>
                         <AnchorPane prefHeight="179.0" prefWidth="311.0">
-                            <ListView fx:id="listPorteras" prefHeight="255.0" prefWidth="314.0" />
+                            <ListView fx:id="listPorteras" prefHeight="255.0" prefWidth="304.0" />
                         </AnchorPane>
                     </content>
                 </Tab>
@@ -155,7 +155,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <VBox fx:id="jugadoraInfoPanel" layoutX="385.0" layoutY="326.0" prefHeight="283.0" prefWidth="303.0" style="-fx-border-width: 5; -fx-background-color: #ffffff; -fx-background-color: #ffffff;">
+        <VBox fx:id="jugadoraInfoPanel" layoutX="382.0" layoutY="321.0" prefHeight="280.0" prefWidth="304.0" style="-fx-border-width: 5; -fx-background-color: #ffffff; -fx-border-color: #000080; -fx-padding: 5;">
             <children>
                 <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
                 <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
@@ -171,7 +171,7 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <TableView fx:id="tableRanking" layoutX="963.0" layoutY="217.0" prefHeight="374.0" prefWidth="290.0" style="-fx-border-color: #ffffff; -fx-border-width: 5; -fx-background-color: #ffffff;">
+        <TableView fx:id="tableRanking" layoutX="963.0" layoutY="217.0" prefHeight="374.0" prefWidth="290.0" style="-fx-border-color: #000080; -fx-border-width: 5; -fx-background-color: #ffffff;">
             <columns>
                 <TableColumn fx:id="colSeleccion" prefWidth="188.0" text="Selecciones" />
                 <TableColumn fx:id="colNRanking" prefWidth="88.0" text="Nº Ranking" />
