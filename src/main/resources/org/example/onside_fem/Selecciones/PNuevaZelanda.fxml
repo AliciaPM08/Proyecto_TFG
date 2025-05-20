@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Selecciones.ConNigeriaP">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Selecciones.ConNuevaZelandaP">
     <children>
         <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
@@ -51,12 +51,12 @@
                 <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
-        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="34.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="27.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Selecciones/Selecciones/Suecia/Suecia.png" />
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/Nueva Zelanda/Nueva Zelanda.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="76.0" layoutY="321.0" prefHeight="295.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #000080; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="76.0" layoutY="321.0" prefHeight="295.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
                     <content>
@@ -88,19 +88,19 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <Label layoutX="250.0" layoutY="176.0" text="Entrenador:  Peter Gerhardsson ">
+        <Label layoutX="250.0" layoutY="176.0" text="Entrenador:   Jitka Klimkova">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
         <ImageView fitHeight="181.0" fitWidth="172.0" layoutX="101.0" layoutY="676.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Selecciones/Selecciones/Suecia/CamisetaP.png" />
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/Nueva Zelanda/CamisetaP.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="172.0" fitWidth="182.0" layoutX="317.0" layoutY="676.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Selecciones/Selecciones/Suecia/CamisetaS.png" />
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/Nueva Zelanda/CamisetaS.png" />
             </image>
         </ImageView>
         <Label layoutX="76.0" layoutY="634.0" text="EQUIPACIONES">
@@ -154,7 +154,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <VBox fx:id="jugadoraInfoPanel" layoutX="382.0" layoutY="321.0" prefHeight="280.0" prefWidth="304.0" style="-fx-border-width: 5; -fx-background-color: #ffffff; -fx-border-color: #000080; -fx-padding: 5;">
+        <VBox fx:id="jugadoraInfoPanel" layoutX="382.0" layoutY="321.0" prefHeight="280.0" prefWidth="304.0" style="-fx-border-width: 5; -fx-background-color: #ffffff; -fx-border-color: #000000; -fx-padding: 5;">
             <children>
                 <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
                 <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " />
@@ -165,12 +165,12 @@
                 <Label fx:id="lblImbatidas" layoutX="15.0" layoutY="250.0" style="-fx-font-size: 14px;" text="Porterias a cero:" />
             </children>
         </VBox>
-        <Label layoutX="217.0" layoutY="107.0" text="SUECIA">
+        <Label layoutX="217.0" layoutY="107.0" text="NUEVA ZELANDA">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <TableView fx:id="tableRanking" layoutX="963.0" layoutY="217.0" prefHeight="374.0" prefWidth="290.0" style="-fx-border-color: #000080; -fx-border-width: 5; -fx-background-color: #ffffff;">
+        <TableView fx:id="tableRanking" layoutX="963.0" layoutY="217.0" prefHeight="374.0" prefWidth="290.0" style="-fx-border-color: #000000; -fx-border-width: 5; -fx-background-color: #ffffff;">
             <columns>
                 <TableColumn fx:id="colSeleccion" prefWidth="188.0" text="Selecciones" />
                 <TableColumn fx:id="colNRanking" prefWidth="88.0" text="Nº Ranking" />
@@ -186,9 +186,9 @@
                 <Image url="@../../../../Imagenes/Selecciones/Selecciones/CopaMundo.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="111.0" fitWidth="150.0" layoutX="1061.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="111.0" fitWidth="150.0" layoutX="1073.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../Imagenes/Selecciones/Selecciones/CopaEuro.png" />
+                <Image url="@../../../../Imagenes/Selecciones/Selecciones/CopaOceania.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="111.0" fitWidth="150.0" layoutX="1224.0" layoutY="706.0" pickOnBounds="true" preserveRatio="true">

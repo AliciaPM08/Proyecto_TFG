@@ -146,7 +146,6 @@
                         <MenuItem mnemonicParsing="false" text="Estados Unidos" />
                         <MenuItem mnemonicParsing="false" text="Francia" />
                         <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                        <MenuItem mnemonicParsing="false" text="Japon" />
                         <MenuItem mnemonicParsing="false" text="Nigeria" />
                         <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
                         <MenuItem mnemonicParsing="false" text="Sudafrica" />

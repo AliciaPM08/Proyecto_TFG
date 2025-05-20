@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class ConColombiaP {
+public class ConSudafricaP {
     @FXML
     private MenuItem volverItem;
 
@@ -178,15 +178,15 @@ public class ConColombiaP {
     }
 
     private void cargarListaJugadoras(String posicion, ListView<String> listView) {
-        List<JugadoraSeleccion> jugadoras = jugadoraDAO.obtenerJugadoresPorSeleccionYPosicion("Colombia", posicion);
+        List<JugadoraSeleccion> jugadoras = jugadoraDAO.obtenerJugadoresPorSeleccionYPosicion("Sudafrica", posicion);
         for (JugadoraSeleccion j : jugadoras) {
             listView.getItems().add(j.getNombre_jugadora());
         }
 
         listView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
-                JugadoraSeleccion j = jugadoraDAO.obtenerJugadoraSeleccionPorNombre("Colombia", newVal);
-                mostrarInfoEnPanel(j, "Colombia");
+                JugadoraSeleccion j = jugadoraDAO.obtenerJugadoraSeleccionPorNombre("Sudafrica", newVal);
+                mostrarInfoEnPanel(j, "Sudafrica");
             }
         });
     }
@@ -199,7 +199,7 @@ public class ConColombiaP {
         lblGoles.setText("Goles:  " + jugadora.getGoles());
         lblImbatidas.setText("Porterias a cero: " + jugadora.getImbatidas());
 
-        String baseRuta = "/Imagenes/Selecciones/Jugadoras/Colombia/" + jugadora.getNombre_jugadora();
+        String baseRuta = "/Imagenes/Selecciones/Jugadoras/Sudafrica/" + jugadora.getNombre_jugadora();
         InputStream inputStream = getClass().getResourceAsStream(baseRuta + ".jpg");
 
         if (inputStream == null) {
