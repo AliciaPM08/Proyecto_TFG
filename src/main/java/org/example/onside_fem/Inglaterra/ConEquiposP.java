@@ -80,7 +80,7 @@ public class ConEquiposP {
         // LIGAS
         ligaPantallas.put("Finetwork Liga F", "/org/example/onside_fem/Espana/PPLigaEspanola.fxml");
         ligaPantallas.put("Liberty A-League", "/org/example/onside_fem/Australia/PPLigaAustraliana.fxml");
-        ligaPantallas.put("Women's Super League", "/org/example/onside_fem/FXML/Ligas/WomensSuperLeague.fxml");
+        ligaPantallas.put("Women's Super League", "/org/example/onside_fem/Inglaterra/PPLigaInglaterra.fxml");
         ligaPantallas.put("Arkema Premiere League", "/org/example/onside_fem/Francia/PPLigaFrancia.fxml");
         ligaPantallas.put("Yogibo WE League", "/org/example/onside_fem/Japon/PPLigaJaponesa.fxml");
         ligaPantallas.put("National Super League", "/org/example/onside_fem/EEUU/PPLigaEEUU.fxml");
@@ -137,7 +137,7 @@ public class ConEquiposP {
 
 
     private void inicializarEquipos() {
-        equipoPantallas.put("ivSaint", "/org/example/onside_fem/Francia/PEtienne.fxml");
+        equipoPantallas.put("ivArsenal", "/org/example/onside_fem/Inglaterra/PArsenal.fxml");
         equipoPantallas.put("ivDijon","/org/example/onside_fem/Francia/PDijon.fxml");
         equipoPantallas.put("ivGuingamp", "/org/example/onside_fem/Francia/PGuingamp.fxml");
         equipoPantallas.put("ivNantes", "/org/example/onside_fem/Francia/PNantes.fxml");
