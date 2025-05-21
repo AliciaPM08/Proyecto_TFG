@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Inglaterra.ConClasificacionInglaterra">
+    <children>
+        <Pane prefHeight="56.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="618.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="60.0" fitWidth="52.0" layoutX="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Logo/Logo App.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="654.0" layoutY="7.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="36.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+            </children>
+        </Pane>
+        <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+            <children>
+                <Label layoutX="639.0" layoutY="1.0" text="OnSideFem" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="hyperlinkAyuda" layoutX="1325.0" layoutY="-1.0" text="Ayuda" textFill="#ff6d6e">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Hyperlink>
+                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+            </children>
+        </Pane>
+        <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
+            <menus>
+                <Menu mnemonicParsing="false" text="Inicio">
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
+                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Alemania" />
+                  <MenuItem mnemonicParsing="false" text="Australia" />
+                  <MenuItem mnemonicParsing="false" text="Brasil" />
+                  <MenuItem mnemonicParsing="false" text="Canada" />
+                  <MenuItem mnemonicParsing="false" text="Colombia" />
+                  <MenuItem mnemonicParsing="false" text="España" />
+                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
+                  <MenuItem mnemonicParsing="false" text="Francia" />
+                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
+                  <MenuItem mnemonicParsing="false" text="Nigeria" />
+                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
+                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
+                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Pane layoutX="-1.0" layoutY="96.0" prefHeight="67.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <ImageView fitHeight="67.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Imagenes/Liga Inglesa/Logo Liga/Logo Liga 2.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="122.0" layoutY="18.0" text="Women's Super League">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="24.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnEquipo" layoutX="1272.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Equipos">
+                    <font>
+                        <Font name="ACaslonPro-Semibold" size="18.0" />
+                    </font>
+                </Button>
+            </children></Pane>
+      <TableView fx:id="tableView" layoutX="340.0" layoutY="218.0" prefHeight="412.0" prefWidth="718.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="96.0" text="Equipo" />
+          <TableColumn fx:id="colPosicion" prefWidth="68.0" text="Posicion" />
+            <TableColumn fx:id="colPuntos" prefWidth="77.0" text="Puntos" />
+            <TableColumn fx:id="colJugados" prefWidth="79.0" text="P. Jugados" />
+            <TableColumn fx:id="colVictorias" prefWidth="70.0" text="Victorias" />
+            <TableColumn fx:id="colEmpates" prefWidth="78.0" text="Empates" />
+            <TableColumn fx:id="colPerdidos" prefWidth="69.0" text="Perdidos" />
+            <TableColumn fx:id="colFavor" prefWidth="84.0" text="G. A Favor" />
+            <TableColumn fx:id="colContra" prefWidth="88.0" text="G. En Contra" />
+        </columns>
+      </TableView>
+    </children>
+</Pane>
