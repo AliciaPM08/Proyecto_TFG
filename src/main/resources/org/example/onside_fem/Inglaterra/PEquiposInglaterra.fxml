@@ -123,7 +123,7 @@
             <Image url="@../../../../Imagenes/Liga Inglesa/Equipos/Manchester City/Manchester City.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ivChealsea" fitHeight="154.0" fitWidth="150.0" layoutX="740.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivChelsea" fitHeight="154.0" fitWidth="150.0" layoutX="740.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga Inglesa/Equipos/Chelsea/Chelsea.png" />
          </image>
