@@ -138,7 +138,7 @@ public class ConEquiposP {
 
     private void inicializarEquipos() {
         equipoPantallas.put("ivArsenal", "/org/example/onside_fem/Inglaterra/PArsenal.fxml");
-        equipoPantallas.put("ivDijon","/org/example/onside_fem/Francia/PDijon.fxml");
+        equipoPantallas.put("ivAston","/org/example/onside_fem/Inglaterra/PAstonVilla.fxml");
         equipoPantallas.put("ivGuingamp", "/org/example/onside_fem/Francia/PGuingamp.fxml");
         equipoPantallas.put("ivNantes", "/org/example/onside_fem/Francia/PNantes.fxml");
         equipoPantallas.put("ivFleury", "/org/example/onside_fem/Francia/PFleury.fxml");
