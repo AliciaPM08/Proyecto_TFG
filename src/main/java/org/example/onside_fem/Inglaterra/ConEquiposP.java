@@ -141,14 +141,14 @@ public class ConEquiposP {
         equipoPantallas.put("ivAston","/org/example/onside_fem/Inglaterra/PAstonVilla.fxml");
         equipoPantallas.put("ivGaviotas", "/org/example/onside_fem/Inglaterra/PBrighton.fxml");
         equipoPantallas.put("ivChelsea", "/org/example/onside_fem/Inglaterra/PChelsea.fxml");
-        equipoPantallas.put("ivFleury", "/org/example/onside_fem/Francia/PFleury.fxml");
-        equipoPantallas.put("ivHavre", "/org/example/onside_fem/Francia/PHavre.fxml");
-        equipoPantallas.put("ivMontpellier", "/org/example/onside_fem/Francia/PMontpellier.fxml");
-        equipoPantallas.put("ivLyon", "/org/example/onside_fem/Francia/PLyon.fxml");
-        equipoPantallas.put("ivParis", "/org/example/onside_fem/Francia/PParis.fxml");
-        equipoPantallas.put("ivPSG", "/org/example/onside_fem/Francia/PPSG.fxml");
-        equipoPantallas.put("ivStrasbourg", "/org/example/onside_fem/Francia/PStrasbourg.fxml");
-        equipoPantallas.put("ivStade", "/org/example/onside_fem/Francia/PReims.fxml");
+        equipoPantallas.put("ivCrystal", "/org/example/onside_fem/Inglaterra/PCrystal.fxml");
+        equipoPantallas.put("ivEverton", "/org/example/onside_fem/Francia/PHavre.fxml");
+        equipoPantallas.put("ivLeicester", "/org/example/onside_fem/Francia/PMontpellier.fxml");
+        equipoPantallas.put("ivLiverpool", "/org/example/onside_fem/Francia/PLyon.fxml");
+        equipoPantallas.put("ivCity", "/org/example/onside_fem/Francia/PParis.fxml");
+        equipoPantallas.put("ivUnited", "/org/example/onside_fem/Francia/PPSG.fxml");
+        equipoPantallas.put("ivSpurs", "/org/example/onside_fem/Francia/PStrasbourg.fxml");
+        equipoPantallas.put("ivHam", "/org/example/onside_fem/Francia/PReims.fxml");
 
         // Agrega listeners dinámicamente
         for (javafx.scene.Node node : rootPane.getChildren()) {
