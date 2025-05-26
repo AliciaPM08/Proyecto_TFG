@@ -148,7 +148,7 @@ public class ConEquiposP {
         equipoPantallas.put("ivCity", "/org/example/onside_fem/Inglaterra/PManCity.fxml");
         equipoPantallas.put("ivUnited", "/org/example/onside_fem/Inglaterra/PManUnited.fxml");
         equipoPantallas.put("ivSpurs", "/org/example/onside_fem/Inglaterra/PTottenham.fxml");
-        equipoPantallas.put("ivHam", "/org/example/onside_fem/Francia/PReims.fxml");
+        equipoPantallas.put("ivHam", "/org/example/onside_fem/Inglaterra/PWestHam.fxml");
 
         // Agrega listeners dinámicamente
         for (javafx.scene.Node node : rootPane.getChildren()) {
