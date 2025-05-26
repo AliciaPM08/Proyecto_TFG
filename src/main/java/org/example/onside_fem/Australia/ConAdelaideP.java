@@ -3,6 +3,7 @@ package org.example.onside_fem.Australia;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,17 +13,16 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import org.example.onside_fem.BBDD.Estadisticas;
-import org.example.onside_fem.BBDD.EstadisticasDAO;
-import org.example.onside_fem.BBDD.Jugadora;
-import org.example.onside_fem.BBDD.JugadoraDAO;
+import org.example.onside_fem.BBDD.*;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -84,6 +84,9 @@ public class ConAdelaideP {
 
     private JugadoraDAO jugadoraDAO;
 
+    @FXML private Button btnVerSeleccion;
+    private String seleccionActualDeLaJugadora;
+
     @FXML
     public void initialize() {
         inicializarIdioma();
@@ -119,12 +122,12 @@ public class ConAdelaideP {
         // LIGAS
         ligaPantallas.put("Finetwork Liga F", "/org/example/onside_fem/Espana/PPLigaEspanola.fxml");
         ligaPantallas.put("Liberty A-League", "/org/example/onside_fem/Australia/PPLigaAustraliana.fxml");
-        ligaPantallas.put("Women's Super League", "/org/example/onside_fem/FXML/Ligas/WomensSuperLeague.fxml");
+        ligaPantallas.put("Women's Super League", "/org/example/onside_fem/Inglaterra/PPLigaInglaterra.fxml");
         ligaPantallas.put("Arkema Premiere League", "/org/example/onside_fem/Francia/PPLigaFrancia.fxml");
         ligaPantallas.put("Yogibo WE League", "/org/example/onside_fem/Japon/PPLigaJaponesa.fxml");
         ligaPantallas.put("National Super League", "/org/example/onside_fem/EEUU/PPLigaEEUU.fxml");
 
-//        // SELECCIONES
+        // SELECCIONES
         seleccionPantallas.put("Alemania", "/org/example/onside_fem/Selecciones/PAlemania.fxml");
         seleccionPantallas.put("Australia", "/org/example/onside_fem/Selecciones/PAustralia.fxml");
         seleccionPantallas.put("Brasil", "/org/example/onside_fem/Selecciones/PBrasil.fxml");
@@ -132,13 +135,12 @@ public class ConAdelaideP {
         seleccionPantallas.put("Colombia", "/org/example/onside_fem/Selecciones/PColombia.fxml");
         seleccionPantallas.put("España", "/org/example/onside_fem/Selecciones/PEspana.fxml");
         seleccionPantallas.put("Estados Unidos", "/org/example/onside_fem/Selecciones/PEEUU.fxml");
-        seleccionPantallas.put("Francia", "/org/example/onside_fem/FXML/Selecciones/Francia.fxml");
-        seleccionPantallas.put("Inglatera", "/org/example/onside_fem/FXML/Selecciones/Inglaterra.fxml");
-        seleccionPantallas.put("Japon", "/org/example/onside_fem/FXML/Selecciones/Japon.fxml");
-        seleccionPantallas.put("Nigeria", "/org/example/onside_fem/FXML/Selecciones/Nigeria.fxml");
-        seleccionPantallas.put("Nueva Zelanda", "/org/example/onside_fem/FXML/Selecciones/NuevaZelanda.fxml");
-        seleccionPantallas.put("Sudafrica", "/org/example/onside_fem/FXML/Selecciones/Sudafrica.fxml");
-        seleccionPantallas.put("Suecia", "/org/example/onside_fem/FXML/Selecciones/Suecia.fxml");
+        seleccionPantallas.put("Francia", "/org/example/onside_fem/Selecciones/PFrancia.fxml");
+        seleccionPantallas.put("Inglaterra", "/org/example/onside_fem/Selecciones/PInglaterra.fxml");
+        seleccionPantallas.put("Nigeria", "/org/example/onside_fem/Selecciones/PNigeria.fxml");
+        seleccionPantallas.put("Nueva Zelanda", "/org/example/onside_fem/Selecciones/PNuevaZelanda.fxml");
+        seleccionPantallas.put("Sudafrica", "/org/example/onside_fem/Selecciones/PSudafrica.fxml");
+        seleccionPantallas.put("Suecia", "/org/example/onside_fem/Selecciones/PSuecia.fxml");
     }
 
     private void inicializarLigas() {
@@ -203,17 +205,77 @@ public class ConAdelaideP {
 
     private void cargarListaJugadoras(String posicion, ListView<String> listView) {
         List<Jugadora> jugadoras = jugadoraDAO.obtenerJugadoresPorEquipoYPosicion("Adelaide Utd", posicion);
+
+        listView.setCellFactory(lv -> new ListCell<>() {
+            @Override
+            protected void updateItem(String nombre, boolean empty) {
+                super.updateItem(nombre, empty);
+                if (empty || nombre == null) {
+                    setText(null);
+                    setGraphic(null);
+                } else {
+                    String nombreLimpio = nombre.replace(" ⭐", "").trim();
+                    boolean tieneEstrella = jugadoraDAO.juegaEnSeleccion(nombreLimpio);
+
+                    Label label = new Label(nombreLimpio);
+                    label.setStyle("-fx-font-size: 13px;");
+
+                    if (tieneEstrella) {
+                        ImageView estrella = new ImageView(new Image(getClass().getResourceAsStream("/Imagenes/star.png")));
+                        estrella.setFitWidth(15);
+                        estrella.setFitHeight(15);
+                        estrella.setCursor(Cursor.HAND);
+
+                        // Acción para ir a pantalla de selección al clickar la estrella
+                        estrella.setOnMouseClicked(event -> {
+                            JugadoraSeleccion js = jugadoraDAO.obtenerJugadoraSeleccionPorNombre(null, nombreLimpio);
+                            if (js != null) {
+                                String seleccion = js.getNombre_seleccion();
+                                System.out.println("Seleccion obtenida para jugadora '" + nombreLimpio + "': '" + seleccion + "'");
+                                String ruta = seleccionPantallas.get(seleccion);
+                                System.out.println("Ruta obtenida para seleccion '" + seleccion + "': " + ruta);
+                                if (ruta != null) {
+                                    URL recurso = getClass().getResource(ruta);
+                                    if (recurso != null) {
+                                        cargarPantalla(ruta);
+                                    } else {
+                                        System.err.println("No se encontró recurso para ruta: " + ruta);
+                                    }
+                                } else {
+                                    System.err.println("No se encontró ruta para la selección: " + seleccion);
+                                }
+                            } else {
+                                System.err.println("No se encontró la selección para la jugadora: " + nombreLimpio);
+                            }
+                            event.consume();
+                        });
+
+
+                        HBox hBox = new HBox(10, label, estrella);
+                        setGraphic(hBox);
+                    } else {
+                        // Si no tiene estrella, solo selecciona el item normal
+                        label.setOnMouseClicked(event -> listView.getSelectionModel().select(getIndex()));
+                        setGraphic(label);
+                    }
+                }
+            }
+        });
+
+        listView.getItems().clear(); // Evita duplicados
         for (Jugadora j : jugadoras) {
             listView.getItems().add(j.getNombre());
         }
 
         listView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
-                Jugadora j = jugadoraDAO.obtenerJugadoraPorNombre("Adelaide Utd", newVal);
-                mostrarInfoEnPanel(j, "Liberty A-League");
+                String nombreLimpio = newVal.replace(" ⭐", "").trim();
+                Jugadora j = jugadoraDAO.obtenerJugadoraPorNombre("Adelaide Utd", nombreLimpio);
+                mostrarInfoEnPanel(j, "Liga Australiana");
             }
         });
     }
+
 
     private void mostrarInfoEnPanel(Jugadora jugadora, String liga) {
         lblNombre.setText("Nombre: " + jugadora.getNombre());
@@ -221,17 +283,29 @@ public class ConAdelaideP {
         lblEquipo.setText("Fecha de nacimiento: " + jugadora.getNombre_equipo());
         lblFecha.setText("Equipo:  " + jugadora.getFecha());
 
-        String baseRuta = "/Imagenes/Liga Australiana/Jugadoras/Adelaide Utd/" + jugadora.getNombre();
-        InputStream inputStream = getClass().getResourceAsStream(baseRuta + ".jpg");
-
+        // Cargar imagen
+        String rutaImagen = "/Imagenes/Liga Australiana/Jugadoras/Adelaide Utd/" + jugadora.getNombre() + ".jpg";
+        InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
         if (inputStream == null) {
             inputStream = getClass().getResourceAsStream("/Imagenes/default_jugadora.png");
         }
-
         if (inputStream != null) {
             imgJugadora.setImage(new Image(inputStream));
         }
+
+        // Comprobar si juega en selección
+        if (jugadoraDAO.juegaEnSeleccion(jugadora.getNombre())) {
+            JugadoraSeleccion js = jugadoraDAO.obtenerJugadoraSeleccionPorNombre(null, jugadora.getNombre());
+            if (js != null) {
+                seleccionActualDeLaJugadora = js.getNombre_seleccion();
+                btnVerSeleccion.setVisible(true);
+            }
+        } else {
+            btnVerSeleccion.setVisible(false);
+            seleccionActualDeLaJugadora = null;
+        }
     }
+
 
     private void cargarPantalla(String rutaFXML) {
         try {
