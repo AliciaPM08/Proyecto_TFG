@@ -88,7 +88,6 @@ public class ConBilbaoP {
 
     private JugadoraDAO jugadoraDAO;
 
-    @FXML private Button btnVerSeleccion;
     private String seleccionActualDeLaJugadora;
 
     @FXML
@@ -287,6 +286,18 @@ public class ConBilbaoP {
         lblEquipo.setText("Fecha de nacimiento: " + jugadora.getNombre_equipo());
         lblFecha.setText("Equipo:  " + jugadora.getFecha());
 
+        lblNombre.setVisible(true);
+        lblNombre.setManaged(true);
+
+        lblPosicion.setVisible(true);
+        lblPosicion.setManaged(true);
+
+        lblEquipo.setVisible(true);
+        lblEquipo.setManaged(true);
+
+        lblFecha.setVisible(true);
+        lblFecha.setManaged(true);
+
         // Cargar imagen
         String rutaImagen = "/Imagenes/Liga_Española/Jugadoras/Athletic_Club/" + jugadora.getNombre() + ".jpg";
         InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
@@ -302,10 +313,8 @@ public class ConBilbaoP {
             JugadoraSeleccion js = jugadoraDAO.obtenerJugadoraSeleccionPorNombre(null, jugadora.getNombre());
             if (js != null) {
                 seleccionActualDeLaJugadora = js.getNombre_seleccion();
-                btnVerSeleccion.setVisible(true);
             }
         } else {
-            btnVerSeleccion.setVisible(false);
             seleccionActualDeLaJugadora = null;
         }
     }

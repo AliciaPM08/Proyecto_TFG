@@ -1,6 +1,5 @@
 package org.example.onside_fem.Espana;
 
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,15 +9,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import org.example.onside_fem.BBDD.*;
 import javafx.scene.Cursor;
 
@@ -88,7 +84,6 @@ public class ConBarsaP {
 
     private JugadoraDAO jugadoraDAO;
 
-    @FXML private Button btnVerSeleccion;
     private String seleccionActualDeLaJugadora;
 
     @FXML
@@ -287,6 +282,18 @@ public class ConBarsaP {
         lblEquipo.setText("Fecha de nacimiento: " + jugadora.getNombre_equipo());
         lblFecha.setText("Equipo:  " + jugadora.getFecha());
 
+        lblNombre.setVisible(true);
+        lblNombre.setManaged(true);
+
+        lblPosicion.setVisible(true);
+        lblPosicion.setManaged(true);
+
+        lblEquipo.setVisible(true);
+        lblEquipo.setManaged(true);
+
+        lblFecha.setVisible(true);
+        lblFecha.setManaged(true);
+
         // Cargar imagen
         String rutaImagen = "/Imagenes/Liga_Española/Jugadoras/FC Barcelona/" + jugadora.getNombre() + ".jpg";
         InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
@@ -302,10 +309,8 @@ public class ConBarsaP {
             JugadoraSeleccion js = jugadoraDAO.obtenerJugadoraSeleccionPorNombre(null, jugadora.getNombre());
             if (js != null) {
                 seleccionActualDeLaJugadora = js.getNombre_seleccion();
-                btnVerSeleccion.setVisible(true);
             }
         } else {
-            btnVerSeleccion.setVisible(false);
             seleccionActualDeLaJugadora = null;
         }
     }
