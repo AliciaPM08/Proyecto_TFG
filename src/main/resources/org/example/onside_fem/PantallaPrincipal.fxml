@@ -80,6 +80,94 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Pane layoutX="268.0" layoutY="95.0" prefHeight="775.0" prefWidth="865.0" style="-fx-background-color: #ffffff;" />
+      <Pane layoutX="218.0" layoutY="95.0" prefHeight="776.0" prefWidth="940.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="297.0" fitWidth="522.0" layoutX="22.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Imagenes/NoticiaEuro.png" />
+               </image>
+            </ImageView>
+            <Label text="EVENTOS PROXIMOS">
+               <font>
+                  <Font name="ACaslonPro-Bold" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="349.0" fitWidth="522.0" layoutX="22.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Imagenes/NoticiaAme.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="289.0" fitWidth="263.0" layoutX="-124.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Imagenes/MascotaEuro.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="558.0" layoutY="75.0" text="EURO Femenina de la UEFA 2025">
+               <font>
+                  <Font name="ACaslonPro-Semibold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="558.0" layoutY="112.0" text="El torneo se celebrará del 2 al 27 de julio.">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="558.0" layoutY="134.0" prefHeight="56.0" prefWidth="293.0" text="Sorteo de la fase final de la EURO Femenina 2025" wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-BoldItalic" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="192.0" prefHeight="31.0" prefWidth="301.0" text="Grupo A: Suiza, Noruega, Islandia, Finlandia" wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="223.0" prefHeight="31.0" prefWidth="301.0" text="Grupo B: España, Portugal, Bélgica, Italia" wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="254.0" prefHeight="31.0" prefWidth="301.0" text="Grupo C: Alemania, Polonia, Dinamarca, Suecia" wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="292.0" prefHeight="22.0" prefWidth="301.0" text="Grupo D: Francia, Inglaterra, Gales, Países Bajos" wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="558.0" layoutY="404.0" text="Copa América Femenina 2025">
+               <font>
+                  <Font name="ACaslonPro-Semibold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="558.0" layoutY="441.0" text="El torneo se celebrará del 12 de julio al 2 de agosto. ">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="387.0" fitWidth="287.0" layoutX="820.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Imagenes/MascotaAme.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="558.0" layoutY="463.0" prefHeight="56.0" prefWidth="326.0" text="Sorteo de la fase final de la Copa Aerica Femenina 2025" wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-BoldItalic" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="519.0" prefHeight="31.0" prefWidth="335.0" text="Grupo A: Ecuador, Argentina, Chile, Uruguay y Perú." wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="553.0" prefHeight="51.0" prefWidth="301.0" text="Grupo B: Brasil, Colombia, Paraguay, Venezuela y Bolivia." wrapText="true">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="15.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label text="Label" />
    </children>
 </Pane>
