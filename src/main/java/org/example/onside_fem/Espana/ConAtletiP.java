@@ -1,6 +1,5 @@
 package org.example.onside_fem.Espana;
 
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,21 +10,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import org.example.onside_fem.BBDD.*;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
@@ -181,7 +178,7 @@ public class ConAtletiP {
         if (seleccionada == null) seleccionada = listCentros.getSelectionModel().getSelectedItem();
         if (seleccionada == null) seleccionada = listDelanteras.getSelectionModel().getSelectedItem();
         if (seleccionada != null) {
-            return seleccionada.replace(" ⭐", "").trim(); // eliminar estrella si hay
+            return seleccionada.replace(" ⭐", "").trim();
         }
         return null;
     }
@@ -462,7 +459,6 @@ public class ConAtletiP {
         }
     }
 
-
     private void cargarPantalla(String rutaFXML) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaFXML));
@@ -479,18 +475,14 @@ public class ConAtletiP {
 
     private void abrirAyuda(ActionEvent event) {
         try {
-            File ayudaHTML = new File("src/main/resources/ayuda/ayuda_usuario.html");
-            if (ayudaHTML.exists()) {
-                Desktop.getDesktop().browse(ayudaHTML.toURI());
+            URL ayudaURL = getClass().getResource("/org/example/onside_fem/ayuda.html");
+            if (ayudaURL != null) {
+                Desktop.getDesktop().browse(ayudaURL.toURI());
             } else {
                 System.err.println("Archivo de ayuda no encontrado.");
             }
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
-    }
-
-    private String obtenerNombrePosicion(String abreviatura) {
-        return mapaPosiciones.getOrDefault(abreviatura, "Desconocido");
     }
 }

@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -14,13 +15,11 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import org.example.onside_fem.BBDD.ClasifiacionDAO;
 import org.example.onside_fem.BBDD.Clasificacion;
-
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.*;
 
 public class ConClasificacionE {
     @FXML
@@ -32,6 +31,8 @@ public class ConClasificacionE {
     @FXML
     private Menu menuSelecciones;
 
+    @FXML private Menu menuInicio;
+
     @FXML
     private ComboBox<String> comboBoxIdiomas;
 
@@ -40,6 +41,22 @@ public class ConClasificacionE {
 
     @FXML
     private Button btnEquipo;
+
+    @FXML private MenuItem menuAlemania;
+    @FXML private MenuItem menuAustralia;
+    @FXML private MenuItem menuBrasil;
+    @FXML private MenuItem menuCanada;
+    @FXML private MenuItem menuColombia;
+    @FXML private MenuItem menuEspana;
+    @FXML private MenuItem menuEstados;
+    @FXML private MenuItem menuFrancia;
+    @FXML private MenuItem menuInglaterra;
+    @FXML private MenuItem menuNigeria;
+    @FXML private MenuItem menuNZelanda;
+    @FXML private MenuItem menuSudafrica;
+    @FXML private MenuItem menuSuecia;
+
+    @FXML private Label footer;
 
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
@@ -60,9 +77,15 @@ public class ConClasificacionE {
 
     private String ligaActual = "Finetwork Liga F";
 
+    private ResourceBundle recursos;
+    private Locale localeActual = new Locale("es", "ES");
+
     @FXML
     public void initialize() {
         inicializarIdioma();
+        recursos = ResourceBundle.getBundle("idiomas.messages", localeActual);
+        traducirUI();
+
         inicializarRutas();
         inicializarMenuInicio();
         inicializarLigas();
@@ -79,9 +102,60 @@ public class ConClasificacionE {
     }
 
     private void cambiarIdioma() {
-        String idioma = comboBoxIdiomas.getValue();
-        Locale locale = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
-        System.out.println("Idioma cambiado a: " + idioma);
+        String idiomaSeleccionado = comboBoxIdiomas.getValue();
+        if (idiomaSeleccionado.equals("Inglés")) {
+            localeActual = new Locale("en", "US");
+        } else {
+            localeActual = new Locale("es", "ES");
+        }
+
+        try {
+            recursos = ResourceBundle.getBundle("idiomas.messages", localeActual);
+            traducirUI();
+        } catch (MissingResourceException e) {
+            System.err.println("Archivo de idioma no encontrado.");
+        }
+    }
+
+    private void traducirUI() {
+        //Menu
+        menuInicio.setText(recursos.getString("menu.inicio"));
+        menuLigas.setText(recursos.getString("menu.ligas"));
+        menuSelecciones.setText(recursos.getString("menu.selecciones"));
+        menuAlemania.setText(recursos.getString("menu.alemania"));
+        menuAustralia.setText(recursos.getString("menu.australia"));
+        menuBrasil.setText(recursos.getString("menu.brasil"));
+        menuCanada.setText(recursos.getString("menu.canada"));
+        menuColombia.setText(recursos.getString("menu.colombia"));
+        menuEspana.setText(recursos.getString("menu.espana"));
+        menuEstados.setText(recursos.getString("menu.unidos"));
+        menuFrancia.setText(recursos.getString("menu.francia"));
+        menuInglaterra.setText(recursos.getString("menu.inglaterra"));
+        menuNigeria.setText(recursos.getString("menu.nigeria"));
+        menuNZelanda.setText(recursos.getString("menu.nzelanda"));
+        menuSudafrica.setText(recursos.getString("menu.sudafrica"));
+        menuSuecia.setText(recursos.getString("menu.suecia"));
+        volverItem.setText(recursos.getString("menu.volver"));
+        hyperlinkAyuda.setText(recursos.getString("menu.ayuda"));
+
+        //Boton
+        btnEquipo.setText(recursos.getString("btn.equipo"));
+
+
+        //Footer
+        footer.setText(recursos.getString("footer.copy"));
+
+        //Columnas
+        colNombre.setText(recursos.getString("clasificacion.colNombre"));
+        colPosicion.setText(recursos.getString("clasificacion.colPosicion"));
+        colPuntos.setText(recursos.getString("clasificacion.colPuntos"));
+        colJugados.setText(recursos.getString("clasificacion.colJugados"));
+        colVictorias.setText(recursos.getString("clasificacion.colVictorias"));
+        colEmpates.setText(recursos.getString("clasifcacion.colEmpates"));
+        colPerdidos.setText(recursos.getString("clasificacion.colPerdidos"));
+        colFavor.setText(recursos.getString("clasificacion.colFavor"));
+        colContra.setText(recursos.getString("clasificacion.colContra"));
+
     }
 
     private void inicializarMenuInicio() {
@@ -178,13 +252,13 @@ public class ConClasificacionE {
 
     private void abrirAyuda(ActionEvent event) {
         try {
-            File ayudaHTML = new File("src/main/resources/ayuda/ayuda_usuario.html");
-            if (ayudaHTML.exists()) {
-                Desktop.getDesktop().browse(ayudaHTML.toURI());
+            URL ayudaURL = getClass().getResource("/org/example/onside_fem/ayuda.html");
+            if (ayudaURL != null) {
+                Desktop.getDesktop().browse(ayudaURL.toURI());
             } else {
                 System.err.println("Archivo de ayuda no encontrado.");
             }
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }
