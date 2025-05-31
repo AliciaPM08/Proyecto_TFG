@@ -27,10 +27,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 
 public class ConAtletiP {
     @FXML
@@ -41,6 +39,9 @@ public class ConAtletiP {
 
     @FXML
     private Menu menuSelecciones;
+
+    @FXML
+    private MenuItem menuInicio;
 
     @FXML
     private ComboBox<String> comboBoxIdiomas;
@@ -54,6 +55,19 @@ public class ConAtletiP {
     @FXML
     private Button btnClasifiacion;
 
+    @FXML private MenuItem menuAlemania;
+    @FXML private MenuItem menuAustralia;
+    @FXML private MenuItem menuBrasil;
+    @FXML private MenuItem menuCanada;
+    @FXML private MenuItem menuColombia;
+    @FXML private MenuItem menuEspana;
+    @FXML private MenuItem menuUSA;
+    @FXML private MenuItem menuFrancia;
+    @FXML private MenuItem menuInglaterra;
+    @FXML private MenuItem menuNigeria;
+    @FXML private MenuItem menuNZelanda;
+    @FXML private MenuItem menuSudafrica;
+    @FXML private MenuItem menuSuecia;
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
@@ -77,6 +91,26 @@ public class ConAtletiP {
     @FXML private Label lblFecha;
     @FXML private ImageView imgJugadora;
 
+
+    @FXML private Tab tabPortera;
+    @FXML private Tab tabCentro;
+    @FXML private Tab tabDelantera;
+    @FXML private Tab tabDefensas;
+
+    @FXML private Label labelPlantilla;
+    @FXML private Label labelEstadisticas;
+    @FXML private Label labelPalmares;
+    @FXML private Label labelEquipaciones;
+
+    @FXML private Label labelEstadio;
+    @FXML private Label labelEntrenador;
+    @FXML private Label labelFundacion;
+    @FXML private Label labelSupercopa;
+    @FXML private Label labelCopaPrimera;
+
+    @FXML private Label footer;
+
+
     private static final Map<String, String> mapaPosiciones = new HashMap<>();
 
     static {
@@ -90,9 +124,15 @@ public class ConAtletiP {
 
     private String seleccionActualDeLaJugadora;
 
+    private ResourceBundle recursos;
+    private Locale localeActual = new Locale("es", "ES");
+
     @FXML
     public void initialize() {
         inicializarIdioma();
+        recursos = ResourceBundle.getBundle("idiomas.messages", localeActual);
+        traducirUI();
+
         inicializarRutas();
         inicializarMenuInicio();
         inicializarLigas();
@@ -112,10 +152,110 @@ public class ConAtletiP {
     }
 
     private void cambiarIdioma() {
-        String idioma = comboBoxIdiomas.getValue();
-        Locale locale = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
-        System.out.println("Idioma cambiado a: " + idioma);
+        String idiomaSeleccionado = comboBoxIdiomas.getValue();
+        if (idiomaSeleccionado.equals("Inglés")) {
+            localeActual = new Locale("en", "US");
+        } else {
+            localeActual = new Locale("es", "ES");
+        }
+
+        try {
+            recursos = ResourceBundle.getBundle("idiomas.messages", localeActual);
+            traducirUI();
+
+            // ACTUALIZAR la información de la jugadora seleccionada al cambiar idioma
+            String jugadoraSeleccionada = obtenerJugadoraSeleccionada();
+            if (jugadoraSeleccionada != null) {
+                Jugadora j = jugadoraDAO.obtenerJugadoraPorNombre("Atletico Madrid", jugadoraSeleccionada);
+                mostrarInfoEnPanel(j, "Liga Española");
+            }
+
+        } catch (MissingResourceException e) {
+            System.err.println("Archivo de idioma no encontrado.");
+        }
     }
+
+    private String obtenerJugadoraSeleccionada() {
+        String seleccionada = listPorteras.getSelectionModel().getSelectedItem();
+        if (seleccionada == null) seleccionada = listDefensas.getSelectionModel().getSelectedItem();
+        if (seleccionada == null) seleccionada = listCentros.getSelectionModel().getSelectedItem();
+        if (seleccionada == null) seleccionada = listDelanteras.getSelectionModel().getSelectedItem();
+        if (seleccionada != null) {
+            return seleccionada.replace(" ⭐", "").trim(); // eliminar estrella si hay
+        }
+        return null;
+    }
+
+
+    private void traducirUI() {
+        //Menu
+        menuInicio.setText(recursos.getString("menu.inicio"));
+        menuLigas.setText(recursos.getString("menu.ligas"));
+        menuSelecciones.setText(recursos.getString("menu.selecciones"));
+        menuAlemania.setText(recursos.getString("menu.alemania"));
+        menuAustralia.setText(recursos.getString("menu.australia"));
+        menuBrasil.setText(recursos.getString("menu.brasil"));
+        menuCanada.setText(recursos.getString("menu.canada"));
+        menuColombia.setText(recursos.getString("menu.colombia"));
+        menuEspana.setText(recursos.getString("menu.espana"));
+        menuUSA.setText(recursos.getString("menu.unidos"));
+        menuFrancia.setText(recursos.getString("menu.francia"));
+        menuInglaterra.setText(recursos.getString("menu.inglaterra"));
+        menuNigeria.setText(recursos.getString("menu.nigeria"));
+        menuNZelanda.setText(recursos.getString("menu.nzelanda"));
+        menuSudafrica.setText(recursos.getString("menu.sudafrica"));
+        menuSuecia.setText(recursos.getString("menu.suecia"));
+        volverItem.setText(recursos.getString("menu.volver"));
+        hyperlinkAyuda.setText(recursos.getString("menu.ayuda"));
+
+        //Boton
+        btnEquipo.setText(recursos.getString("btn.equipo"));
+        btnClasifiacion.setText(recursos.getString("btn.clasificacion"));
+
+        // Columnas de tabla
+        colGAnotados.setText(recursos.getString("stats.goles_anotados"));
+        colGRecibidos.setText(recursos.getString("stats.goles_recibidos"));
+        colTAmarillas.setText(recursos.getString("stats.amarillas"));
+        colTRojas.setText(recursos.getString("stats.rojas"));
+
+        // Tabs
+        tabPortera.setText(recursos.getString("tab.portera"));
+        tabDefensas.setText(recursos.getString("tab.defensas"));
+        tabCentro.setText(recursos.getString("tab.centrocampistas"));
+        tabDelantera.setText(recursos.getString("tab.delantera"));
+
+        //Labels generales
+        labelPlantilla.setText(recursos.getString("plantilla.label"));
+        labelEstadisticas.setText(recursos.getString("estadisticas.label"));
+        labelPalmares.setText(recursos.getString("palmares.label"));
+        labelEquipaciones.setText(recursos.getString("equipaciones.label"));
+
+        //Footer
+        footer.setText(recursos.getString("footer.copy"));
+
+        //Info equipo
+        labelCopaPrimera.setText(recursos.getString("equipoAtletico.titulo1"));
+        labelSupercopa.setText(recursos.getString("equipoAtletico.titulo3"));
+        labelEntrenador.setText(recursos.getString("equipoAtletico.entrenador"));
+        labelEstadio.setText(recursos.getString("equipoAtletico.estadio"));
+        labelFundacion.setText(recursos.getString("equipoAtletico.fundacion"));
+    }
+
+    private String traducirPosicion(String posicionOriginal) {
+        switch (posicionOriginal.toLowerCase()) {
+            case "PO":
+                return recursos.getString("portera");
+            case "DF":
+                return recursos.getString("defensa");
+            case "CC":
+                return recursos.getString("centrocampista");
+            case "DL":
+                return recursos.getString("delantera");
+            default:
+                return posicionOriginal; // Por si acaso hay algo inesperado
+        }
+    }
+
 
     private void inicializarMenuInicio() {
         volverItem.setOnAction(e -> cargarPantalla("/org/example/onside_fem/PantallaPrincipal.fxml"));
@@ -281,10 +421,13 @@ public class ConAtletiP {
 
 
     private void mostrarInfoEnPanel(Jugadora jugadora, String liga) {
-        lblNombre.setText("Nombre: " + jugadora.getNombre());
-        lblPosicion.setText("Posición: " + obtenerNombrePosicion(jugadora.getPosicion()));
-        lblEquipo.setText("Fecha de nacimiento: " + jugadora.getNombre_equipo());
-        lblFecha.setText("Equipo:  " + jugadora.getFecha());
+        lblNombre.setText(recursos.getString("nombre") + ": " + jugadora.getNombre());
+
+        String posicionTraducida = traducirPosicion(jugadora.getPosicion());
+        lblPosicion.setText(recursos.getString("posicion") + ": " + posicionTraducida);
+
+        lblEquipo.setText(recursos.getString("fecha") + ": " + jugadora.getNombre_equipo());
+        lblFecha.setText(recursos.getString("equipo_label") + ": " + jugadora.getFecha());
 
         lblNombre.setVisible(true);
         lblNombre.setManaged(true);
@@ -298,7 +441,7 @@ public class ConAtletiP {
         lblFecha.setVisible(true);
         lblFecha.setManaged(true);
 
-        // Cargar imagen
+        // Imagen
         String rutaImagen = "/Imagenes/Liga_Española/Jugadoras/Atlético de Madrid/" + jugadora.getNombre() + ".jpg";
         InputStream inputStream = getClass().getResourceAsStream(rutaImagen);
         if (inputStream == null) {

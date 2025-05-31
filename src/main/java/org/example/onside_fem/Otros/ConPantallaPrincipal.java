@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -131,14 +133,15 @@ public class ConPantallaPrincipal {
 
     private void abrirAyuda(ActionEvent event) {
         try {
-            File ayudaHTML = new File("src/main/resources/ayuda/ayuda_usuario.html");
-            if (ayudaHTML.exists()) {
-                Desktop.getDesktop().browse(ayudaHTML.toURI());
+            URL ayudaURL = getClass().getResource("/org/example/onside_fem/ayuda.html");
+            if (ayudaURL != null) {
+                Desktop.getDesktop().browse(ayudaURL.toURI());
             } else {
                 System.err.println("Archivo de ayuda no encontrado.");
             }
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }
+
 }
