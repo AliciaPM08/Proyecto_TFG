@@ -173,18 +173,26 @@ public class ConClasificacionE {
 
         // SELECCIONES
         seleccionPantallas.put("Alemania", "/org/example/onside_fem/Selecciones/PAlemania.fxml");
+        seleccionPantallas.put("Germany", "/org/example/onside_fem/Selecciones/PAlemania.fxml");
         seleccionPantallas.put("Australia", "/org/example/onside_fem/Selecciones/PAustralia.fxml");
         seleccionPantallas.put("Brasil", "/org/example/onside_fem/Selecciones/PBrasil.fxml");
+        seleccionPantallas.put("Brazil", "/org/example/onside_fem/Selecciones/PBrasil.fxml");
         seleccionPantallas.put("Canada", "/org/example/onside_fem/Selecciones/PCanada.fxml");
         seleccionPantallas.put("Colombia", "/org/example/onside_fem/Selecciones/PColombia.fxml");
         seleccionPantallas.put("España", "/org/example/onside_fem/Selecciones/PEspana.fxml");
+        seleccionPantallas.put("Spain", "/org/example/onside_fem/Selecciones/PEspana.fxml");
         seleccionPantallas.put("Estados Unidos", "/org/example/onside_fem/Selecciones/PEEUU.fxml");
+        seleccionPantallas.put("USA", "/org/example/onside_fem/Selecciones/PEEUU.fxml");
         seleccionPantallas.put("Francia", "/org/example/onside_fem/Selecciones/PFrancia.fxml");
+        seleccionPantallas.put("France", "/org/example/onside_fem/Selecciones/PFrancia.fxml");
         seleccionPantallas.put("Inglaterra", "/org/example/onside_fem/Selecciones/PInglaterra.fxml");
+        seleccionPantallas.put("England", "/org/example/onside_fem/Selecciones/PInglaterra.fxml");
         seleccionPantallas.put("Nigeria", "/org/example/onside_fem/Selecciones/PNigeria.fxml");
         seleccionPantallas.put("Nueva Zelanda", "/org/example/onside_fem/Selecciones/PNuevaZelanda.fxml");
+        seleccionPantallas.put("New Zeland", "/org/example/onside_fem/Selecciones/PNuevaZelanda.fxml");
         seleccionPantallas.put("Sudafrica", "/org/example/onside_fem/Selecciones/PSudafrica.fxml");
         seleccionPantallas.put("Suecia", "/org/example/onside_fem/Selecciones/PSuecia.fxml");
+        seleccionPantallas.put("Sweden", "/org/example/onside_fem/Selecciones/PSuecia.fxml");
     }
 
     private void inicializarLigas() {
