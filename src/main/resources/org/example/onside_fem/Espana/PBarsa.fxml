@@ -235,5 +235,10 @@
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
+      <ImageView fitHeight="204.0" fitWidth="197.0" layoutX="1014.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/CampeonasLogos.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>
