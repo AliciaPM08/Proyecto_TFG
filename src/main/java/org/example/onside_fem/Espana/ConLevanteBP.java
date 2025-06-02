@@ -143,9 +143,9 @@ public class ConLevanteBP {
         labelEquipaciones.setText(recursos.getString("equipaciones.label"));
 
 
-        labelEntrenador.setText(recursos.getString("equipoBetis.entrenador"));
-        labelEstadio.setText(recursos.getString("equipoBetis.estadio"));
-        labelFundacion.setText(recursos.getString("equipoBetis.fundacion"));
+        labelEntrenador.setText(recursos.getString("equipoLBadalona.entrenador"));
+        labelEstadio.setText(recursos.getString("equipoLBadalona.estadio"));
+        labelFundacion.setText(recursos.getString("equipoLBadalona.fundacion"));
         footer.setText(recursos.getString("footer.copy"));
     }
 
