@@ -49,7 +49,7 @@
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
                 </Hyperlink>
-                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+                <Label fx:id="footer" layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
         <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
@@ -80,7 +80,7 @@
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Espanyol/Espanyol.png" />
             </image>
         </ImageView>
-        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="318.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabpanePlantilla" layoutX="77.0" layoutY="435.0" prefHeight="294.0" prefWidth="321.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-width: 5; -fx-border-radius: 3;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tabPortera" style="-fx-background-color: #ffffff;" text="Portera">
                     <content>
@@ -112,7 +112,7 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="69.0" prefWidth="477.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-radius: 3; -fx-border-width: 5;">
+        <TableView fx:id="tableEstadisticas" layoutX="874.0" layoutY="435.0" prefHeight="68.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-border-color: #294e9c; -fx-border-radius: 3; -fx-border-width: 5;">
             <columns>
                 <TableColumn fx:id="colGAnotados" prefWidth="122.0" text="Goles Anotados" />
                 <TableColumn fx:id="colGRecibidos" prefWidth="111.0" text="Goles Recibidos" />
@@ -125,59 +125,59 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="230.0" text="Fundación: 1970">
+        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 1970">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="273.0" text="Entrenadora: Sara Monforte">
+        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenadora: Sara Monforte">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Dani Jarque">
+        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Dani Jarque">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="47.0" layoutY="744.0" text="PALMARES">
+        <Label fx:id="labelPalmares" layoutX="47.0" layoutY="744.0" text="PALMARES">
             <font>
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="199.0" fitWidth="182.0" layoutX="941.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="243.0" fitWidth="190.0" layoutX="900.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Espanyol/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="199.0" fitWidth="167.0" layoutX="1154.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="243.0" fitWidth="188.0" layoutX="1147.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Espanyol/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label layoutX="1014.0" layoutY="540.0" text="EQUIPACIONES">
+        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="551.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="68.0" layoutY="798.0" text="1 Copa Primera Division">
+        <Label fx:id="labelCopaPrimera" layoutX="68.0" layoutY="798.0" text="1 Copas Primera División">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="77.0" layoutY="399.0" text="PLANTILLA">
+        <Label fx:id="labelPlantilla" layoutX="77.0" layoutY="399.0" text="PLANTILLA">
             <font>
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="874.0" layoutY="399.0" text="ESTADÍSTICAS GENERALES">
+        <Label fx:id="labelEstadisticas" layoutX="874.0" layoutY="399.0" text="ESTADÍSTICAS GENERALES">
             <font>
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
         <MenuBar layoutX="-3.0" layoutY="56.0" prefHeight="25.0" prefWidth="1406.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
-                <Menu mnemonicParsing="false" text="Inicio">
+                <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
                     <items>
                         <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
                     </items>
@@ -194,35 +194,35 @@
                 </Menu>
                 <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Seleccion">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Alemania" />
-                        <MenuItem mnemonicParsing="false" text="Australia" />
-                        <MenuItem mnemonicParsing="false" text="Brasil" />
-                        <MenuItem mnemonicParsing="false" text="Canada" />
-                        <MenuItem mnemonicParsing="false" text="Colombia" />
-                        <MenuItem mnemonicParsing="false" text="España" />
-                        <MenuItem mnemonicParsing="false" text="Estados Unidos" />
-                        <MenuItem mnemonicParsing="false" text="Francia" />
-                        <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                        <MenuItem mnemonicParsing="false" text="Nigeria" />
-                        <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
-                        <MenuItem mnemonicParsing="false" text="Sudafrica" />
-                        <MenuItem mnemonicParsing="false" text="Suecia" />
+                        <MenuItem fx:id="menuAlemania" mnemonicParsing="false" text="Alemania" />
+                        <MenuItem fx:id="menuAustralia" mnemonicParsing="false" text="Australia" />
+                        <MenuItem fx:id="menuBrasil" mnemonicParsing="false" text="Brasil" />
+                        <MenuItem fx:id="menuCanada" mnemonicParsing="false" text="Canada" />
+                        <MenuItem fx:id="menuColombia" mnemonicParsing="false" text="Colombia" />
+                        <MenuItem fx:id="menuEspana" mnemonicParsing="false" text="España" />
+                        <MenuItem fx:id="menuUSA" mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem fx:id="menuFrancia" mnemonicParsing="false" text="Francia" />
+                        <MenuItem fx:id="menuInglaterra" mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem fx:id="menuNigeria" mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem fx:id="menuNZelanda" mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem fx:id="menuSudafrica" mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem fx:id="menuSuecia" mnemonicParsing="false" text="Suecia" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-      <Label layoutX="272.0" layoutY="798.0" text="6 Copas de la Reina">
-         <font>
-            <Font name="ACaslonPro-Regular" size="18.0" />
-         </font>
-      </Label>
-        <VBox fx:id="jugadoraInfoPanel" layoutX="387.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #294e9c; -fx-border-width: 5; -fx-background-color: #ffffff; -fx-padding: 5;">
+        <Label fx:id="labelCopa" layoutX="282.0" layoutY="798.0" text="6 Copas de la Reina">
+            <font>
+                <Font name="ACaslonPro-Regular" size="18.0" />
+            </font>
+        </Label>
+        <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #294e9c; -fx-border-width: 5; -fx-background-color: #ffffff; -fx-padding: 5;">
             <children>
                 <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
-                <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " visible="false" managed="false" />
-                <Label fx:id="lblPosicion" style="-fx-font-size: 14px;" text="Posición: " visible="false" managed="false" />
-                <Label fx:id="lblEquipo" style="-fx-font-size: 14px;" text="Equipo: " visible="false" managed="false" />
-                <Label fx:id="lblFecha" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" managed="false" />
+                <Label fx:id="lblNombre" managed="false" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " visible="false" />
+                <Label fx:id="lblPosicion" managed="false" style="-fx-font-size: 14px;" text="Posición: " visible="false" />
+                <Label fx:id="lblEquipo" managed="false" style="-fx-font-size: 14px;" text="Equipo: " visible="false" />
+                <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
     </children>
