@@ -109,6 +109,19 @@ public class ConBetisP {
         } catch (MissingResourceException e) {
             System.err.println("Archivo de idioma no encontrado.");
         }
+        limpiarPanelJugadora();
+    }
+
+    /**
+     * Limpia el panel de la informacion de la jugadora cuando se cambia de idioma
+     */
+    private void limpiarPanelJugadora() {
+        lblNombre.setText("");
+        lblPosicion.setText("");
+        lblEquipo.setText("");
+        lblFecha.setText("");
+        imgJugadora.setImage(null);
+        seleccionActualDeLaJugadora = null;
     }
 
     /**

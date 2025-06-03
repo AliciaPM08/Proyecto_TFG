@@ -27,7 +27,7 @@
                         <Font name="ACaslonPro-Semibold" size="36.0" />
                     </font>
                 </Label>
-                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
         <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -42,41 +42,41 @@
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
                 </Hyperlink>
-                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+                <Label fx:id="footer" layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
         <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
                 <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
-               <items>
-                  <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
-               </items></Menu>
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
                 <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
-                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
-                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
-                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
-                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
-                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                        <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                        <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                        <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
                 </Menu>
                 <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Alemania" />
-                  <MenuItem mnemonicParsing="false" text="Australia" />
-                  <MenuItem mnemonicParsing="false" text="Brasil" />
-                  <MenuItem mnemonicParsing="false" text="Canada" />
-                  <MenuItem mnemonicParsing="false" text="Colombia" />
-                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
-                  <MenuItem mnemonicParsing="false" text="España" />
-                  <MenuItem mnemonicParsing="false" text="Francia" />
-                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                  <MenuItem mnemonicParsing="false" text="Japon" />
-                  <MenuItem mnemonicParsing="false" text="Nigeria" />
-                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
-                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
-                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                        <MenuItem fx:id="menuAlemania" mnemonicParsing="false" text="Alemania" />
+                        <MenuItem fx:id="menuAustralia" mnemonicParsing="false" text="Australia" />
+                        <MenuItem fx:id="menuBrasil" mnemonicParsing="false" text="Brasil" />
+                        <MenuItem fx:id="menuCanada" mnemonicParsing="false" text="Canada" />
+                        <MenuItem fx:id="menuColombia" mnemonicParsing="false" text="Colombia" />
+                        <MenuItem fx:id="menuEspana" mnemonicParsing="false" text="España" />
+                        <MenuItem fx:id="menuEstados" mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem fx:id="menuFrancia" mnemonicParsing="false" text="Francia" />
+                        <MenuItem fx:id="menuInglaterra" mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem fx:id="menuNigeria" mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem fx:id="menuNZelanda" mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem fx:id="menuSudafrica" mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem fx:id="menuSuecia" mnemonicParsing="false" text="Suecia" />
                     </items>
                 </Menu>
             </menus>
@@ -104,84 +104,54 @@
                </font>
             </Button>
          </children></Pane>
-      <Label layoutX="62.0" layoutY="170.0" text="NOTICIAS">
+      <Label fx:id="labelNoticia" layoutX="62.0" layoutY="170.0" text="NOTICIAS">
          <font>
             <Font name="ACaslonPro-Semibold" size="36.0" />
          </font>
       </Label>
-      <ImageView fitHeight="182.0" fitWidth="324.0" layoutX="140.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivImagen1" fitHeight="182.0" fitWidth="324.0" layoutX="140.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Noticia1.png" />
          </image>
       </ImageView>
-      <Label layoutX="522.0" layoutY="241.0" text="La emoción por la tercera plaza continúa tras la jornada 27">
+      <Label fx:id="labelTitulo1" layoutX="525.0" layoutY="241.0" text="Liga F firma una temporada histórica y acelera su crecimiento hacia el futuro">
          <font>
-            <Font name="ACaslonPro-SemiboldItalic" size="36.0" />
+            <Font name="ACaslonPro-SemiboldItalic" size="29.0" />
          </font>
       </Label>
-      <Label layoutX="525.0" layoutY="305.0" text="El Athletic Club ganó al Costa Adeje Tenerife (2-0) ante los 10.086 espectadores que fueron a San Mamés. El empate del Atlético de Madrid ">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="525.0" layoutY="341.0" text="en Buñol (2-2) y la victoria del Granada en Riazor (1-2) mantienen la emoción por Europa. El Real Madrid está a un punto del está a un ">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="525.0" layoutY="382.0" text="punto del FC Barcelona, que tiene un partido menos. ">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="182.0" fitWidth="336.0" layoutX="139.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivImagen2" fitHeight="182.0" fitWidth="336.0" layoutX="139.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Noticia2.png" />
          </image>
       </ImageView>
-      <Label layoutX="518.0" layoutY="450.0" text="El Barcelona defenderá corona en la final de la Champions">
+      <Label fx:id="labelTitulo2" layoutX="518.0" layoutY="450.0" text="El DUX Logroño asciende a Liga F ">
          <font>
             <Font name="ACaslonPro-BoldItalic" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="524.0" layoutY="503.0" text="El conjunto culé se impuso por 1-4 al Chelsea en Stamford Bridge en el partido de vuelta de las semifinales de la Champions. Aitana Bonmatí, ">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="522.0" layoutY="540.0" text="Ewa Pajor, Claudia Pina y Salma Paralluelo marcaron los goles de las azulgranas, que se meten en su sexta final europea. Kaptein anotó el gol ">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="524.0" layoutY="580.0" text="del honor para las inglesas.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="182.0" fitWidth="334.0" layoutX="139.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivimagen3" fitHeight="182.0" fitWidth="334.0" layoutX="139.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga_Española/Logo Liga/Noticia3.png" />
          </image>
       </ImageView>
-      <Label layoutX="522.0" layoutY="649.0" text="El Alhama logra el ascenso a Liga F">
+      <Label fx:id="labelTitulo3" layoutX="522.0" layoutY="649.0" text="El Alhama logra el ascenso a Liga F">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="525.0" layoutY="721.0" text="El conjunto murciano empató 1-1 ante el AEM SE Lleida en la última jornada de Primera RFEF. Un punto que permite a las de Dani Álvarez">
+      <Label fx:id="labelNoticia3" layoutX="534.0" layoutY="699.0" prefHeight="96.0" prefWidth="835.0" text="El conjunto murciano empató 1-1 ante el AEM SE Lleida en la última jornada de Primera RFEF. Un punto que permite a las de Dani Álvarez conseguir el ascenso deportivo a Liga F, ya que tendrá que cumplir con las exigencias de la máxima categoría, entre ellas, contar con un estadio  con césped natural." wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="525.0" layoutY="758.0" text="conseguir el ascenso deportivo a Liga F, ya que tendrá que cumplir con las exigencias de la máxima categoría, entre ellas, contar con un estadio ">
+      <Label fx:id="labelNoticia2" layoutX="534.0" layoutY="495.0" prefHeight="96.0" prefWidth="835.0" text="El conjunto riojano ganó por 3-1 al Cacereño en la vuelta de la final del playoff por subir a Liga F. Un triunfo, que unido a la victoria también por 0-3 en el partido de ida, permite a las de Héctor Blanco conseguir el ascenso deportivo a Liga F, ya que tendrán que cumplir con las exigencias de la máxima categoría." wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="525.0" layoutY="796.0" text="con césped natural.">
+      <Label fx:id="labelNoticia1" layoutX="534.0" layoutY="288.0" prefHeight="135.0" prefWidth="835.0" text="La última jornada de Liga F Moeve no sólo puso fin a una trepidante temporada donde hemos podido disfrutar de grandes emociones, sino que ha permitido consolidar a Liga F como uno de los referentes a nivel mundial en el panorama futbolístico con un crecimiento sin precedentes en televisión, asistencia a los estadios y presencia digital en redes sociales, dejando patente el esfuerzo conjunto de los clubes para seguir fortaleciendo y visibilizando la profesionalización del fútbol femenino en nuestro país hacia la sostenibilidad." wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="17.0" />
          </font>
       </Label>
     </children>

@@ -30,7 +30,21 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
-
+/**
+ * Controlador JavaFX para la vista del equipo Real Madrid Femenino.
+ * Gestiona la carga de jugadoras, estadísticas, menús de navegación y traducción de la interfaz.
+ * Permite cambiar el idioma, visualizar información de jugadoras y navegar entre ligas y selecciones.
+ * <p>
+ * Este controlador está asociado a una interfaz FXML que muestra:
+ * - Plantilla de jugadoras (por posición)
+ * - Estadísticas del equipo
+ * - Información adicional del club
+ * <p>
+ * Utiliza DAOs para acceder a la base de datos de jugadoras y estadísticas.
+ * También gestiona la internacionalización de la interfaz mediante ResourceBundle.
+ *
+ * @author Alicia Pacheco Mena
+ */
 public class ConRMadridP {
     @FXML private MenuItem volverItem, menuAlemania, menuAustralia, menuBrasil, menuCanada, menuColombia, menuEspana, menuUSA, menuFrancia, menuInglaterra, menuNigeria, menuNZelanda, menuSudafrica, menuSuecia;
     @FXML private Menu menuLigas, menuSelecciones;
@@ -99,6 +113,19 @@ public class ConRMadridP {
         } catch (MissingResourceException e) {
             System.err.println("Archivo de idioma no encontrado.");
         }
+        limpiarPanelJugadora();
+    }
+
+    /**
+     * Limpia el panel de la informacion de la jugadora cuando se cambia de idioma
+     */
+    private void limpiarPanelJugadora() {
+        lblNombre.setText("");
+        lblPosicion.setText("");
+        lblEquipo.setText("");
+        lblFecha.setText("");
+        imgJugadora.setImage(null);
+        seleccionActualDeLaJugadora = null;
     }
 
     /**

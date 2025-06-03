@@ -1,6 +1,6 @@
 package org.example.onside_fem.Espana;
 
-import javafx.animation.PauseTransition;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,26 +11,36 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import org.example.onside_fem.BBDD.*;
 
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
-
+/**
+ * Controlador JavaFX para la vista del equipo Real Sociedad Femenino.
+ * Gestiona la carga de jugadoras, estadísticas, menús de navegación y traducción de la interfaz.
+ * Permite cambiar el idioma, visualizar información de jugadoras y navegar entre ligas y selecciones.
+ * <p>
+ * Este controlador está asociado a una interfaz FXML que muestra:
+ * - Plantilla de jugadoras (por posición)
+ * - Estadísticas del equipo
+ * - Información adicional del club
+ * <p>
+ * Utiliza DAOs para acceder a la base de datos de jugadoras y estadísticas.
+ * También gestiona la internacionalización de la interfaz mediante ResourceBundle.
+ *
+ * @author Alicia Pacheco Mena
+ */
 public class ConRSociedadP {
     @FXML private MenuItem volverItem, menuAlemania, menuAustralia, menuBrasil, menuCanada, menuColombia, menuEspana, menuUSA, menuFrancia, menuInglaterra, menuNigeria, menuNZelanda, menuSudafrica, menuSuecia;
     @FXML private Menu menuLigas, menuSelecciones;
@@ -99,6 +109,19 @@ public class ConRSociedadP {
         } catch (MissingResourceException e) {
             System.err.println("Archivo de idioma no encontrado.");
         }
+        limpiarPanelJugadora();
+    }
+
+    /**
+     * Limpia el panel de la informacion de la jugadora cuando se cambia de idioma
+     */
+    private void limpiarPanelJugadora() {
+        lblNombre.setText("");
+        lblPosicion.setText("");
+        lblEquipo.setText("");
+        lblFecha.setText("");
+        imgJugadora.setImage(null);
+        seleccionActualDeLaJugadora = null;
     }
 
     /**

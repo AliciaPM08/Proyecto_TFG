@@ -109,6 +109,7 @@ public class ConAtletiP {
         } catch (MissingResourceException e) {
             System.err.println("Archivo de idioma no encontrado.");
         }
+        limpiarPanelJugadora();
     }
 
     /**
@@ -433,5 +434,17 @@ public class ConAtletiP {
         } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Limpia el panel de la informacion de la juagdora una vez que se cambie de idioma
+     */
+    private void limpiarPanelJugadora() {
+        lblNombre.setText("");
+        lblPosicion.setText("");
+        lblEquipo.setText("");
+        lblFecha.setText("");
+        imgJugadora.setImage(null);
+        seleccionActualDeLaJugadora = null;
     }
 }

@@ -31,7 +31,7 @@ import java.net.URL;
 import java.util.*;
 import java.util.List;
 /**
- * Controlador JavaFX para la vista del equipo Atlético de Madrid Femenino.
+ * Controlador JavaFX para la vista del equipo Deportivo Femenino.
  * Gestiona la carga de jugadoras, estadísticas, menús de navegación y traducción de la interfaz.
  * Permite cambiar el idioma, visualizar información de jugadoras y navegar entre ligas y selecciones.
  *
@@ -113,6 +113,19 @@ public class ConDeporP {
         } catch (MissingResourceException e) {
             System.err.println("Archivo de idioma no encontrado.");
         }
+        limpiarPanelJugadora();
+    }
+
+    /**
+     * Limpia el panel de la informacion de la jugadora cuando se cambia de idioma
+     */
+    private void limpiarPanelJugadora() {
+        lblNombre.setText("");
+        lblPosicion.setText("");
+        lblEquipo.setText("");
+        lblFecha.setText("");
+        imgJugadora.setImage(null);
+        seleccionActualDeLaJugadora = null;
     }
 
     /**
