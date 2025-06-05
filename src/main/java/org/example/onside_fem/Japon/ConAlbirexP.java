@@ -421,7 +421,7 @@ public class ConAlbirexP {
     }
 
     /**
-     * Limpia el panel de la informacion de la juagdora una vez que se cambie de idioma
+     * Limpia el panel de la informacion de la jugadora una vez que se cambie de idioma
      */
     private void limpiarPanelJugadora() {
         lblNombre.setText("");
