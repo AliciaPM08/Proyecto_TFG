@@ -257,7 +257,7 @@ public class ConEquiposP {
 
     private void abrirAyuda(ActionEvent event) {
         try {
-            File ayudaHTML = new File("src/main/resources/ayuda/ayuda_usuario.html");
+            File ayudaHTML = new File("src/main/resources/ayuda/ayuda.html");
             if (ayudaHTML.exists()) {
                 Desktop.getDesktop().browse(ayudaHTML.toURI());
             } else {
