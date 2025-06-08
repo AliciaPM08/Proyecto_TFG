@@ -90,14 +90,14 @@ public class ConPantallaP {
     }
 
     private void inicializarIdioma() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.getItems().addAll("Español", "English");
         comboBoxIdiomas.setValue("Español");
         comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
         String idiomaSeleccionado = comboBoxIdiomas.getValue();
-        if (idiomaSeleccionado.equals("Inglés")) {
+        if (idiomaSeleccionado.equals("English")) {
             localeActual = new Locale("en", "US");
         } else {
             localeActual = new Locale("es", "ES");
