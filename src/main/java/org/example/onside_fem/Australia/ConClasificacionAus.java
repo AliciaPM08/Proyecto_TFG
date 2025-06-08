@@ -77,7 +77,7 @@ public class ConClasificacionAus {
     @FXML private TableColumn<Clasificacion, Integer> colFavor;
     @FXML private TableColumn<Clasificacion, Integer> colContra;
 
-    private String ligaActual = "National Womens Soccer League";
+    private String ligaActual = "Liberty A-League";
 
     private ResourceBundle recursos;
     private Locale localeActual = new Locale("es", "ES");
