@@ -255,5 +255,10 @@
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
+      <ImageView fitHeight="96.0" fitWidth="114.0" layoutX="651.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/CopaReina.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>
