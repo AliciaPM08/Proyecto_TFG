@@ -101,7 +101,7 @@
                     </font>
                 </Button>
             </children></Pane>
-      <TableView fx:id="tableView" layoutX="338.0" layoutY="218.0" prefHeight="412.0" prefWidth="723.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
+      <TableView fx:id="tableView" layoutX="338.0" layoutY="262.0" prefHeight="377.0" prefWidth="723.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
         <columns>
           <TableColumn fx:id="colNombre" prefWidth="96.0" text="Equipo" />
           <TableColumn fx:id="colPosicion" prefWidth="68.0" text="Posicion" />

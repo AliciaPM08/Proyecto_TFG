@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 22 de octubre de 2019 ">
+        <Label fx:id="labelFundacion" layoutX="258.0" layoutY="230.0" text="Fundación: 22 de octubre de 2019 ">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador:  Bev Yanez">
+        <Label fx:id="labelEntrenador" layoutX="258.0" layoutY="263.0" text="Entrenador:  Bev Yanez">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Lynn Family Stadium">
+        <Label fx:id="labelEstadio" layoutX="258.0" layoutY="293.0" text="Estadio: Lynn Family Stadium">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,12 +145,12 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="170.0" fitWidth="150.0" layoutX="907.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="191.0" fitWidth="160.0" layoutX="920.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Lousville/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="170.0" fitWidth="174.0" layoutX="1154.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="191.0" fitWidth="197.0" layoutX="1132.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Lousville/CamisetaS.png" />
             </image>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1060.0" layoutY="252.0" text="Katie Lund">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="958.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1060.0" layoutY="282.0" text="Lauren Milliet">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="CHICAGO STARS FC">
+        <Label layoutX="207.0" layoutY="173.0" text="CHICAGO STARS FC">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2006">
+        <Label fx:id="labelFundacion" layoutX="238.0" layoutY="230.0" text="Fundación: 2006">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Lorne Donaldson">
+        <Label fx:id="labelEntrenador" layoutX="238.0" layoutY="260.0" text="Entrenador: Lorne Donaldson">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: SeatGeek Stadium">
+        <Label fx:id="labelEstadio" layoutX="238.0" layoutY="290.0" text="Estadio: SeatGeek Stadium">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,12 +145,12 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="170.0" fitWidth="150.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="191.0" fitWidth="175.0" layoutX="921.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Red Start/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="1177.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="183.0" fitWidth="197.0" layoutX="1143.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Red Start/CamisetaS.png" />
             </image>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1076.0" layoutY="249.0" text="Alyssa Naeher">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="971.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1076.0" layoutY="279.0" text="Shea Groom">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

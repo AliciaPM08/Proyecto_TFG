@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 29 de marzo de 2011  ">
+        <Label fx:id="labelFundacion" layoutX="258.0" layoutY="230.0" text="Fundación: 29 de marzo de 2011  ">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador:  Jonatan Giráldez">
+        <Label fx:id="labelEntrenador" layoutX="258.0" layoutY="262.0" text="Entrenador:  Jonatan Giráldez">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Audi Field">
+        <Label fx:id="labelEstadio" layoutX="258.0" layoutY="295.0" text="Estadio: Audi Field">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,12 +145,12 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="170.0" fitWidth="150.0" layoutX="907.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="186.0" fitWidth="183.0" layoutX="911.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Spirit/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="170.0" fitWidth="174.0" layoutX="1154.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="183.0" fitWidth="160.0" layoutX="1158.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Spirit/CamisetaS.png" />
             </image>
@@ -221,6 +221,21 @@
          </font>
       </Label>
       <Label layoutX="361.0" layoutY="798.0" text="1 NWSL Challenge Cup">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1060.0" layoutY="242.0" text="Aubrey Kingsbury">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="965.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1060.0" layoutY="274.0" text="Casey Krueger">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

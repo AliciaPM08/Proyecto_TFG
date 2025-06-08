@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="NORTH CAROLINA COURAGE">
+        <Label layoutX="218.0" layoutY="173.0" text="NORTH CAROLINA COURAGE">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2011">
+        <Label fx:id="labelFundacion" layoutX="254.0" layoutY="230.0" text="Fundación: 2011">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Sean Nahas">
+        <Label fx:id="labelEntrenador" layoutX="254.0" layoutY="260.0" text="Entrenador: Sean Nahas">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: WakeMed Soccer Park">
+        <Label fx:id="labelEstadio" layoutX="254.0" layoutY="292.0" text="Estadio: WakeMed Soccer Park">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,12 +145,12 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="160.0" fitWidth="122.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="177.0" fitWidth="160.0" layoutX="934.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Courage/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="151.0" fitWidth="160.0" layoutX="1177.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="198.0" fitWidth="197.0" layoutX="1143.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Courage/CamisetaS.png" />
             </image>
@@ -226,6 +226,21 @@
          </font>
       </Label>
       <Label layoutX="607.0" layoutY="802.0" text="1 Women's International Champions Cup ">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1057.0" layoutY="249.0" text="Denise O'Sullivan ">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="968.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1057.0" layoutY="281.0" text="Kaleigh Kurtz">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

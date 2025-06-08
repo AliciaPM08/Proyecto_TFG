@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 20 de octubre de 2015 ">
+        <Label fx:id="labelFundacion" layoutX="260.0" layoutY="230.0" text="Fundación: 20 de octubre de 2015 ">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Sean Nahas">
+        <Label fx:id="labelEntrenador" layoutX="260.0" layoutY="259.0" text="Entrenador: Sean Nahas">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Exploria Stadium">
+        <Label fx:id="labelEstadio" layoutX="260.0" layoutY="290.0" text="Estadio: Exploria Stadium">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,12 +145,12 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="160.0" fitWidth="122.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="186.0" fitWidth="170.0" layoutX="930.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Pride/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="151.0" fitWidth="160.0" layoutX="1177.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="186.0" fitWidth="171.0" layoutX="1173.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Pride/CamisetaS.png" />
             </image>
@@ -220,5 +220,20 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
+      <Label layoutX="1071.0" layoutY="242.0" text="Marta">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="968.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1071.0" layoutY="271.0" text="Kylie Strom">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

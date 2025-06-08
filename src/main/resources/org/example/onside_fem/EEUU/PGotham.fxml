@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2006">
+        <Label fx:id="labelFundacion" layoutX="254.0" layoutY="230.0" text="Fundación: 2006">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Juan Carlos Amorós">
+        <Label fx:id="labelEntrenador" layoutX="254.0" layoutY="261.0" text="Entrenador: Juan Carlos Amorós">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Red Bull Arena">
+        <Label fx:id="labelEstadio" layoutX="254.0" layoutY="293.0" text="Estadio: Red Bull Arena">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,12 +145,12 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="170.0" fitWidth="150.0" layoutX="935.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="198.0" fitWidth="178.0" layoutX="916.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Gotham/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="181.0" fitWidth="137.0" layoutX="1177.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="198.0" fitWidth="178.0" layoutX="1170.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Estadunidense/Equipos/Gotham/CamisetaS.png" />
             </image>
@@ -220,5 +220,25 @@
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
+      <Label layoutX="1076.0" layoutY="250.0" text="Tierna Davidsonbel">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="958.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1076.0" layoutY="282.0" text="Jess Carter">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="98.0" fitWidth="137.0" layoutX="618.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/CampeonasConcaf.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>
