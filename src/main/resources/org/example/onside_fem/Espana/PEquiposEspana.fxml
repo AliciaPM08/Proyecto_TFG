@@ -134,7 +134,7 @@
             <Image url="@../../../../Imagenes/Liga_Española/Equipos/Granada/Granada.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ivLevante" fitHeight="160.0" fitWidth="160.0" layoutX="200.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivLevante" fitHeight="160.0" fitWidth="160.0" layoutX="199.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante/Levante.png" />
          </image>
@@ -144,7 +144,7 @@
             <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante Badalona/Levante Badalona.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ivMadridCFF" fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivMadridCFF" fitHeight="160.0" fitWidth="160.0" layoutX="379.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga_Española/Equipos/Madrid CFF/Madrid CFF.png" />
          </image>
@@ -174,12 +174,12 @@
             <Image url="@../../../../Imagenes/Liga_Española/Equipos/Valencia/Valencia.png" />
          </image>
       </ImageView>
-      <Label layoutX="59.0" layoutY="450.0" text="Athletic Club">
+      <Label layoutX="58.0" layoutY="450.0" text="Athletic Club">
          <font>
             <Font name="ACaslonPro-Semibold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="210.0" layoutY="450.0" text="Atlético de Madrid">
+      <Label layoutX="209.0" layoutY="450.0" text="Atlético de Madrid">
          <font>
             <Font name="ACaslonPro-Semibold" size="18.0" />
          </font>
@@ -249,7 +249,7 @@
             <Font name="ACaslonPro-Semibold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="1113.0" layoutY="756.0" text="Sevilla FC">
+      <Label layoutX="1114.0" layoutY="756.0" text="Sevilla FC">
          <font>
             <Font name="ACaslonPro-Semibold" size="18.0" />
          </font>

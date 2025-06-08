@@ -12,6 +12,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Espana.ConClasificacionE">
@@ -101,7 +102,7 @@
                     </font>
                 </Button>
             </children></Pane>
-      <TableView fx:id="tableView" layoutX="339.0" layoutY="228.0" prefHeight="445.0" prefWidth="722.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
+      <TableView fx:id="tableView" layoutX="339.0" layoutY="228.0" prefHeight="424.0" prefWidth="722.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
         <columns>
           <TableColumn fx:id="colNombre" prefWidth="96.0" text="Equipo" />
           <TableColumn fx:id="colPosicion" prefWidth="68.0" text="Posicion" />
@@ -114,5 +115,58 @@
             <TableColumn fx:id="colContra" prefWidth="88.0" text="G. En Contra" />
         </columns>
       </TableView>
+      <Label fx:id="labelChampions" layoutX="429.0" layoutY="664.0" text="CLASIFICADAS PARA  LIGA DE CAMPEONAS">
+         <font>
+            <Font name="ACaslonPro-Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="429.0" layoutY="695.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Barcelona/Barcelona.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="625.0" layoutY="695.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Real Madrid/Real Madrid.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="821.0" layoutY="695.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga_Española/Equipos/Atletico de Madrid/Atletico Madrid.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="70.0" layoutY="228.0" prefHeight="201.0" prefWidth="159.0" style="-fx-alignment: center;">
+         <children>
+            <Label fx:id="labelCampeonas" style="-fx-alignment: center;" text="CAMPEONAS">
+               <font>
+                  <Font name="ACaslonPro-Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="166.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga_Española/Equipos/Barcelona/Barcelona.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="1127.0" layoutY="228.0" prefHeight="331.0" prefWidth="193.0" style="-fx-alignment: center;">
+         <children>
+            <Label fx:id="labelDescenso" text="DESCENSO">
+               <font>
+                  <Font name="ACaslonPro-Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga_Española/Equipos/Betis/Betis.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga_Española/Equipos/Valencia/Valencia.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
     </children>
 </Pane>

@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="SD EIBAR">
+        <Label layoutX="202.0" layoutY="173.0" text="SD EIBAR">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 1991-2003-2009">
+        <Label fx:id="labelFundacion" layoutX="222.0" layoutY="230.0" text="Fundación: 1991-2003-2009">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Yerai Arti">
+        <Label fx:id="labelEntrenador" layoutX="222.0" layoutY="263.0" text="Entrenador: Yerai Arti">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Iprua">
+        <Label fx:id="labelEstadio" layoutX="223.0" layoutY="298.0" text="Estadio: Estadio Iprua">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="939.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1036.0" layoutY="242.0" text="Patri Ojeda">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1036.0" layoutY="275.0" text="Arene Altonaga">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

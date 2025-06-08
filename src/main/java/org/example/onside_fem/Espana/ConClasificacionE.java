@@ -58,6 +58,8 @@ public class ConClasificacionE {
 
     @FXML private Label footer;
 
+    @FXML private Label labelCampeonas, labelDescenso, labelChampions;
+
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
@@ -155,6 +157,10 @@ public class ConClasificacionE {
         colPerdidos.setText(recursos.getString("clasificacion.colPerdidos"));
         colFavor.setText(recursos.getString("clasificacion.colFavor"));
         colContra.setText(recursos.getString("clasificacion.colContra"));
+
+        labelCampeonas.setText(recursos.getString("labelCampeonas.c"));
+        labelDescenso.setText(recursos.getString("labelDescenso.d"));
+        labelChampions.setText(recursos.getString("labelChampions.ch"));
 
     }
 

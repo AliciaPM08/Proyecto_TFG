@@ -134,14 +134,20 @@ public class ConPantallaP {
 
         //Boton
         btnEquipo.setText(recursos.getString("btn.equipo"));
+        btnClasificacion.setText(recursos.getString("btn.clasificacion"));
 
 
         //Footer
         footer.setText(recursos.getString("footer.copy"));
 
         //Labels
-
-
+        labelNoticia.setText(recursos.getString("label.Noticia"));
+        labelTitulo1.setText(recursos.getString("label.titulo1espana"));
+        labelTitulo2.setText(recursos.getString("label.titulo2espana"));
+        labelTitulo3.setText(recursos.getString("label.titulo3espana"));
+        labelNoticia1.setText(recursos.getString("label.noticia1espana"));
+        labelNoticia2.setText(recursos.getString("label.noticia2espana"));
+        labelNoticia3.setText(recursos.getString("label.noticia3espana"));
     }
 
     private void inicializarMenuInicio() {

@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="DEPORTIVO ABANCA">
+        <Label layoutX="217.0" layoutY="173.0" text="DEPORTIVO ABANCA">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 25 de noviembre de 1983 - 2016">
+        <Label fx:id="labelFundacion" layoutX="237.0" layoutY="230.0" text="Fundación: 25 de noviembre de 1983 - 2016">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Fran Alonso">
+        <Label fx:id="labelEntrenador" layoutX="238.0" layoutY="264.0" text="Entrenador: Fran Alonso">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Riazor">
+        <Label fx:id="labelEstadio" layoutX="237.0" layoutY="297.0" text="Estadio: Estadio Riazor">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -150,12 +150,12 @@
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Dep La Coruña/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="1163.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="1159.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Dep La Coruña/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="551.0" text="EQUIPACIONES">
+        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="523.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
@@ -220,5 +220,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1033.0" layoutY="253.0" text="Patrícia Hmírová">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="939.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1033.0" layoutY="286.0" text="Yohana Gómez">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

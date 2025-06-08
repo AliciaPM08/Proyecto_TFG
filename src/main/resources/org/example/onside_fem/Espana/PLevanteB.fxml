@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="FC LEVANTE BADALONA">
+        <Label layoutX="222.0" layoutY="173.0" text="FC LEVANTE BADALONA">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 1983">
+        <Label fx:id="labelFundacion" layoutX="250.0" layoutY="219.0" text="Fundación: 1983">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Ferran Cabello">
+        <Label fx:id="labelEntrenador" layoutX="250.0" layoutY="253.0" text="Entrenador: Ferran Cabello">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Municipal de Badalona">
+        <Label fx:id="labelEstadio" layoutX="251.0" layoutY="286.0" text="Estadio: Estadio Municipal de Badalona">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,17 +145,17 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="197.0" fitWidth="176.0" layoutX="907.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="197.0" fitWidth="176.0" layoutX="905.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante Badalona/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="207.0" fitWidth="197.0" layoutX="1153.0" layoutY="597.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="207.0" fitWidth="197.0" layoutX="1152.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Levante Badalona/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="551.0" text="EQUIPACIONES">
+        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="519.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1052.0" layoutY="242.0" text="Melanie Serrano">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="949.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1052.0" layoutY="265.0" text="Irina Uribe">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

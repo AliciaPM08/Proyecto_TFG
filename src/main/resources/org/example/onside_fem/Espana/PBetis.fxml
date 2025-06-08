@@ -75,7 +75,7 @@
                     </font>
                 </Button>
             </children></Pane>
-        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="47.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="36.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Betis/Betis.png" />
             </image>
@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="REAL BETIS FEMENINAS">
+        <Label layoutX="214.0" layoutY="173.0" text="REAL BETIS FEMENINAS">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 1 de enero de 2011">
+        <Label fx:id="labelFundacion" layoutX="238.0" layoutY="230.0" text="Fundación: 1 de enero de 2011">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Joseba Aguirre Lopez">
+        <Label fx:id="labelEntrenador" layoutX="238.0" layoutY="267.0" text="Entrenador: Joseba Aguirre Lopez">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Ciudad Deportiva Luis del Sol">
+        <Label fx:id="labelEstadio" layoutX="238.0" layoutY="302.0" text="Estadio: Ciudad Deportiva Luis del Sol">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,12 +145,12 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="160.0" fitWidth="137.0" layoutX="907.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="137.0" layoutX="932.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Betis/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="207.0" fitWidth="197.0" layoutX="1153.0" layoutY="597.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="207.0" fitWidth="197.0" layoutX="1127.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Betis/CamisetaS.png" />
             </image>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="956.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1045.0" layoutY="267.0" text="Carolina Férez">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1045.0" layoutY="291.0" text="Nana">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

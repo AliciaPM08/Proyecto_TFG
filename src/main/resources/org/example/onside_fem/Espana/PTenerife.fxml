@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="COSTA ADEJE TENERIFE">
+        <Label layoutX="207.0" layoutY="173.0" text="COSTA ADEJE TENERIFE">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2013">
+        <Label fx:id="labelFundacion" layoutX="230.0" layoutY="230.0" text="Fundación: 2013">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Eder Maestre">
+        <Label fx:id="labelEntrenador" layoutX="230.0" layoutY="259.0" text="Entrenador: Eder Maestre">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Campo de Fútbol de Adeje">
+        <Label fx:id="labelEstadio" layoutX="230.0" layoutY="291.0" text="Estadio: Campo de Fútbol de Adeje">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,17 +145,17 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="191.0" fitWidth="182.0" layoutX="907.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="191.0" fitWidth="182.0" layoutX="906.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Tenerife/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="207.0" fitWidth="197.0" layoutX="1153.0" layoutY="597.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="210.0" fitWidth="206.0" layoutX="1144.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Tenerife/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="551.0" text="EQUIPACIONES">
+        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="520.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1055.0" layoutY="242.0" text="Maria Jose">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="960.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1055.0" layoutY="271.0" text="Sandra Castelló">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

@@ -130,12 +130,12 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Victor Marin">
+        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="264.0" text="Entrenador: Victor Marin">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Centro Deportivo Civitas Alcala de Henares">
+        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="297.0" text="Estadio: Centro Deportivo Civitas Alcala de Henares">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,17 +145,17 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="170.0" fitWidth="150.0" layoutX="906.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="160.0" fitWidth="174.0" layoutX="906.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Atletico de Madrid/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="1163.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="1163.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Atletico de Madrid/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="551.0" text="EQUIPACIONES">
+        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="539.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
@@ -223,12 +223,27 @@
       </Label>
         <VBox fx:id="jugadoraInfoPanel" layoutX="392.0" layoutY="435.0" prefHeight="294.0" prefWidth="303.0" style="-fx-border-color: #9c0001; -fx-border-width: 5; -fx-background-color: #ffffff; -fx-padding: 5;">
             <children>
-                <ImageView fx:id="imgJugadora" fitHeight="150" fitWidth="150" preserveRatio="true" />
+                <ImageView fx:id="imgJugadora" fitHeight="171.0" fitWidth="174.0" preserveRatio="true" />
                 <Label fx:id="lblNombre" managed="false" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " visible="false" />
                 <Label fx:id="lblPosicion" managed="false" style="-fx-font-size: 14px;" text="Posición: " visible="false" />
                 <Label fx:id="lblEquipo" managed="false" style="-fx-font-size: 14px;" text="Equipo: " visible="false" />
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <ImageView fitHeight="75.0" fitWidth="72.0" layoutX="1014.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1111.0" layoutY="253.0" text="Dolores Gallardo">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1112.0" layoutY="276.0" text="Carmen Menayo">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

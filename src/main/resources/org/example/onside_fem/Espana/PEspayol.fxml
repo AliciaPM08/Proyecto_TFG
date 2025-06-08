@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="RCD ESPANYOL">
+        <Label layoutX="215.0" layoutY="173.0" text="RCD ESPANYOL">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 1970">
+        <Label fx:id="labelFundacion" layoutX="238.0" layoutY="230.0" text="Fundación: 1970">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenadora: Sara Monforte">
+        <Label fx:id="labelEntrenador" layoutX="238.0" layoutY="261.0" text="Entrenadora: Sara Monforte">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Estadio Dani Jarque">
+        <Label fx:id="labelEstadio" layoutX="238.0" layoutY="291.0" text="Estadio: Estadio Dani Jarque">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -155,7 +155,7 @@
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Espanyol/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="551.0" text="EQUIPACIONES">
+        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="520.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
@@ -225,5 +225,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="956.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1061.0" layoutY="261.0" text="Cristina Baudet">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1061.0" layoutY="291.0" text="Anita Hernández">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

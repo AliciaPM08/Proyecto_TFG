@@ -120,22 +120,22 @@
                 <TableColumn fx:id="colTRojas" prefWidth="104.0" text="Tarjetas Rojas" />
             </columns>
         </TableView>
-        <Label layoutX="233.0" layoutY="173.0" text="REAL SOCIEDAD DE FUTBOL SAD">
+        <Label layoutX="207.0" layoutY="173.0" text="REAL SOCIEDAD DE FUTBOL SAD">
             <font>
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2004">
+        <Label fx:id="labelFundacion" layoutX="238.0" layoutY="230.0" text="Fundación: 2004">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Jose Luis Sanchez Vera">
+        <Label fx:id="labelEntrenador" layoutX="238.0" layoutY="262.0" text="Entrenador: Jose Luis Sanchez Vera">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Instalaciones Zubieta">
+        <Label fx:id="labelEstadio" layoutX="238.0" layoutY="297.0" text="Estadio: Instalaciones Zubieta">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -145,17 +145,17 @@
                 <Font name="ACaslonPro-Semibold" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="196.0" fitWidth="137.0" layoutX="914.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="196.0" fitWidth="137.0" layoutX="914.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Real Sociedad/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="182.0" fitWidth="131.0" layoutX="1162.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="182.0" fitWidth="131.0" layoutX="1162.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga_Española/Equipos/Real Sociedad/CamisetaS.png" />
             </image>
         </ImageView>
-        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="551.0" text="EQUIPACIONES">
+        <Label fx:id="labelEquipaciones" layoutX="1014.0" layoutY="523.0" text="EQUIPACIONES">
             <font>
                 <Font name="ACaslonPro-Bold" size="24.0" />
             </font>
@@ -220,5 +220,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1033.0" layoutY="251.0" text="Ane Etxezarreta">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="931.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1033.0" layoutY="274.0" text="Klára Cahynová">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
