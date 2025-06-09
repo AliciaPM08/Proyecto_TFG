@@ -37,7 +37,7 @@
                 <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
-        <Pane  layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
+        <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
             <children>
                 <Label layoutX="639.0" layoutY="1.0" text="OnSideFem" textFill="#ff6d6e">
                     <font>
@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 12 de mayo de 2022">
+        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="219.0" text="Fundación: 12 de mayo de 2022">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenadora: Kat Smith">
+        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="253.0" text="Entrenadora: Kat Smith">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Tarneit">
+        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="286.0" text="Estadio: Tarneit">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1056.0" layoutY="242.0" text="Catherine Zimmerman">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="946.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1057.0" layoutY="275.0" text="Chloe Logarzo">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

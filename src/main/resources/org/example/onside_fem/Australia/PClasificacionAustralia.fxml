@@ -7,11 +7,13 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Australia.ConClasificacionAus">
@@ -101,7 +103,7 @@
                     </font>
                 </Button>
             </children></Pane>
-      <TableView fx:id="tableView" layoutX="340.0" layoutY="258.0" prefHeight="384.0" prefWidth="718.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
+      <TableView fx:id="tableView" layoutX="338.0" layoutY="283.0" prefHeight="335.0" prefWidth="724.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
         <columns>
           <TableColumn fx:id="colNombre" prefWidth="96.0" text="Equipo" />
           <TableColumn fx:id="colPosicion" prefWidth="68.0" text="Posicion" />
@@ -114,5 +116,20 @@
             <TableColumn fx:id="colContra" prefWidth="88.0" text="G. En Contra" />
         </columns>
       </TableView>
+      <VBox layoutX="67.0" layoutY="271.0" prefHeight="251.0" prefWidth="198.0" style="-fx-alignment: CENTER;">
+         <children>
+            <Label text="CAMPEONAS" fx:id="labelCampeonas">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="24.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="29.0" prefWidth="0.0" visible="false" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Central Coast Mariners/Logo Central Coast Mariners.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
     </children>
 </Pane>

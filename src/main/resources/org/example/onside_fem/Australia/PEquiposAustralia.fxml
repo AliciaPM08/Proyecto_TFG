@@ -119,7 +119,7 @@
             <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Melb Sindey/Logo Melb Sindey.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ivMelbourneV" fitHeight="160.0" fitWidth="160.0" layoutX="1205.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ivMelbourneV" fitHeight="170.0" fitWidth="147.0" layoutX="1200.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Imagenes/Liga Australiana/Equipos/Melb Victory/Logo Melb Victory.png" />
          </image>

@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación:  2008">
+        <Label fx:id="labelFundacion" layoutX="256.0" layoutY="231.0" text="Fundación:  2008">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Heather Garriock">
+        <Label fx:id="labelEntrenador" layoutX="256.0" layoutY="264.0" text="Entrenador: Heather Garriock">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: McKellar Park">
+        <Label fx:id="labelEstadio" layoutX="256.0" layoutY="299.0" text="Estadio: McKellar Park">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -220,5 +220,20 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
+      <Label layoutX="1070.0" layoutY="253.0" text="Michelle Heyman">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="965.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1070.0" layoutY="288.0" text="Bethany Gordon">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

@@ -27,7 +27,7 @@
                         <Font name="ACaslonPro-Semibold" size="36.0" />
                     </font>
                 </Label>
-                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
         <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -42,40 +42,41 @@
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
                 </Hyperlink>
-                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+                <Label fx:id="footer" layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
         <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
                 <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
-               <items>
-                  <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
-               </items></Menu>
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
                 <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
-                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
-                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
-                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
-                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
-                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                        <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                        <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                        <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
                 </Menu>
                 <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Alemania" />
-                  <MenuItem mnemonicParsing="false" text="Australia" />
-                  <MenuItem mnemonicParsing="false" text="Brasil" />
-                  <MenuItem mnemonicParsing="false" text="Canada" />
-                  <MenuItem mnemonicParsing="false" text="Colombia" />
-                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
-                  <MenuItem mnemonicParsing="false" text="España" />
-                  <MenuItem mnemonicParsing="false" text="Francia" />
-                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                  <MenuItem mnemonicParsing="false" text="Nigeria" />
-                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
-                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
-                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                        <MenuItem fx:id="menuAlemania" mnemonicParsing="false" text="Alemania" />
+                        <MenuItem fx:id="menuAustralia" mnemonicParsing="false" text="Australia" />
+                        <MenuItem fx:id="menuBrasil" mnemonicParsing="false" text="Brasil" />
+                        <MenuItem fx:id="menuCanada" mnemonicParsing="false" text="Canada" />
+                        <MenuItem fx:id="menuColombia" mnemonicParsing="false" text="Colombia" />
+                        <MenuItem fx:id="menuEspana" mnemonicParsing="false" text="España" />
+                        <MenuItem fx:id="menuEstados" mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem fx:id="menuFrancia" mnemonicParsing="false" text="Francia" />
+                        <MenuItem fx:id="menuInglaterra" mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem fx:id="menuNigeria" mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem fx:id="menuNZelanda" mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem fx:id="menuSudafrica" mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem fx:id="menuSuecia" mnemonicParsing="false" text="Suecia" />
                     </items>
                 </Menu>
             </menus>
@@ -103,7 +104,7 @@
                </font>
             </Button>
          </children></Pane>
-      <Label layoutX="60.0" layoutY="185.0" text="NOTICIAS">
+      <Label fx:id="labelNoticia" layoutX="60.0" layoutY="185.0" text="NOTICIAS">
          <font>
             <Font name="ACaslonPro-Semibold" size="36.0" />
          </font>
@@ -113,19 +114,14 @@
             <Image url="@../../../../Imagenes/Liga Australiana/Logo Liga/noticia1.png" />
          </image>
       </ImageView>
-      <Label layoutX="518.0" layoutY="241.0" text="Victoria de Melbourne en la rivalidad original mientras Adelaide ">
+      <Label fx:id="labelTitulo1" layoutX="516.0" layoutY="231.0" prefHeight="85.0" prefWidth="808.0" text="Victoria de Melbourne en la rivalidad original mientras Adelaide enfrenta una batalla cuesta arriba en la semifinal  " wrapText="true">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="524.0" layoutY="332.0" text="El Adelaide United lo tiene todo por hacer en el partido de vuelta de la semifinal de la Ninja A-League después de ser derrotado por 3-1 por ">
+      <Label fx:id="labelNoticia1" layoutX="524.0" layoutY="321.0" prefHeight="93.0" prefWidth="808.0" text="El Adelaide United lo tiene todo por hacer en el partido de vuelta de la semifinal de la Ninja A-League después de ser derrotado por 3-1 por el Melbourne Victory el domingo por la tarde gracias a un doblete de Claudia Bunge. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="524.0" layoutY="369.0" text="el Melbourne Victory el domingo por la tarde gracias a un doblete de Claudia Bunge.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="182.0" fitWidth="336.0" layoutX="139.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
@@ -133,14 +129,14 @@
             <Image url="@../../../../Imagenes/Liga Australiana/Logo Liga/noticia2.png" />
          </image>
       </ImageView>
-      <Label layoutX="518.0" layoutY="450.0" text="Candidatos de abril para Jugador Shark del Mes, Ninja A-League.">
+      <Label fx:id="labelTitulo2" layoutX="518.0" layoutY="450.0" text="Candidatos de mayo para Jugador Shark del Mes, Ninja A-League.">
          <font>
             <Font name="ACaslonPro-BoldItalic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="524.0" layoutY="503.0" text="¡Los nominados para el premio al Jugador Shark del Mes de abril en la Ninja A-League ya están disponibles!">
+      <Label fx:id="labelNoticia2" layoutX="524.0" layoutY="503.0" text="¡Los nominados para el premio al Jugador Shark del Mes de mayo en la Ninja A-League ya están disponibles!">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="182.0" fitWidth="334.0" layoutX="139.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
@@ -148,24 +144,14 @@
             <Image url="@../../../../Imagenes/Liga Australiana/Logo Liga/noticia3.png" />
          </image>
       </ImageView>
-      <Label layoutX="522.0" layoutY="670.0" text="Mitre lanza el primer balón a medida para las finales de la A-Leagues ">
+      <Label fx:id="labelTitulo3" layoutX="516.0" layoutY="656.0" text="Mitre lanza el primer balón a medida para las finales de la A-Leagues ">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="524.0" layoutY="738.0" text="Las Ligas Profesionales Australianas (APL), en asociación con Mitre, han lanzado los primeros balones oficiales personalizados para las finales ">
+      <Label fx:id="labelNoticia3" layoutX="524.0" layoutY="693.0" prefHeight="85.0" prefWidth="840.0" text="Las Ligas Profesionales Australianas (APL), en asociación con Mitre, han lanzado los primeros balones oficiales personalizados para las finales de la A-League Women 2025 de la Ninja A-League y la Isuzu UTE A-League Men. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="523.0" layoutY="778.0" text="de la A-League Women 2025 de la Ninja A-League y la Isuzu UTE A-League Men.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="518.0" layoutY="278.0" text="enfrenta una batalla cuesta arriba en la semifinal ">
-         <font>
-            <Font name="ACaslonPro-BoldItalic" size="30.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
     </children>

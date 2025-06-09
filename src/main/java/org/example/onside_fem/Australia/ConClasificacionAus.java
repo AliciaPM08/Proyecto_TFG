@@ -60,6 +60,8 @@ public class ConClasificacionAus {
 
     @FXML private Label footer;
 
+    @FXML private Label labelCampeonas;
+
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
@@ -98,14 +100,14 @@ public class ConClasificacionAus {
     }
 
     private void inicializarIdioma() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.getItems().addAll("Español", "English");
         comboBoxIdiomas.setValue("Español");
         comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
         String idiomaSeleccionado = comboBoxIdiomas.getValue();
-        if (idiomaSeleccionado.equals("Inglés")) {
+        if (idiomaSeleccionado.equals("English")) {
             localeActual = new Locale("en", "US");
         } else {
             localeActual = new Locale("es", "ES");
@@ -157,6 +159,9 @@ public class ConClasificacionAus {
         colPerdidos.setText(recursos.getString("clasificacion.colPerdidos"));
         colFavor.setText(recursos.getString("clasificacion.colFavor"));
         colContra.setText(recursos.getString("clasificacion.colContra"));
+
+        //Label
+        labelCampeonas.setText(recursos.getString("labelCampeonas.c"));
 
     }
 

@@ -63,7 +63,7 @@ public class ConCaberraP {
      */
     @FXML
     public void initialize() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.getItems().addAll("Español", "English");
         comboBoxIdiomas.setValue("Español");
         comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
         cambiarIdioma();
@@ -75,7 +75,7 @@ public class ConCaberraP {
      */
     private void cambiarIdioma() {
         String idioma = comboBoxIdiomas.getValue();
-        localeActual = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
+        localeActual = idioma.equals("English") ? new Locale("en", "US") : new Locale("es", "ES");
 
         try {
             recursos = ResourceBundle.getBundle("idiomas.messages", localeActual);
@@ -95,6 +95,19 @@ public class ConCaberraP {
         } catch (MissingResourceException e) {
             System.err.println("Archivo de idioma no encontrado.");
         }
+        limpiarPanelJugadora();
+    }
+
+    /**
+     * Limpia el panel de la informacion de la jugadora una vez que se cambie de idioma
+     */
+    private void limpiarPanelJugadora() {
+        lblNombre.setText("");
+        lblPosicion.setText("");
+        lblEquipo.setText("");
+        lblFecha.setText("");
+        imgJugadora.setImage(null);
+        seleccionActualDeLaJugadora = null;
     }
 
     /**

@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación:  2008">
+        <Label fx:id="labelFundacion" layoutX="258.0" layoutY="226.0" text="Fundación:  2008">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Grant Brebner">
+        <Label fx:id="labelEntrenador" layoutX="258.0" layoutY="257.0" text="Entrenador: Grant Brebner">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Epping Stadium">
+        <Label fx:id="labelEstadio" layoutX="258.0" layoutY="291.0" text="Estadio: Epping Stadium">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -220,5 +220,20 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
+      <Label layoutX="1064.0" layoutY="238.0" text="Emily Gielnik">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1064.0" layoutY="269.0" text="Kayla Morrison">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="74.0" fitWidth="75.0" layoutX="963.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>
