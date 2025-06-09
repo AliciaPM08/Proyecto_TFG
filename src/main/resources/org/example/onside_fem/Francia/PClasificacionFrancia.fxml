@@ -7,11 +7,13 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Francia.ConClasificacionFrancia">
@@ -101,7 +103,7 @@
                     </font>
                 </Button>
             </children></Pane>
-      <TableView fx:id="tableView" layoutX="340.0" layoutY="218.0" prefHeight="412.0" prefWidth="718.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
+      <TableView fx:id="tableView" layoutX="337.0" layoutY="285.0" prefHeight="330.0" prefWidth="724.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
         <columns>
           <TableColumn fx:id="colNombre" prefWidth="96.0" text="Equipo" />
           <TableColumn fx:id="colPosicion" prefWidth="68.0" text="Posicion" />
@@ -114,5 +116,66 @@
             <TableColumn fx:id="colContra" prefWidth="88.0" text="G. En Contra" />
         </columns>
       </TableView>
+      <VBox layoutX="72.0" layoutY="285.0" prefHeight="200.0" prefWidth="167.0" style="-fx-alignment: center;">
+         <children>
+            <Label fx:id="labelCampeonas" text="CAMPEONAS">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="24.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+            <ImageView fitHeight="185.0" fitWidth="198.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga Francesa/Equipos/Lyon/Lyon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="1138.0" layoutY="285.0" prefHeight="351.0" prefWidth="212.0" style="-fx-alignment: CENTER;">
+         <children>
+            <Label fx:id="labelDescenso" text="DESCENSO">
+               <font>
+                  <Font name="ACaslonPro-Regular" size="24.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga Francesa/Equipos/Stade de Reims/Stade Reims.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga Francesa/Equipos/Guingamp/Guingamp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label fx:id="labelChampions" layoutX="414.0" layoutY="636.0" text="CLASIFICADAS PARA LA LIGA DE CAMPEONAS">
+         <font>
+            <Font name="ACaslonPro-Regular" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="337.0" layoutY="684.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Francesa/Equipos/Lyon/Lyon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="526.0" layoutY="684.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Francesa/Equipos/Paris SG/Paris SG.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="736.0" layoutY="684.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Francesa/Equipos/Paris Fc/Paris Fc.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="910.0" layoutY="684.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Liga Francesa/Equipos/Dijon/Dijon.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>

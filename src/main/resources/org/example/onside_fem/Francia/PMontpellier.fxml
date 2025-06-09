@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2001">
+        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="231.0" text="Fundación: 2001">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Yannick Chandioux">
+        <Label fx:id="labelEntrenador" layoutX="273.0" layoutY="261.0" text="Entrenador: Yannick Chandioux">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Stade Jules Rimet">
+        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="293.0" text="Estadio: Stade Jules Rimet">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -221,6 +221,21 @@
          </font>
       </Label>
       <Label layoutX="250.0" layoutY="800.0" text="2 Copas Premieré">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1040.0" layoutY="250.0" text="Ifeoma Onumonu">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="931.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1040.0" layoutY="282.0" text="Marion Torrent">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

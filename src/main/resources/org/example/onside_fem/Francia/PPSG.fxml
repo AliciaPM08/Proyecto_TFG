@@ -130,12 +130,12 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Fabrice Abriel">
+        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="267.0" text="Entrenador: Fabrice Abriel">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Stade Sébastien Charléty">
+        <Label fx:id="labelEstadio" layoutX="271.0" layoutY="299.0" text="Estadio: Stade Sébastien Charléty">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -221,6 +221,21 @@
          </font>
       </Label>
       <Label layoutX="229.0" layoutY="799.0" text="4 Coupe de France">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1092.0" layoutY="256.0" text="Jackie Groenen">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="981.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1092.0" layoutY="288.0" text="Griedge Mbock Bathy">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

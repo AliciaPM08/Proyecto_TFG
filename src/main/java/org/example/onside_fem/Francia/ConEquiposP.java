@@ -87,14 +87,14 @@ public class ConEquiposP {
     }
 
     private void inicializarIdioma() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.getItems().addAll("Español", "English");
         comboBoxIdiomas.setValue("Español");
         comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
         String idiomaSeleccionado = comboBoxIdiomas.getValue();
-        if (idiomaSeleccionado.equals("Inglés")) {
+        if (idiomaSeleccionado.equals("English")) {
             localeActual = new Locale("en", "US");
         } else {
             localeActual = new Locale("es", "ES");
@@ -253,7 +253,7 @@ public class ConEquiposP {
 
     private void abrirAyuda(ActionEvent event) {
         try {
-            File ayudaHTML = new File("src/main/resources/ayuda/ayuda.html");
+            File ayudaHTML = new File("/org/example/onside_fem/ayuda.html");
             if (ayudaHTML.exists()) {
                 Desktop.getDesktop().browse(ayudaHTML.toURI());
             } else {

@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2004">
+        <Label fx:id="labelFundacion" layoutX="265.0" layoutY="231.0" text="Fundación: 2004">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Joe Montemurro">
+        <Label fx:id="labelEntrenador" layoutX="265.0" layoutY="261.0" text="Entrenador: Joe Montemurro">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Parc Olympique Lyonnais">
+        <Label fx:id="labelEstadio" layoutX="265.0" layoutY="292.0" text="Estadio: Parc Olympique Lyonnais">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -230,7 +230,22 @@
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="labelChampion" layoutX="624.0" layoutY="800.0" text="8 Ligas de Campeoneonas">
+      <Label fx:id="labelChampion" layoutX="624.0" layoutY="800.0" text="8 Ligas de Campeonas">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1073.0" layoutY="243.0" text="Wendie Renard">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="970.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1073.0" layoutY="281.0" text="Eugunie Le Sommer">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

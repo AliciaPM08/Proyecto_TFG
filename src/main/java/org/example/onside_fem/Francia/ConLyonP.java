@@ -64,7 +64,7 @@ public class ConLyonP {
      */
     @FXML
     public void initialize() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.getItems().addAll("Español", "English");
         comboBoxIdiomas.setValue("Español");
         comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
         cambiarIdioma();
@@ -76,7 +76,7 @@ public class ConLyonP {
      */
     private void cambiarIdioma() {
         String idioma = comboBoxIdiomas.getValue();
-        localeActual = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
+        localeActual = idioma.equals("English") ? new Locale("en", "US") : new Locale("es", "ES");
 
         try {
             recursos = ResourceBundle.getBundle("idiomas.messages", localeActual);

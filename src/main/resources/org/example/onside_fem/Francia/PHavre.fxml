@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 2014">
+        <Label fx:id="labelFundacion" layoutX="253.0" layoutY="231.0" text="Fundación: 2014">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Frédéric Gonçalves">
+        <Label fx:id="labelEntrenador" layoutX="253.0" layoutY="262.0" text="Entrenador: Frédéric Gonçalves">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Stade Océane">
+        <Label fx:id="labelEstadio" layoutX="253.0" layoutY="293.0" text="Estadio: Stade Océane">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1055.0" layoutY="243.0" text="Silke Demeyere">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="943.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1055.0" layoutY="274.0" text="Salome Elisor">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

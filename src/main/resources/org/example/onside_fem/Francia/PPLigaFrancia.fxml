@@ -27,7 +27,7 @@
                         <Font name="ACaslonPro-Semibold" size="36.0" />
                     </font>
                 </Label>
-                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
         <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -42,40 +42,41 @@
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
                 </Hyperlink>
-                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+                <Label fx:id="footer" layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
         <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
                 <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
-               <items>
-                  <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
-               </items></Menu>
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
                 <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
-                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
-                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
-                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
-                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
-                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                        <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                        <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                        <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
                 </Menu>
                 <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Alemania" />
-                  <MenuItem mnemonicParsing="false" text="Australia" />
-                  <MenuItem mnemonicParsing="false" text="Brasil" />
-                  <MenuItem mnemonicParsing="false" text="Canada" />
-                  <MenuItem mnemonicParsing="false" text="Colombia" />
-                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
-                  <MenuItem mnemonicParsing="false" text="España" />
-                  <MenuItem mnemonicParsing="false" text="Francia" />
-                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                  <MenuItem mnemonicParsing="false" text="Nigeria" />
-                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
-                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
-                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                        <MenuItem fx:id="menuAlemania" mnemonicParsing="false" text="Alemania" />
+                        <MenuItem fx:id="menuAustralia" mnemonicParsing="false" text="Australia" />
+                        <MenuItem fx:id="menuBrasil" mnemonicParsing="false" text="Brasil" />
+                        <MenuItem fx:id="menuCanada" mnemonicParsing="false" text="Canada" />
+                        <MenuItem fx:id="menuColombia" mnemonicParsing="false" text="Colombia" />
+                        <MenuItem fx:id="menuEspana" mnemonicParsing="false" text="España" />
+                        <MenuItem fx:id="menuEstados" mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem fx:id="menuFrancia" mnemonicParsing="false" text="Francia" />
+                        <MenuItem fx:id="menuInglaterra" mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem fx:id="menuNigeria" mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem fx:id="menuNZelanda" mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem fx:id="menuSudafrica" mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem fx:id="menuSuecia" mnemonicParsing="false" text="Suecia" />
                     </items>
                 </Menu>
             </menus>
@@ -103,7 +104,7 @@
                </font>
             </Button>
          </children></Pane>
-      <Label layoutX="62.0" layoutY="170.0" text="NOTICIAS">
+      <Label fx:id="labelNoticia" layoutX="62.0" layoutY="170.0" text="NOTICIAS">
          <font>
             <Font name="ACaslonPro-Semibold" size="36.0" />
          </font>
@@ -113,19 +114,14 @@
             <Image url="@../../../../Imagenes/Liga Francesa/Logo Liga/noticia.png" />
          </image>
       </ImageView>
-      <Label layoutX="522.0" layoutY="241.0" text="PSG - Paris FC: ¡Una semifinal 100% parisina en el Parque de los Príncipes!">
+      <Label fx:id="labelTitulo1" layoutX="494.0" layoutY="238.0" text="PSG - Paris FC: ¡Una semifinal 100% parisina en el Parque de los Príncipes!">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="29.0" />
          </font>
       </Label>
-      <Label layoutX="528.0" layoutY="290.0" text="El domingo 11 de mayo a las 21.00 horas, el Parque de los Príncipes acogerá por primera vez en su historia una semifinal del Play-Off de la Première ">
+      <Label fx:id="labelNoticia1" layoutX="502.0" layoutY="274.0" prefHeight="99.0" prefWidth="854.0" text="El domingo 11 de mayo a las 21.00 horas, el Parque de los Príncipes acogerá por primera vez en su historia una semifinal del Play-Off de la Première Ligue Arkema entre el París Saint-Germain y el París FC. Un emocionante partido femenino a partir de 15 euros. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="525.0" layoutY="323.0" text="Ligue Arkema entre el París Saint-Germain y el París FC. Un emocionante partido femenino a partir de 15 euros.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="214.0" fitWidth="182.0" layoutX="235.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
@@ -133,19 +129,14 @@
             <Image url="@../../../../Imagenes/Liga Francesa/Logo Liga/noticia2.png" />
          </image>
       </ImageView>
-      <Label layoutX="518.0" layoutY="450.0" text="Play-offs del D1 : el OL avanza a la final por delante del Dijon FCO">
+      <Label fx:id="labelTitulo2" layoutX="494.0" layoutY="450.0" text="Play-offs del D1 : el OL avanza a la final por delante del Dijon FCO">
          <font>
             <Font name="ACaslonPro-BoldItalic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="524.0" layoutY="503.0" text="En esta primera semifinal de los play-offs de la Arkema Premier League, el OL se enfrentó al Dijon en el Groupama Stadium. Al final del partido ">
+      <Label fx:id="labelNoticia2" layoutX="502.0" layoutY="498.0" prefHeight="56.0" prefWidth="854.0" text="En esta primera semifinal de los play-offs de la Arkema Premier League, el OL se enfrentó al Dijon en el Groupama Stadium. Al final del partido quedó un lugar en la final para defender. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="522.0" layoutY="540.0" text="quedó un lugar en la final para defender.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="145.0" fitWidth="282.0" layoutX="192.0" layoutY="667.0" pickOnBounds="true" preserveRatio="true">
@@ -153,19 +144,14 @@
             <Image url="@../../../../Imagenes/Liga Francesa/Logo Liga/noticia3.png" />
          </image>
       </ImageView>
-      <Label layoutX="522.0" layoutY="661.0" text="Ascenso a la Premier League: el sueño inesperado del TFC Women">
+      <Label fx:id="labelTitulo3" layoutX="494.0" layoutY="661.0" text="Ascenso a la Premier League: el sueño inesperado del TFC Women">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="29.0" />
          </font>
       </Label>
-      <Label layoutX="525.0" layoutY="721.0" text="Ascendidas esta temporada a la Segunda División, las jugadoras del TFC pueden ascender a la Primera División, la élite del fútbol femenino, la próxima ">
+      <Label fx:id="labelNoticia3" layoutX="502.0" layoutY="707.0" prefHeight="92.0" prefWidth="854.0" text="Ascendidas esta temporada a la Segunda División, las jugadoras del TFC pueden ascender a la Primera División, la élite del fútbol femenino, la próxima temporada. Sólo les quedan dos partidos para conseguir un ascenso tan inesperado como prometedor. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="525.0" layoutY="758.0" text="temporada. Sólo les quedan dos partidos para conseguir un ascenso tan inesperado como prometedor.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
     </children>

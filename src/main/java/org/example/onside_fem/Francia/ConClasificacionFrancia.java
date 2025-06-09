@@ -77,6 +77,7 @@ public class ConClasificacionFrancia {
     @FXML private TableColumn<Clasificacion, Integer> colFavor;
     @FXML private TableColumn<Clasificacion, Integer> colContra;
 
+    @FXML private Label labelCampeonas, labelDescenso, labelChampions;
 
     private ResourceBundle recursos;
     private Locale localeActual = new Locale("es", "ES");
@@ -99,14 +100,14 @@ public class ConClasificacionFrancia {
     }
 
     private void inicializarIdioma() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
+        comboBoxIdiomas.getItems().addAll("Español", "English");
         comboBoxIdiomas.setValue("Español");
         comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
     }
 
     private void cambiarIdioma() {
         String idiomaSeleccionado = comboBoxIdiomas.getValue();
-        if (idiomaSeleccionado.equals("Inglés")) {
+        if (idiomaSeleccionado.equals("English")) {
             localeActual = new Locale("en", "US");
         } else {
             localeActual = new Locale("es", "ES");
@@ -158,6 +159,10 @@ public class ConClasificacionFrancia {
         colPerdidos.setText(recursos.getString("clasificacion.colPerdidos"));
         colFavor.setText(recursos.getString("clasificacion.colFavor"));
         colContra.setText(recursos.getString("clasificacion.colContra"));
+
+        labelCampeonas.setText(recursos.getString("labelCampeonas.c"));
+        labelDescenso.setText(recursos.getString("labelDescenso.d"));
+        labelChampions.setText(recursos.getString("labelChampions.ch"));
 
     }
 

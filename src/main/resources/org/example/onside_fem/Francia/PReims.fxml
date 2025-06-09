@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 1968">
+        <Label fx:id="labelFundacion" layoutX="260.0" layoutY="231.0" text="Fundación: 1968">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Mathieu Rufié">
+        <Label fx:id="labelEntrenador" layoutX="260.0" layoutY="265.0" text="Entrenador: Mathieu Rufié">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Stade Louis Blériot">
+        <Label fx:id="labelEstadio" layoutX="260.0" layoutY="299.0" text="Estadio: Stade Louis Blériot">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -216,6 +216,21 @@
             </children>
         </VBox>
       <Label layoutX="77.0" layoutY="799.0" text="5 D1 Féminine">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1071.0" layoutY="254.0" text="Melissa Gomes">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="957.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1071.0" layoutY="288.0" text="Rachel Corboz">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

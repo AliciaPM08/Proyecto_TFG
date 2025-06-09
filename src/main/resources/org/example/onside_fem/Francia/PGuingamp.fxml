@@ -125,17 +125,17 @@
                 <Font name="ACaslonPro-Semibold" size="36.0" />
             </font>
         </Label>
-        <Label fx:id="labelFundacion" layoutX="272.0" layoutY="230.0" text="Fundación: 1 de enero de 1979">
+        <Label fx:id="labelFundacion" layoutX="254.0" layoutY="231.0" text="Fundación: 1 de enero de 1979">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador:   Frédéric Biancalani">
+        <Label fx:id="labelEntrenador" layoutX="254.0" layoutY="262.0" text="Entrenador:   Frédéric Biancalani">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio:  Stade Fred-Aubert">
+        <Label fx:id="labelEstadio" layoutX="254.0" layoutY="291.0" text="Estadio:  Stade Fred-Aubert">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -216,6 +216,21 @@
             </children>
         </VBox>
       <Label layoutX="69.0" layoutY="796.0" text="1 D1 Femenié">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1050.0" layoutY="251.0" text="Sofia Guellati">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="943.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1050.0" layoutY="280.0" text="Maureen Bigot">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

@@ -130,12 +130,12 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Nicolas Chabot">
+        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="262.0" text="Entrenador: Nicolas Chabot">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Stade Marcel-Saupin">
+        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="296.0" text="Estadio: Stade Marcel-Saupin">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1075.0" layoutY="242.0" text="Lalia Dali-Storti">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="952.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1075.0" layoutY="273.0" text="Eva Sumo">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
