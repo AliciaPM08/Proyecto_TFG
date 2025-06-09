@@ -54,7 +54,7 @@
         </Pane>
         <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
             <children>
-                <ImageView fitHeight="75.0" fitWidth="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="75.0" fitWidth="136.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/Logo liga.jpg" />
                     </image>
@@ -130,12 +130,12 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Tadashi Ogasahara">
+        <Label fx:id="labelEntrenador" layoutX="270.0" layoutY="264.0" text="Entrenador: Tadashi Ogasahara">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio:  Minami Nagano Sports Park">
+        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="301.0" text="Estadio:  Minami Nagano Sports Park">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -150,7 +150,7 @@
                 <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Nagano Parceiro/CamisetaP.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="160.0" fitWidth="145.0" layoutX="1188.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="178.0" fitWidth="175.0" layoutX="1188.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Nagano Parceiro/CamisetaS.png" />
             </image>
@@ -215,5 +215,20 @@
                 <Label fx:id="lblFecha" managed="false" style="-fx-font-size: 14px;" text="Fecha de nacimiento: " visible="false" />
             </children>
         </VBox>
+      <Label layoutX="1048.0" layoutY="242.0" text="Yuki Sakai">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="943.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1048.0" layoutY="276.0" text="Hazuki Genma">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

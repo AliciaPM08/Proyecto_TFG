@@ -54,7 +54,7 @@
         </Pane>
         <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
             <children>
-                <ImageView fitHeight="75.0" fitWidth="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="75.0" fitWidth="136.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/Logo liga.jpg" />
                     </image>
@@ -130,12 +130,12 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Naoki Kusunose">
+        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="263.0" text="Entrenador: Naoki Kusunose">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="310.0" text="Estadio: Urawa Komaba">
+        <Label fx:id="labelEstadio" layoutX="272.0" layoutY="301.0" text="Estadio: Urawa Komaba">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -221,6 +221,21 @@
             </font>
         </Label>
       <Label layoutX="272.0" layoutY="804.0" text="2 Copas Emperatriz">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1072.0" layoutY="252.0" text="Sakiko Ikeda">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="976.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1072.0" layoutY="290.0" text="Hikaru Naomoto">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

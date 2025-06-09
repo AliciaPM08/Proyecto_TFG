@@ -54,7 +54,7 @@
         </Pane>
         <Pane layoutX="-1.0" layoutY="81.0" prefHeight="82.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
             <children>
-                <ImageView fitHeight="75.0" fitWidth="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="75.0" fitWidth="136.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/Logo liga.jpg" />
                     </image>
@@ -130,7 +130,7 @@
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="273.0" text="Entrenador: Shin Nakamura">
+        <Label fx:id="labelEntrenador" layoutX="272.0" layoutY="270.0" text="Entrenador: Shin Nakamura">
             <font>
                 <Font name="ACaslonPro-Regular" size="18.0" />
             </font>
@@ -216,6 +216,21 @@
             </children>
         </VBox>
       <Label layoutX="77.0" layoutY="804.0" text="2 WE League">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1075.0" layoutY="253.0" text="Yukari Kinga">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="970.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1075.0" layoutY="282.0" text="Kaede Nakamura">
          <font>
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>

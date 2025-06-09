@@ -7,11 +7,13 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.onside_fem.Japon.ConClasificacionJap">
@@ -90,7 +92,7 @@
                         <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/Logo liga.jpg" />
                     </image>
                 </ImageView>
-                <Label layoutX="122.0" layoutY="18.0" text="WE League">
+                <Label layoutX="122.0" layoutY="26.0" text="WE League">
                     <font>
                         <Font name="ACaslonPro-Semibold" size="24.0" />
                     </font>
@@ -101,18 +103,33 @@
                     </font>
                 </Button>
             </children></Pane>
-      <TableView fx:id="tableView" layoutX="340.0" layoutY="258.0" prefHeight="384.0" prefWidth="718.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
+      <TableView fx:id="tableView" layoutX="293.0" layoutY="284.0" prefHeight="333.0" prefWidth="812.0" style="-fx-border-color: #00266a; -fx-border-width: 5;">
         <columns>
-          <TableColumn fx:id="colNombre" prefWidth="96.0" text="Equipo" />
-          <TableColumn fx:id="colPosicion" prefWidth="68.0" text="Posicion" />
-            <TableColumn fx:id="colPuntos" prefWidth="77.0" text="Puntos" />
-            <TableColumn fx:id="colJugados" prefWidth="79.0" text="P. Jugados" />
-            <TableColumn fx:id="colVictorias" prefWidth="70.0" text="Victorias" />
-            <TableColumn fx:id="colEmpates" prefWidth="78.0" text="Empates" />
-            <TableColumn fx:id="colPerdidos" prefWidth="69.0" text="Perdidos" />
-            <TableColumn fx:id="colFavor" prefWidth="84.0" text="G. A Favor" />
-            <TableColumn fx:id="colContra" prefWidth="88.0" text="G. En Contra" />
+          <TableColumn fx:id="colNombre" prefWidth="179.0" text="Equipo" />
+          <TableColumn fx:id="colPosicion" prefWidth="70.0" text="Posicion" />
+            <TableColumn fx:id="colPuntos" prefWidth="64.0" text="Puntos" />
+            <TableColumn fx:id="colJugados" prefWidth="89.0" text="P. Jugados" />
+            <TableColumn fx:id="colVictorias" prefWidth="77.0" text="Victorias" />
+            <TableColumn fx:id="colEmpates" prefWidth="69.0" text="Empates" />
+            <TableColumn fx:id="colPerdidos" text="Perdidos" />
+            <TableColumn fx:id="colFavor" prefWidth="89.0" text="G. A Favor" />
+            <TableColumn fx:id="colContra" prefWidth="89.0" text="G. En Contra" />
         </columns>
       </TableView>
+      <VBox layoutX="49.0" layoutY="284.0" prefHeight="252.0" prefWidth="192.0" style="-fx-alignment: CENTER;">
+         <children>
+            <Label fx:id="labelCampeonas" text="CAMPEONAS">
+               <font>
+                  <Font name="ACaslonPro-Semibold" size="24.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="22.0" prefWidth="0.0" visible="false" />
+            <ImageView fitHeight="182.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagenes/Liga Japonesa/Equipos/Beleza/Beleza.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
     </children>
 </Pane>

@@ -88,7 +88,7 @@
                         <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/Logo liga.jpg" />
                     </image>
                 </ImageView>
-                <Label layoutX="151.0" layoutY="26.0" text="WE League">
+                <Label layoutX="147.0" layoutY="39.0" text="WE League">
                     <font>
                         <Font name="ACaslonPro-Semibold" size="24.0" />
                     </font>

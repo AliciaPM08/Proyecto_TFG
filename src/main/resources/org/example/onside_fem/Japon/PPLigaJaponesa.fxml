@@ -27,7 +27,7 @@
                         <Font name="ACaslonPro-Semibold" size="36.0" />
                     </font>
                 </Label>
-                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
         <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -42,40 +42,41 @@
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
                 </Hyperlink>
-                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+                <Label fx:id="footer" layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
         <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
                 <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
-               <items>
-                  <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
-               </items></Menu>
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
                 <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
-                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
-                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
-                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
-                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
-                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                        <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                        <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                        <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
                 </Menu>
                 <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Alemania" />
-                  <MenuItem mnemonicParsing="false" text="Australia" />
-                  <MenuItem mnemonicParsing="false" text="Brasil" />
-                  <MenuItem mnemonicParsing="false" text="Canada" />
-                  <MenuItem mnemonicParsing="false" text="Colombia" />
-                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
-                  <MenuItem mnemonicParsing="false" text="España" />
-                  <MenuItem mnemonicParsing="false" text="Francia" />
-                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                  <MenuItem mnemonicParsing="false" text="Nigeria" />
-                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
-                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
-                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                        <MenuItem fx:id="menuAlemania" mnemonicParsing="false" text="Alemania" />
+                        <MenuItem fx:id="menuAustralia" mnemonicParsing="false" text="Australia" />
+                        <MenuItem fx:id="menuBrasil" mnemonicParsing="false" text="Brasil" />
+                        <MenuItem fx:id="menuCanada" mnemonicParsing="false" text="Canada" />
+                        <MenuItem fx:id="menuColombia" mnemonicParsing="false" text="Colombia" />
+                        <MenuItem fx:id="menuEspana" mnemonicParsing="false" text="España" />
+                        <MenuItem fx:id="menuEstados" mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem fx:id="menuFrancia" mnemonicParsing="false" text="Francia" />
+                        <MenuItem fx:id="menuInglaterra" mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem fx:id="menuNigeria" mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem fx:id="menuNZelanda" mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem fx:id="menuSudafrica" mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem fx:id="menuSuecia" mnemonicParsing="false" text="Suecia" />
                     </items>
                 </Menu>
             </menus>
@@ -103,7 +104,7 @@
                </font>
             </Button>
          </children></Pane>
-      <Label layoutX="60.0" layoutY="185.0" text="NOTICIAS">
+      <Label fx:id="labelNoticia" layoutX="60.0" layoutY="185.0" text="NOTICIAS">
          <font>
             <Font name="ACaslonPro-Semibold" size="36.0" />
          </font>
@@ -113,19 +114,14 @@
             <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/noticia.png" />
          </image>
       </ImageView>
-      <Label layoutX="518.0" layoutY="241.0" text="Omiya Ardija Ventus da una charla a estudiantes de secundaria sobre ">
+      <Label fx:id="labelTitulo1" layoutX="470.0" layoutY="231.0" prefHeight="85.0" prefWidth="889.0" text="Omiya Ardija Ventus da una charla a estudiantes de secundaria sobre temas importantes que rodean a las atletas femeninas. " wrapText="true">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="524.0" layoutY="332.0" text="El 5 de mayo, en la ciudad de Saitama, prefectura de Saitama (su ciudad natal), participaron en una interacción recreativa con usuarios del Centro">
+      <Label fx:id="labelNoticia1" layoutX="483.0" layoutY="316.0" prefHeight="106.0" prefWidth="898.0" text="El 5 de mayo, en la ciudad de Saitama, prefectura de Saitama (su ciudad natal), participaron en una interacción recreativa con usuarios del Centro  de Servicios Sankeien. Al día siguiente, tuvieron una charla &quot;¡Hablemos!&quot; sobre información básica sobre el cuerpo femenino, que incluyó una mesa redonda y un partido de fútbol para estudiantes de 1.º y 2.º de secundaria de su academia." wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="524.0" layoutY="369.0" text=" de Servicios Sankeien. Al día siguiente, tuvieron una charla &quot;¡Hablemos!&quot; sobre información básica sobre el cuerpo femenino, que incluyó una">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="182.0" fitWidth="336.0" layoutX="139.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
@@ -133,14 +129,14 @@
             <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/noticia2.png" />
          </image>
       </ImageView>
-      <Label layoutX="518.0" layoutY="450.0" text="Hiroshima acogerá un programa de entrevistas sobre temas de salud ">
+      <Label fx:id="labelTitulo2" layoutX="470.0" layoutY="434.0" prefHeight="85.0" prefWidth="889.0" text="Hiroshima acogerá un programa de entrevistas sobre temas de salud de la mujer y promoción de actividades para mujeres " wrapText="true">
          <font>
             <Font name="ACaslonPro-BoldItalic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="526.0" layoutY="540.0" text="El Sanfrecce Hiroshima Regina celebró un evento WE ACTION DAY en tres sedes diferentes de la prefectura de Hiroshima: &quot;Sanfrecce ">
+      <Label fx:id="labelNoticia2" layoutX="483.0" layoutY="519.0" prefHeight="106.0" prefWidth="898.0" text="El Sanfrecce Hiroshima Regina celebró un evento WE ACTION DAY en tres sedes diferentes de la prefectura de Hiroshima: &quot;Sanfrecce  Hiroshima Regina x Hiroshima Greater Urban Area Football Session&quot; el 5 de marzo y &quot;Femtech Japan/Femcare Japan en HIROSHIMA Sanfrecce Hiroshima Talk Show&quot; con una visita a una escuela primaria el 6 de marzo. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="182.0" fitWidth="334.0" layoutX="139.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
@@ -148,49 +144,14 @@
             <Image url="@../../../../Imagenes/Liga Japonesa/Logo Liga/noticia3.png" />
          </image>
       </ImageView>
-      <Label layoutX="522.0" layoutY="670.0" text="Chifure AS Elfen Saitama infunde coraje y esperanza para el futuro a ">
+      <Label fx:id="labelTitulo3" layoutX="470.0" layoutY="656.0" prefHeight="85.0" prefWidth="889.0" text="Chifure AS Elfen Saitama infunde coraje y esperanza para el futuro a los niños de su ciudad natal. " wrapText="true">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="524.0" layoutY="754.0" text="Chifure AS Elfen Saitama interactuó con estudiantes de primaria locales bajo el lema &quot;¡Esperanza y sueños para el futuro de los niños!&quot; en su ciudad ">
+      <Label fx:id="labelNoticia3" layoutX="483.0" layoutY="747.0" prefHeight="85.0" prefWidth="889.0" text="Chifure AS Elfen Saitama interactuó con estudiantes de primaria locales bajo el lema &quot;¡Esperanza y sueños para el futuro de los niños!&quot; en su ciudad natal, Hanno. A través de una charla y un programa diseñado por los propios jugadores, les transmitieron la importancia de afrontar retos " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="526.0" layoutY="783.0" text="natal, Hanno. A través de una charla y un programa diseñado por los propios jugadores, les transmitieron la importancia de afrontar retos">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="518.0" layoutY="278.0" text="temas importantes que rodean a las atletas femeninas.">
-         <font>
-            <Font name="ACaslonPro-BoldItalic" size="30.0" />
-         </font>
-      </Label>
-      <Label layoutX="524.0" layoutY="406.0" text="mesa redonda y un partido de fútbol para estudiantes de 1.º y 2.º de secundaria de su academia.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="518.0" layoutY="487.0" text="de la mujer y promoción de actividades para mujeres">
-         <font>
-            <Font name="ACaslonPro-SemiboldItalic" size="30.0" />
-         </font>
-      </Label>
-      <Label layoutX="526.0" layoutY="579.0" text="Hiroshima Regina x Hiroshima Greater Urban Area Football Session&quot; el 5 de marzo y &quot;Femtech Japan/Femcare Japan en HIROSHIMA 2023 Sanfrecce ">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="526.0" layoutY="614.0" text="Hiroshima Talk Show&quot; con una visita a una escuela primaria el 6 de marzo.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="522.0" layoutY="710.0" text="los niños de su ciudad natal.">
-         <font>
-            <Font name="ACaslonPro-BoldItalic" size="30.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
     </children>

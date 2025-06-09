@@ -63,8 +63,8 @@ public class ConVegaltaP {
      */
     @FXML
     public void initialize() {
-        comboBoxIdiomas.getItems().addAll("Español", "Inglés");
-        comboBoxIdiomas.setValue("Español");
+        comboBoxIdiomas.getItems().addAll("Español", "English");
+        comboBoxIdiomas.setValue("English");
         comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
         cambiarIdioma();
     }
