@@ -4,63 +4,117 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Hyperlink;
+import javafx.scene.control.*;
+import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 public class ConPantallaPrincipal {
     @FXML
-    private Menu menuInicio;
-
-    @FXML
     private Menu menuLigas;
+
+    @FXML private MenuItem menuAlemania, menuAustralia, menuBrasil, menuCanada, menuColombia, menuEspana, menuUSA, menuFrancia, menuInglaterra, menuNigeria, menuNZelanda, menuSudafrica, menuSuecia;
 
     @FXML
     private Menu menuSelecciones;
 
     @FXML
-    private ComboBox<String> comboBoxIdioma;
+    private ComboBox<String> comboBoxIdiomas;
 
     @FXML
     private Hyperlink hyperlinkAyuda;
-
 
     private final Map<String, String> ligaPantallas = new HashMap<>();
 
 
     private final Map<String, String> seleccionPantallas = new HashMap<>();
 
+    private ResourceBundle recursos;
+    private Locale localeActual;
+
+    @FXML
+    private Label footer;
+
+    @FXML
+    private Label labelEventos,labelEuro,labelEuroF,labelSorteoE,labelAE,labelBE;
+
+    @FXML
+    private Label labelCE,labelDE,labelAmerica,labelFechaA,labelSA,labelAA,labelAB;
+
+    /**
+     * Metodo invocado automáticamente por JavaFX tras la carga del FXML.
+     * Inicializa los elementos del comboBox de idiomas y establece el idioma por defecto.
+     */
     @FXML
     public void initialize() {
-        inicializarIdioma();
-        inicializarRutas();
-        inicializarLigas();
-        inicializarSelecciones();
-        hyperlinkAyuda.setOnAction(this::abrirAyuda);
-    }
-
-    private void inicializarIdioma() {
-        comboBoxIdioma.getItems().addAll("Español", "Inglés");
-        comboBoxIdioma.setValue("Español");
-        comboBoxIdioma.setOnAction(e -> cambiarIdioma());
+        comboBoxIdiomas.getItems().addAll("Español", "English");
+        comboBoxIdiomas.setValue("Español");
+        comboBoxIdiomas.setOnAction(e -> cambiarIdioma());
+        cambiarIdioma();
     }
 
     private void cambiarIdioma() {
-        String idioma = comboBoxIdioma.getValue();
-        Locale locale = idioma.equals("Inglés") ? new Locale("en", "US") : new Locale("es", "ES");
-        System.out.println("Idioma cambiado a: " + idioma);
+        String idioma = comboBoxIdiomas.getValue();
+        localeActual = idioma.equals("English") ? new Locale("en", "US") : new Locale("es", "ES");
+
+        try {
+            recursos = ResourceBundle.getBundle("idiomas.messages", localeActual);
+            traducirUI();
+            inicializarRutas();
+            inicializarLigas();
+            inicializarSelecciones();
+            hyperlinkAyuda.setOnAction(this::abrirAyuda);
+        }catch (MissingResourceException e) {
+            System.err.println("Archivo de idioma no encontrado.");
+        }
+    }
+
+    /**
+     * Traduce todos los textos visibles de la interfaz usando el archivo de idioma seleccionado.
+     */
+    private void traducirUI() {
+        menuLigas.setText(recursos.getString("menu.ligas"));
+        menuSelecciones.setText(recursos.getString("menu.selecciones"));
+        menuAlemania.setText(recursos.getString("menu.alemania"));
+        menuAustralia.setText(recursos.getString("menu.australia"));
+        menuBrasil.setText(recursos.getString("menu.brasil"));
+        menuCanada.setText(recursos.getString("menu.canada"));
+        menuColombia.setText(recursos.getString("menu.colombia"));
+        menuEspana.setText(recursos.getString("menu.espana"));
+        menuUSA.setText(recursos.getString("menu.unidos"));
+        menuFrancia.setText(recursos.getString("menu.francia"));
+        menuInglaterra.setText(recursos.getString("menu.inglaterra"));
+        menuNigeria.setText(recursos.getString("menu.nigeria"));
+        menuNZelanda.setText(recursos.getString("menu.nzelanda"));
+        menuSudafrica.setText(recursos.getString("menu.sudafrica"));
+        menuSuecia.setText(recursos.getString("menu.suecia"));
+        hyperlinkAyuda.setText(recursos.getString("menu.ayuda"));
+
+        labelEventos.setText(recursos.getString("label.eventos"));
+        labelEuro.setText(recursos.getString("label.tituloE"));
+        labelEuroF.setText(recursos.getString("label.fechaE"));
+        labelSorteoE.setText(recursos.getString("label.sorteoE"));
+        labelAE.setText(recursos.getString("label.GrupoAE"));
+        labelBE.setText(recursos.getString("label.GrupoBE"));
+        labelCE.setText(recursos.getString("label.GrupoCE"));
+        labelDE.setText(recursos.getString("label.GrupoDE"));
+        labelAmerica.setText(recursos.getString("label.tituloA"));
+        labelFechaA.setText(recursos.getString("label.fechaA"));
+        labelSA.setText(recursos.getString("label.sorteoA"));
+        labelAA.setText(recursos.getString("label.GrupoAA"));
+        labelAB.setText(recursos.getString("label.GrupoBA"));
+
+        footer.setText(recursos.getString("footer.copy"));
     }
 
     private void inicializarRutas() {
@@ -122,7 +176,7 @@ public class ConPantallaPrincipal {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaFXML));
             Pane root = loader.load();
-            Stage stage = (Stage) comboBoxIdioma.getScene().getWindow();
+            Stage stage = (Stage) comboBoxIdiomas.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setResizable(false);
         } catch (IOException e) {

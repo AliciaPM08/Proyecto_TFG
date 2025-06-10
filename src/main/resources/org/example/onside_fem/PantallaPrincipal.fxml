@@ -31,7 +31,7 @@
                   <Font name="ACaslonPro-Semibold" size="36.0" />
                </font>
             </Label>
-            <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+            <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
          </children>
       </Pane>
       <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1410.0" style="-fx-background-color: #01152e;">
@@ -46,12 +46,12 @@
                   <Font name="ACaslonPro-Semibold" size="18.0" />
                </font>
             </Hyperlink>
-            <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+            <Label fx:id="footer" layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
          </children>
       </Pane>
       <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../Estilos/estilo.css">
-        <menus>
-          <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
+         <menus>
+            <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                <items>
                   <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
                   <MenuItem mnemonicParsing="false" text="Liberty A-League" />
@@ -60,25 +60,25 @@
                   <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
                   <MenuItem mnemonicParsing="false" text="National Super League" />
                </items>
-          </Menu>
-          <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
+            </Menu>
+            <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Alemania" />
-                  <MenuItem mnemonicParsing="false" text="Australia" />
-                  <MenuItem mnemonicParsing="false" text="Brasil" />
-                  <MenuItem mnemonicParsing="false" text="Canada" />
-                  <MenuItem mnemonicParsing="false" text="Colombia" />
-                  <MenuItem mnemonicParsing="false" text="España" />
-                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
-                  <MenuItem mnemonicParsing="false" text="Francia" />
-                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                  <MenuItem mnemonicParsing="false" text="Nigeria" />
-                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
-                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
-                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                  <MenuItem fx:id="menuAlemania" mnemonicParsing="false" text="Alemania" />
+                  <MenuItem fx:id="menuAustralia" mnemonicParsing="false" text="Australia" />
+                  <MenuItem fx:id="menuBrasil" mnemonicParsing="false" text="Brasil" />
+                  <MenuItem fx:id="menuCanada" mnemonicParsing="false" text="Canada" />
+                  <MenuItem fx:id="menuColombia" mnemonicParsing="false" text="Colombia" />
+                  <MenuItem fx:id="menuEspana" mnemonicParsing="false" text="España" />
+                  <MenuItem fx:id="menuUSA" mnemonicParsing="false" text="Estados Unidos" />
+                  <MenuItem fx:id="menuFrancia" mnemonicParsing="false" text="Francia" />
+                  <MenuItem fx:id="menuInglaterra" mnemonicParsing="false" text="Inglaterra" />
+                  <MenuItem fx:id="menuNigeria" mnemonicParsing="false" text="Nigeria" />
+                  <MenuItem fx:id="menuNZelanda" mnemonicParsing="false" text="Nueva Zelanda" />
+                  <MenuItem fx:id="menuSudafrica" mnemonicParsing="false" text="Sudafrica" />
+                  <MenuItem fx:id="menuSuecia" mnemonicParsing="false" text="Suecia" />
                </items>
-          </Menu>
-        </menus>
+            </Menu>
+         </menus>
       </MenuBar>
       <Pane layoutX="218.0" layoutY="95.0" prefHeight="776.0" prefWidth="940.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -87,7 +87,7 @@
                   <Image url="@../../../Imagenes/NoticiaEuro.png" />
                </image>
             </ImageView>
-            <Label text="EVENTOS PROXIMOS">
+            <Label fx:id="labelEventos" text="EVENTOS PROXIMOS">
                <font>
                   <Font name="ACaslonPro-Bold" size="40.0" />
                </font>
@@ -102,47 +102,47 @@
                   <Image url="@../../../Imagenes/MascotaEuro.png" />
                </image>
             </ImageView>
-            <Label layoutX="558.0" layoutY="75.0" text="EURO Femenina de la UEFA 2025">
+            <Label fx:id="labelEuro" layoutX="558.0" layoutY="75.0" text="EURO Femenina de la UEFA 2025">
                <font>
-                  <Font name="ACaslonPro-Semibold" size="20.0" />
+                  <Font name="ACaslonPro-Semibold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="558.0" layoutY="112.0" text="El torneo se celebrará del 2 al 27 de julio.">
+            <Label fx:id="labelEuroF" layoutX="558.0" layoutY="112.0" text="El torneo se celebrará del 2 al 27 de julio.">
                <font>
-                  <Font name="ACaslonPro-Regular" size="17.0" />
+                  <Font name="ACaslonPro-Regular" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="558.0" layoutY="134.0" prefHeight="56.0" prefWidth="293.0" text="Sorteo de la fase final de la EURO Femenina 2025" wrapText="true">
+            <Label fx:id="labelSorteoE" layoutX="558.0" layoutY="134.0" prefHeight="56.0" prefWidth="361.0" text="Sorteo de la fase final de la EURO Femenina 2025" wrapText="true">
                <font>
-                  <Font name="ACaslonPro-BoldItalic" size="16.0" />
+                  <Font name="ACaslonPro-BoldItalic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="564.0" layoutY="192.0" prefHeight="31.0" prefWidth="301.0" text="Grupo A: Suiza, Noruega, Islandia, Finlandia" wrapText="true">
+            <Label fx:id="labelAE" layoutX="564.0" layoutY="192.0" prefHeight="31.0" prefWidth="380.0" text="Grupo A: Suiza, Noruega, Islandia, Finlandia" wrapText="true">
                <font>
-                  <Font name="ACaslonPro-Regular" size="15.0" />
+                  <Font name="ACaslonPro-Regular" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="564.0" layoutY="223.0" prefHeight="31.0" prefWidth="301.0" text="Grupo B: España, Portugal, Bélgica, Italia" wrapText="true">
+            <Label fx:id="labelBE" layoutX="564.0" layoutY="223.0" prefHeight="31.0" prefWidth="317.0" text="Grupo B: España, Portugal, Bélgica, Italia" wrapText="true">
                <font>
-                  <Font name="ACaslonPro-Regular" size="15.0" />
+                  <Font name="ACaslonPro-Regular" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="564.0" layoutY="254.0" prefHeight="31.0" prefWidth="301.0" text="Grupo C: Alemania, Polonia, Dinamarca, Suecia" wrapText="true">
+            <Label fx:id="labelCE" layoutX="564.0" layoutY="254.0" prefHeight="31.0" prefWidth="361.0" text="Grupo C: Alemania, Polonia, Dinamarca, Suecia" wrapText="true">
                <font>
-                  <Font name="ACaslonPro-Regular" size="15.0" />
+                  <Font name="ACaslonPro-Regular" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="564.0" layoutY="292.0" prefHeight="22.0" prefWidth="301.0" text="Grupo D: Francia, Inglaterra, Gales, Países Bajos" wrapText="true">
+            <Label fx:id="labelDE" layoutX="564.0" layoutY="292.0" prefHeight="23.0" prefWidth="361.0" text="Grupo D: Francia, Inglaterra, Gales, Países Bajos" wrapText="true">
                <font>
-                  <Font name="ACaslonPro-Regular" size="15.0" />
+                  <Font name="ACaslonPro-Regular" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="558.0" layoutY="404.0" text="Copa América Femenina 2025">
+            <Label fx:id="labelAmerica" layoutX="558.0" layoutY="404.0" text="Copa América Femenina 2025">
                <font>
-                  <Font name="ACaslonPro-Semibold" size="20.0" />
+                  <Font name="ACaslonPro-Semibold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="558.0" layoutY="441.0" text="El torneo se celebrará del 12 de julio al 2 de agosto. ">
+            <Label fx:id="labelFechaA" layoutX="558.0" layoutY="441.0" text="El torneo se celebrará del 12 de julio al 2 de agosto. ">
                <font>
                   <Font name="ACaslonPro-Regular" size="17.0" />
                </font>
@@ -152,22 +152,21 @@
                   <Image url="@../../../Imagenes/MascotaAme.png" />
                </image>
             </ImageView>
-            <Label layoutX="558.0" layoutY="463.0" prefHeight="56.0" prefWidth="326.0" text="Sorteo de la fase final de la Copa Aerica Femenina 2025" wrapText="true">
+            <Label fx:id="labelSA" layoutX="558.0" layoutY="463.0" prefHeight="56.0" prefWidth="326.0" text="Sorteo de la fase final de la Copa Aerica Femenina 2025" wrapText="true">
                <font>
-                  <Font name="ACaslonPro-BoldItalic" size="16.0" />
+                  <Font name="ACaslonPro-BoldItalic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="564.0" layoutY="519.0" prefHeight="31.0" prefWidth="335.0" text="Grupo A: Ecuador, Argentina, Chile, Uruguay y Perú." wrapText="true">
+            <Label fx:id="labelAA" layoutX="564.0" layoutY="519.0" prefHeight="52.0" prefWidth="351.0" text="Grupo A: Ecuador, Argentina, Chile, Uruguay y Perú." wrapText="true">
                <font>
-                  <Font name="ACaslonPro-Regular" size="15.0" />
+                  <Font name="ACaslonPro-Regular" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="564.0" layoutY="553.0" prefHeight="51.0" prefWidth="301.0" text="Grupo B: Brasil, Colombia, Paraguay, Venezuela y Bolivia." wrapText="true">
+            <Label fx:id="labelAB" layoutX="564.0" layoutY="569.0" prefHeight="51.0" prefWidth="301.0" text="Grupo B: Brasil, Colombia, Paraguay, Venezuela y Bolivia." wrapText="true">
                <font>
-                  <Font name="ACaslonPro-Regular" size="15.0" />
+                  <Font name="ACaslonPro-Regular" size="16.0" />
                </font>
             </Label>
          </children></Pane>
-      <Label text="Label" />
    </children>
 </Pane>
