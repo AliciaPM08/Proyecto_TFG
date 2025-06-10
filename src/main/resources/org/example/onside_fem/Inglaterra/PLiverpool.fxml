@@ -220,5 +220,20 @@
             <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
+      <Label layoutX="1045.0" layoutY="242.0" text="Niamh Fahey">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="952.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/Capitan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1045.0" layoutY="274.0" text="Gemma Bonner">
+         <font>
+            <Font name="ACaslonPro-Regular" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
