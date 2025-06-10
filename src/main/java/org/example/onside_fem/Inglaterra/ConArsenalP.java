@@ -207,14 +207,14 @@ public class ConArsenalP {
      * Asigna una acción al botón de ver equipos.
      */
     private void inicializarEquipos() {
-        btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PEquiposEspana.fxml"));
+        btnEquipo.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Inglaterra/PEquiposInglaterra.fxml"));
     }
 
     /**
      * Asigna una acción al botón de ver clasificación.
      */
     private void inicializarClasifiacion() {
-        btnClasifiacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Espana/PClasificacionEspana.fxml"));
+        btnClasifiacion.setOnAction(e -> cargarPantalla("/org/example/onside_fem/Inglaterra/PClasificacionInglaterra.fxml"));
     }
 
     /**
