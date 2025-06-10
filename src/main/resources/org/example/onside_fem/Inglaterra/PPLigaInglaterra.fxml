@@ -27,7 +27,7 @@
                         <Font name="ACaslonPro-Semibold" size="36.0" />
                     </font>
                 </Label>
-                <ComboBox fx:id="comboBoxIdioma" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
+                <ComboBox fx:id="comboBoxIdiomas" layoutX="1236.0" layoutY="16.0" prefWidth="150.0" style="-fx-background-color: #ff6d6e;" />
             </children>
         </Pane>
         <Pane layoutY="870.0" prefHeight="32.0" prefWidth="1400.0" style="-fx-background-color: #01152e;">
@@ -42,40 +42,41 @@
                         <Font name="ACaslonPro-Semibold" size="18.0" />
                     </font>
                 </Hyperlink>
-                <Label layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
+                <Label fx:id="footer" layoutY="8.0" text="® OnSideFem. Todos los derechos reservados " textFill="WHITE" />
             </children>
         </Pane>
         <MenuBar layoutY="56.0" prefHeight="25.0" prefWidth="1400.0" style="-fx-background-color: #ff6d6e;" stylesheets="@../../../../Estilos/estilo.css">
             <menus>
                 <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
-               <items>
-                  <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
-               </items></Menu>
+                    <items>
+                        <MenuItem fx:id="volverItem" mnemonicParsing="false" text="Volver" />
+                    </items>
+                </Menu>
                 <Menu fx:id="menuLigas" mnemonicParsing="false" text="Ligas">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Finetwork Liga F" />
-                  <MenuItem mnemonicParsing="false" text="Liberty A-League" />
-                  <MenuItem mnemonicParsing="false" text="Women's Super League" />
-                  <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
-                  <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
-                  <MenuItem mnemonicParsing="false" text="National Super League" />
+                        <MenuItem mnemonicParsing="false" text="Liberty A-League" />
+                        <MenuItem mnemonicParsing="false" text="Women's Super League" />
+                        <MenuItem mnemonicParsing="false" text="Arkema Premiere League" />
+                        <MenuItem mnemonicParsing="false" text="Yogibo WE League" />
+                        <MenuItem mnemonicParsing="false" text="National Super League" />
                     </items>
                 </Menu>
                 <Menu fx:id="menuSelecciones" mnemonicParsing="false" text="Selecciones">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Alemania" />
-                  <MenuItem mnemonicParsing="false" text="Australia" />
-                  <MenuItem mnemonicParsing="false" text="Brasil" />
-                  <MenuItem mnemonicParsing="false" text="Canada" />
-                  <MenuItem mnemonicParsing="false" text="Colombia" />
-                  <MenuItem mnemonicParsing="false" text="Estados Unidos" />
-                  <MenuItem mnemonicParsing="false" text="España" />
-                  <MenuItem mnemonicParsing="false" text="Francia" />
-                  <MenuItem mnemonicParsing="false" text="Inglaterra" />
-                  <MenuItem mnemonicParsing="false" text="Nigeria" />
-                  <MenuItem mnemonicParsing="false" text="Nueva Zelanda" />
-                  <MenuItem mnemonicParsing="false" text="Sudafrica" />
-                  <MenuItem mnemonicParsing="false" text="Suecia" />
+                        <MenuItem fx:id="menuAlemania" mnemonicParsing="false" text="Alemania" />
+                        <MenuItem fx:id="menuAustralia" mnemonicParsing="false" text="Australia" />
+                        <MenuItem fx:id="menuBrasil" mnemonicParsing="false" text="Brasil" />
+                        <MenuItem fx:id="menuCanada" mnemonicParsing="false" text="Canada" />
+                        <MenuItem fx:id="menuColombia" mnemonicParsing="false" text="Colombia" />
+                        <MenuItem fx:id="menuEspana" mnemonicParsing="false" text="España" />
+                        <MenuItem fx:id="menuEstados" mnemonicParsing="false" text="Estados Unidos" />
+                        <MenuItem fx:id="menuFrancia" mnemonicParsing="false" text="Francia" />
+                        <MenuItem fx:id="menuInglaterra" mnemonicParsing="false" text="Inglaterra" />
+                        <MenuItem fx:id="menuNigeria" mnemonicParsing="false" text="Nigeria" />
+                        <MenuItem fx:id="menuNZelanda" mnemonicParsing="false" text="Nueva Zelanda" />
+                        <MenuItem fx:id="menuSudafrica" mnemonicParsing="false" text="Sudafrica" />
+                        <MenuItem fx:id="menuSuecia" mnemonicParsing="false" text="Suecia" />
                     </items>
                 </Menu>
             </menus>
@@ -103,7 +104,7 @@
                </font>
             </Button>
          </children></Pane>
-      <Label layoutX="62.0" layoutY="170.0" text="NOTICIAS">
+      <Label fx:id="labelNoticia" layoutX="62.0" layoutY="170.0" text="NOTICIAS">
          <font>
             <Font name="ACaslonPro-Semibold" size="36.0" />
          </font>
@@ -113,19 +114,14 @@
             <Image url="@../../../../Imagenes/Liga Inglesa/Logo Liga/noticia1.png" />
          </image>
       </ImageView>
-      <Label layoutX="492.0" layoutY="240.0" text="London City Lionesses seguro promoción a Barclays De las mujeres Súper Liga">
+      <Label fx:id="labelTitulo1" layoutX="492.0" layoutY="240.0" text="London City Lionesses seguro promoción a Barclays De las mujeres Súper Liga">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="512.0" layoutY="290.0" text="Un maravilloso gol de Isobel Goodwin ayudó a las London City Lionessesses a asegurar el ascenso a la Barclays Women's Super League por primera ">
+      <Label fx:id="labelNoticia1" layoutX="506.0" layoutY="271.0" prefHeight="104.0" prefWidth="852.0" text="Un maravilloso gol de Isobel Goodwin ayudó a las London City Lionessesses a asegurar el ascenso a la Barclays Women's Super League por primera vez cuando empataron 2-2 con el Birmingham City en la decisión del título en St. Andrew's. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="512.0" layoutY="323.0" text="vez cuando empataron 2-2 con el Birmingham City en la decisión del título en St. Andrew's.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="154.0" fitWidth="271.0" layoutX="186.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
@@ -133,19 +129,14 @@
             <Image url="@../../../../Imagenes/Liga Inglesa/Logo Liga/noticia2.png" />
          </image>
       </ImageView>
-      <Label layoutX="489.0" layoutY="450.0" text="Un nuevo nombre y una nueva imagen para el fútbol femenino profesional en Inglaterra">
+      <Label fx:id="labelTitulo2" layoutX="489.0" layoutY="450.0" text="Un nuevo nombre y una nueva imagen para el fútbol femenino profesional en Inglaterra">
          <font>
             <Font name="ACaslonPro-BoldItalic" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="512.0" layoutY="498.0" text="Hoy se marca un nuevo capítulo para el fútbol femenino en Inglaterra ya que Women's Professional Leagues Limited (WPLL) revela nuevos nombres ">
+      <Label fx:id="labelNoticia2" layoutX="500.0" layoutY="487.0" prefHeight="94.0" prefWidth="852.0" text="Hoy se marca un nuevo capítulo para el fútbol femenino en Inglaterra ya que Women's Professional Leagues Limited (WPLL) revela nuevos nombres de empresa y liga, nuevos emblemas y una nueva identidad visual para el juego profesional femenino. " wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="512.0" layoutY="529.0" text="de empresa y liga, nuevos emblemas y una nueva identidad visual para el juego profesional femenino.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
       <ImageView fitHeight="182.0" fitWidth="280.0" layoutX="186.0" layoutY="636.0" pickOnBounds="true" preserveRatio="true">
@@ -153,19 +144,14 @@
             <Image url="@../../../../Imagenes/Liga Inglesa/Logo Liga/noticia3.png" />
          </image>
       </ImageView>
-      <Label layoutX="489.0" layoutY="658.0" text="Campeones Chelsea completo invicto estación mientras Arsenal sello segundo">
+      <Label fx:id="labelTitulo3" layoutX="487.0" layoutY="636.0" text="Campeones Chelsea completo invicto estación mientras Arsenal sello segundo">
          <font>
             <Font name="ACaslonPro-SemiboldItalic" size="29.0" />
          </font>
       </Label>
-      <Label layoutX="506.0" layoutY="709.0" text="El Chelsea, campeón de la Superliga femenina, cerró su temporada con estilo al convertirse en el primer equipo en completar una temporada liguera de 22">
+      <Label fx:id="labelNoticia3" layoutX="492.0" layoutY="680.0" prefHeight="94.0" prefWidth="852.0" text="El Chelsea, campeón de la Superliga femenina, cerró su temporada con estilo al convertirse en el primer equipo en completar una temporada liguera de 22 partidos invicto y el cuarto en completar una campaña invencible tras superar al Liverpool." wrapText="true">
          <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="506.0" layoutY="740.0" text="partidos invicto y el cuarto en completar una campaña invencible tras superar al Liverpool.">
-         <font>
-            <Font name="ACaslonPro-Regular" size="14.0" />
+            <Font name="ACaslonPro-Regular" size="18.0" />
          </font>
       </Label>
     </children>
