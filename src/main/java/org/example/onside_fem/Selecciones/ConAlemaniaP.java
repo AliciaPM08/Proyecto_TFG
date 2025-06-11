@@ -171,7 +171,7 @@ public class ConAlemaniaP {
         lblImbatidas.setText(recursos.getString("jugadora.imbatidas"));
 
         labelAlemania.setText(recursos.getString("label.Alemania"));
-        labelEntrenador.setText(recursos.getString("label.entrenador"));
+        labelEntrenador.setText(recursos.getString("label.entrenadorALE"));
         labelConvocatoria.setText(recursos.getString("label.convocatoria"));
         labelRanking.setText(recursos.getString("label.ranking"));
         labelPalmares.setText(recursos.getString("label.palmares"));
@@ -367,7 +367,7 @@ public class ConAlemaniaP {
 
     private void abrirAyuda(ActionEvent event) {
         try {
-            File ayudaHTML = new File("src/main/resources/ayuda/ayuda_usuario.html");
+            File ayudaHTML = new File("org/example/onside_fem/ayuda.html");
             if (ayudaHTML.exists()) {
                 Desktop.getDesktop().browse(ayudaHTML.toURI());
             } else {

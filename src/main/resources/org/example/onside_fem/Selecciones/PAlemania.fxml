@@ -160,8 +160,8 @@
                 <Label fx:id="lblNombre" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Nombre: " visible="false" />
                 <Label fx:id="lblPosicion" style="-fx-font-size: 14px;" text="Posición: " visible="false" />
                 <Label fx:id="lblPJugados" style="-fx-font-size: 14px;" text="Partidos jugados:" visible="false" />
-            <Label fx:id="lblGoles" layoutX="15.0" layoutY="230.0" style="-fx-font-size: 14px;" text="Goles:" visible="false" />
-            <Label fx:id="lblImbatidas" layoutX="15.0" layoutY="250.0" style="-fx-font-size: 14px;" text="Porterias a cero:" visible="false" />
+                <Label fx:id="lblGoles" layoutX="15.0" layoutY="230.0" style="-fx-font-size: 14px;" text="Goles:" visible="false" />
+                <Label fx:id="lblImbatidas" layoutX="15.0" layoutY="250.0" style="-fx-font-size: 14px;" text="Porterias a cero:" visible="false" />
                 <Label fx:id="lblEquipo" style="-fx-font-size: 14px;" text="Seleccion: " visible="false" />
             </children>
         </VBox>
