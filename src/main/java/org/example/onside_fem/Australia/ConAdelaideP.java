@@ -424,8 +424,6 @@ public class ConAdelaideP {
             URL ayudaURL = getClass().getResource("/org/example/onside_fem/ayuda.html");
             if (ayudaURL != null) {
                 Desktop.getDesktop().browse(ayudaURL.toURI());
-            } else {
-                System.err.println("Archivo de ayuda no encontrado.");
             }
         } catch (IOException | URISyntaxException e) {
             e.printStackTrace();

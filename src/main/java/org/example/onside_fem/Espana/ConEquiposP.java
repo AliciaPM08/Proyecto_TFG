@@ -229,13 +229,12 @@ public class ConEquiposP {
         equipoPantallas.put("ivValencia", "/org/example/onside_fem/Espana/PValecia.fxml");
         equipoPantallas.put("ivBetis", "/org/example/onside_fem/Espana/PBetis.fxml");
 
-        // Agrega listeners dinámicamente
         for (javafx.scene.Node node : rootPane.getChildren()) {
             if (node instanceof ImageView) {
                 String id = node.getId();
                 if (id != null && id.startsWith("iv") && equipoPantallas.containsKey(id)) {
                     node.setOnMouseClicked(e -> cargarPantalla(equipoPantallas.get(id)));
-                    node.setStyle("-fx-cursor: hand;"); // Opcional: cambia el cursor al pasar por encima
+                    node.setStyle("-fx-cursor: hand;");
                 }
             }
         }

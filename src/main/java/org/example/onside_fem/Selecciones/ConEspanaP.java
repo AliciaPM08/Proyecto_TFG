@@ -382,6 +382,10 @@ public class ConEspanaP {
     }
 
     private String obtenerNombrePosicion(String abreviatura) {
-        return mapaPosiciones.getOrDefault(abreviatura, "Desconocido");
+        try {
+            return recursos.getString("pos." + abreviatura);
+        } catch (MissingResourceException e) {
+            return abreviatura;
+        }
     }
 }
