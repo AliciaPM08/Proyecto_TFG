@@ -211,5 +211,10 @@
                 <Font name="AdobeArabic-Regular" size="48.0" />
             </font>
         </Label>
+      <ImageView fitHeight="91.0" fitWidth="72.0" layoutX="368.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Imagenes/CopaMundo.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>
